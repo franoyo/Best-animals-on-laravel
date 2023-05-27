@@ -1,0 +1,291 @@
+body{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+
+}
+@font-face{
+    font-family:hatton;
+    src: url(../fonts/PP\ Hatton\ Medium\ 500.otf);
+           }
+
+.modal-container{
+    display: flex;
+position: fixed;
+align-self: center;
+justify-content: center;
+align-items: center;
+
+
+width: 100vw;
+height: 100vh;
+background-color: rgba(110, 142, 146, 0.3); 
+opacity: 0;
+pointer-events: none;
+transition: 0.5s;
+
+}
+.mostrar{
+    pointer-events: auto;
+opacity: 1;
+
+
+}
+.modal-container .modal{
+display: flex;
+flex-direction: column;
+justify-content: space-evenly;
+align-items: center;
+text-align: center;
+width: 20vw;
+height: 20vh;
+border: solid red;
+font-family: hatton;
+font-size: 2vw;
+background-color: white;
+border-radius: 2vw;
+
+
+
+}
+.modal .visto{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+width:4vw ;
+height: 7vh;
+font-size: 2vw;
+border: none;
+background-color: #268ecd;
+border-radius: 2vw;
+transition: 0.6s;
+
+
+}
+.visto:hover{
+background-color: #d9862c;
+
+
+}
+
+
+
+
+.org{
+    display: flex;
+justify-content: center;
+align-items: center;
+
+    width: 100%;
+    height: 20vh;
+    
+    
+
+    }
+  .cont{
+
+    display: flex;
+    width: 20%;
+    height: 70%;
+   align-items: center;
+   justify-content: center;
+    
+   
+   
+
+  }
+  .cont .img5{
+
+        width: 100%;
+        height: 100%;
+      
+        
+        
+    }
+    .ins{
+        display: flex;
+ justify-content: center;
+ align-items: center;
+    
+        width: 100%;
+        height: 70vh;
+    
+  
+      
+
+
+       }
+       .ins .perro{
+        width: 40vh;
+height: 55vh;
+
+
+       }
+       .ins .gato{
+        width: 40vh;
+        height: 55vh;
+
+       }
+       
+       .cont2{
+        background-color: white;
+        display: flex;
+     
+       
+        flex-direction: column;
+        
+       align-items: center;
+  
+    width: 50vh;
+   height:50vh ;
+   justify-content: center;
+border-style: solid ;border-width: 2vh;
+   border-radius: 10vh;
+   border-color: #d9d9d9;
+   
+
+}
+.cont2 .correo{
+    display: flex;
+width: 80%;
+height: 15%;
+margin: 1vh;
+border:0.4vh solid;
+border-radius: 1vh;
+font-family: hatton;
+font-size: 3vh;
+
+
+
+}
+.cont2 .boton{
+display: flex;
+align-items: center;
+justify-content: center;
+    background-color: #d9862c;
+    width: 30vh;
+    height: 8vh;
+    border: none;
+    border-radius: 3vh;
+    color: white;
+    font-size: 4vh;
+
+    transition: 0.5s;
+}
+.boton:hover{
+cursor: pointer;
+background-color: #268ecd;
+
+
+
+
+}
+
+.cont2 .formu{
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+
+
+
+}
+.cont2 .sesion{
+    font-family: hatton;
+color: #2e8dc6;
+font-size:4.5vh;
+
+}
+.cont2 .not_account{
+font-size: 1.8vh;
+
+}
+.regist {
+color: #d9862c;
+
+
+
+
+}
+.coloru{
+color: #d9862c;
+
+    
+}
+
+
+
+
+
+
+
+       .fn{
+        display: flex;
+    
+    justify-content: center ;
+  text-align: center;
+      width: 100%;
+        height: 10vh;
+        background-color: #268ecd;
+        font-size: 1vw;
+
+
+       }
+       .fn .endtext{
+
+        font-size: 1vw;
+       }
+@media(orientation:portrait){
+    .modal-container .modal{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        align-items: center;
+        text-align: center;
+        width: 50vw;
+        height: 20vh;
+        border: solid red;
+        font-family: hatton;
+        font-size: 2vw;
+        background-color: white;
+        border-radius: 2vw;
+        
+        
+        
+        }
+    .org{
+        display: flex;
+    justify-content: center;
+    align-items: center;
+    
+        width: 100%;
+        height: 20vh;
+        
+       
+    
+        }
+      .org .cont{
+    
+        display: flex;
+        width: 40%;
+        height: 80%;
+       align-items: center;
+       justify-content: center;
+       
+       
+       
+    
+      }
+      .cont .img5{
+    
+            width: 100%;
+            height: 100%;
+          
+            
+            
+        }
+
+}
+           
+       

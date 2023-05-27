@@ -1,0 +1,782 @@
+body{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    
+    
+    }
+    @font-face{
+        font-family:hatton;
+        src: url(../fonts/PP\ Hatton\ Medium\ 500.otf);
+               }
+    .contenedor-header{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: 15vh;
+    background-color: #FF914D;
+    
+    }
+    .contenedor-header .content{
+    display: flex;
+    width: 20%;
+    height: 100%;
+    
+    
+    }
+    .content .logo{
+    width: 100%;
+    height: 100%;
+    
+    
+    }
+    .middle-contenedor{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 60vh;
+    background-color: #FF914D;
+    
+    }
+    .middle-contenedor .middle-row{
+    display: flex;
+    width: 100%;
+    height: 33.33%;
+    
+    
+    }
+    .middle-row .txt-1{
+    display: flex;
+    text-align: start;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-size: 6vh;
+    width: 45%;
+    height: 100%;
+    
+    margin-left: 5%;
+    
+    }
+    .middle-row .contenedor-huellas{
+    display: flex;
+    width: 12%;
+    height: 30%;
+    
+    align-self: flex-end;
+    background-image: url(../img/huellas.png);
+    background-position: center;
+    background-size: contain;
+    
+    }
+    .middle-contenedor .middle-row2{
+        display: flex;
+        justify-content: center;
+        width: 100%;
+        height: 33.33%;
+      
+        
+        }
+        .middle-row2 .central-txt{
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    font-family: hatton;
+    font-size: 8vh;
+    color: white;
+    width: 50%;
+    height: 100%;
+    
+    
+    
+        }
+        .middle-contenedor .middle-row3{
+            display: flex;
+            flex-direction: row-reverse;
+            width: 100%;
+            height: 33.33%;
+            
+            
+            }
+            .middle-row3 .txt-3{
+    display: flex;
+    text-align: start;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-size: 6vh;
+    width: 45%;
+    height: 100%;
+    
+    margin-right: 5%;
+    
+    
+            }
+            .middle-row3 .contenedor-mascotas{
+    display: flex;
+    width: 47%;
+    height: 100%;
+    
+    
+    
+            }
+            .contenedor-mascotas .mascotas{
+                
+                position: relative;
+                top: 32.2%;
+    width: 100%;
+    height: 85%;
+    
+    
+            }
+    
+    .footer-contenedor{
+    display: flex;
+    width: 100%;
+    height: 25vh;
+    background-color:#2E8DC6;
+    
+    
+    }
+    .footer-contenedor .mitad-1{
+    display: flex;
+    width: 49.71%;
+    height: 100%;
+    
+    
+    }
+    .mitad-1 .container-gps{
+    display: flex;
+    width: 20%;
+    height: 100%;
+    
+    margin-left: 5%;
+    
+    }
+    .container-gps .put-gps{
+    display: flex;
+    width: 100%;
+    height: 80%;
+    
+    align-self: flex-end;
+    margin-bottom: 7%;
+    
+    
+    }
+    .put-gps:hover{
+        animation: shake 0.82s cubic-bezier(.36,.07,.19,.97) both;
+        transform: translate3d(0, 0, 0);
+        backface-visibility: hidden;
+        perspective: 100vh;
+    
+    
+    }
+    .put-gps .imagen{
+    width: 100%;
+    height: 100%;
+    
+    
+    }
+    .mitad-1 .container-text{
+        display: flex;
+        flex-direction: column-reverse;
+    width: 45%;
+    height: 100%;
+    
+    }
+    .container-text .internal-text{
+    display: flex;
+    width: 100%;
+    height: 25%;
+    
+    
+    align-items: center;
+    justify-content: flex-end;
+    font-family: hatton;
+    font-size: 3vh;
+    color: white;
+    }
+    .container-text .internal-text1{
+        display: flex;
+        width: 100%;
+        height: 25%;
+       
+     
+        align-items: center;
+        justify-content: center;
+        font-family: hatton;
+    font-size: 4vh;
+    color: white;
+        }
+        .container-text .internal-text2{
+            display: flex;
+            width: 100%;
+            height: 25%;
+            
+           
+            align-items: center;
+            font-family: hatton;
+    font-size: 3vh;
+    color: white;
+            }
+            .mitad-1 .sedes{
+                display: flex;
+                flex-direction: column;
+               
+                align-self: flex-end;
+    width: 30%;
+    height: 50%;
+            }
+            .sedes .part{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+    text-align: center;
+    width: 100%;
+    height: 50%;
+    
+    color: white;
+    font-family: hatton;
+    font-size: 1.9vh;
+    
+            }
+            .sedes .part-2{
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                text-align: center;
+                justify-content: flex-start;
+                width: 100%;
+                height: 50%;
+             
+                color: white;
+    font-family: hatton;
+    font-size: 1.9vh;
+    padding-top: 3%;
+                
+                        }
+            .sedes .linea-2{
+    width: 80%;
+    height: 8%;
+    background-color: white;
+    
+    
+            }
+    .footer-contenedor .linea{
+    width: 0.5%;
+    height: 60%;
+    background-color: white;
+    align-self: flex-end;
+    margin-bottom: 1.5%;
+    
+    }
+    .footer-contenedor .mitad-2{
+        display: flex;
+    width: 49.70%;
+    height: 100%;
+    
+    
+    }
+    .mitad-2 .container-blackberry{
+    display: flex;
+    width: 22%;
+    height: 100%;
+    
+    margin-left: 1%;
+    align-items: center;
+    }
+    .container-blackberry .put-phone{
+    display: flex;
+    width: 100%;
+    height: 90%;
+    
+    
+    
+    
+    }
+    .put-phone:hover{
+        animation: shake 0.82s cubic-bezier(.36,.07,.19,.97) both;
+        transform: translate3d(0, 0, 0);
+        backface-visibility: hidden;
+        perspective: 100vh;
+    
+    }
+    @keyframes shake {
+        10%, 90% {
+          transform: translate3d(-1px, 0, 0);
+        }
+        
+        20%, 80% {
+          transform: translate3d(2px, 0, 0);
+        }
+      
+        30%, 50%, 70% {
+          transform: translate3d(-4px, 0, 0);
+        }
+      
+        40%, 60% {
+          transform: translate3d(4px, 0, 0);
+        }
+      }
+    
+    .put-phone .imy{
+    width: 100%;
+    height: 100%;
+    
+    
+    }
+    .mitad-2 .comms-container{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    width: 45%;
+    height: 100%;
+    
+    
+    
+    }
+    .comms-container .comms-content{
+    display: flex;
+    width: 95%;
+    height: 60%;
+    
+    font-size: 3vh;
+    font-family: hatton;
+    color: white;
+    
+    
+    }
+    .mitad-2 .container-numeros{
+        display: flex;
+        flex-direction: column;
+    width: 34%;
+    height: 50%;
+    
+    align-self: flex-end;
+    }
+    .container-numeros .divi-1{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+    font-size: 3vh;
+    font-family: hatton;
+    color: white;
+    width: 100%;
+    height: 50%;
+    
+    
+    
+    }
+    .divi-1 .linea-3{
+    width: 80%;
+    height: 8%;
+    background-color: white;
+    
+    
+    }
+    .container-numeros .divi-2{
+    display: flex;
+    justify-content: center;
+    padding-top: 3%;
+    font-size: 3vh;
+    font-family: hatton;
+    color: white;
+    width: 100%;
+    height: 50%;
+    
+    
+    
+    }
+    @media(orientation:portrait){
+        .contenedor-header{
+            display: flex;
+            justify-content: center;
+            width: 100%;
+            height: 15vh;
+            background-color: #FF914D;
+            
+            }
+            .contenedor-header .content{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 50%;
+            height: 100%;
+            
+            
+            }
+            .content .logo{
+            width: 80%;
+            height: 60%;
+            
+            
+            }
+            .middle-contenedor{
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+            height: 60vh;
+            background-color: #FF914D;
+            
+            }
+            .middle-contenedor .middle-row{
+            display: flex;
+            width: 100%;
+            height: 33.33%;
+            
+            
+            }
+            .middle-row .txt-1{
+            display: flex;
+            text-align: start;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            font-size: 3vh;
+            width: 45%;
+            height: 100%;
+            
+            margin-left: 5%;
+            
+            }
+            .middle-row .contenedor-huellas{
+            display: flex;
+            width: 20%;
+            height: 20%;
+            
+            align-self: flex-end;
+            background-image: url(../img/huellas.png);
+            background-position: center;
+            background-size: contain;
+            
+            }
+            .middle-contenedor .middle-row2{
+                display: flex;
+                justify-content: center;
+                width: 100%;
+                height: 33.33%;
+              
+                
+                }
+                .middle-row2 .central-txt{
+            display: flex;
+            text-align: center;
+            align-items: center;
+            justify-content: center;
+            font-family: hatton;
+            font-size: 6vh;
+            color: white;
+            width: 50%;
+            height: 100%;
+            
+            
+            
+                }
+                .middle-contenedor .middle-row3{
+                    display: flex;
+                    flex-direction: row-reverse;
+                    width: 100%;
+                    height: 33.33%;
+                    
+                    
+                    }
+                    .middle-row3 .txt-3{
+            display: flex;
+            text-align: start;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            font-size: 3vh;
+            width: 45%;
+            height: 100%;
+            
+            margin-right: 5%;
+            
+            
+                    }
+                    .middle-row3 .contenedor-mascotas{
+            display: flex;
+            align-self: flex-end;
+            width: 47%;
+            height: 40%;
+            
+         
+            
+                    }
+                    .contenedor-mascotas .mascotas{
+                        
+                        position: relative;
+                        top: 32.2%;
+            width: 100%;
+            height: 85%;
+            
+            
+                    }
+            
+            .footer-contenedor{
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+            height: 25vh;
+            background-color:#2E8DC6;
+            
+            
+            }
+            .footer-contenedor .mitad-1{
+            display: flex;
+            width: 100%;
+            height: 50%;
+            
+            
+            }
+            .mitad-1 .container-gps{
+            display: flex;
+            width: 20%;
+            height: 100%;
+           
+            margin-left: 2%;
+            
+            }
+            .container-gps .put-gps{
+            display: flex;
+            width: 100%;
+            height: 80%;
+            
+            align-self: flex-end;
+            margin-bottom: 7%;
+            
+            
+            }
+            .put-gps:hover{
+                animation: shake 0.82s cubic-bezier(.36,.07,.19,.97) both;
+                transform: translate3d(0, 0, 0);
+                backface-visibility: hidden;
+                perspective: 100vh;
+            
+            
+            }
+            .put-gps .imagen{
+            width: 100%;
+            height: 100%;
+            
+            
+            }
+            .mitad-1 .container-text{
+                display: flex;
+                flex-direction: column-reverse;
+            width: 45%;
+            height: 100%;
+            
+            }
+            .container-text .internal-text{
+            display: flex;
+            width: 100%;
+            height: 25%;
+            
+            
+            align-items: center;
+            justify-content: flex-end;
+            font-family: hatton;
+            font-size: 1.8vh;
+            color: white;
+            }
+            .container-text .internal-text1{
+                display: flex;
+                width: 100%;
+                height: 25%;
+               
+             
+                align-items: center;
+                justify-content: center;
+                font-family: hatton;
+            font-size: 2vh;
+            color: white;
+                }
+                .container-text .internal-text2{
+                    display: flex;
+                    width: 100%;
+                    height: 25%;
+                    
+                   
+                    align-items: center;
+                    font-family: hatton;
+            font-size: 1.8vh;
+            color: white;
+                    }
+                    .mitad-1 .sedes{
+                        display: flex;
+                        flex-direction: column;
+                       
+                        align-self: center;
+            width: 30%;
+            height: 50%;
+                    }
+                    .sedes .part{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: flex-end;
+            width: 100%;
+            height: 50%;
+            
+            color: white;
+            font-family: hatton;
+            font-size: 1vh;
+            
+                    }
+                    .sedes .part-2{
+                        display: flex;
+                        flex-direction: column;
+                        align-items: center;
+                        justify-content: flex-start;
+                        width: 100%;
+                        height: 50%;
+                     
+                        color: white;
+            font-family: hatton;
+            font-size: 1vh;
+            padding-top: 3%;
+                        
+                                }
+                    .sedes .linea-2{
+            width: 80%;
+            height: 5%;
+            background-color: white;
+            
+            
+                    }
+            .footer-contenedor .linea{
+            width: 90%;
+            height: 2%;
+            background-color: white;
+            align-self: flex-end;
+            margin-bottom: 0%;
+            margin-right: 5%;
+            }
+            .footer-contenedor .mitad-2{
+                display: flex;
+            width: 100%;
+            height: 50%;
+          
+            
+            }
+            .mitad-2 .container-blackberry{
+            display: flex;
+            width: 22%;
+            height: 100%;
+            
+            margin-left: 1%;
+            align-items: center;
+            }
+            .container-blackberry .put-phone{
+            display: flex;
+            width: 100%;
+            height: 90%;
+            
+            
+            
+            
+            }
+            .put-phone:hover{
+                animation: shake 0.82s cubic-bezier(.36,.07,.19,.97) both;
+                transform: translate3d(0, 0, 0);
+                backface-visibility: hidden;
+                perspective: 100vh;
+            
+            }
+            @keyframes shake {
+                10%, 90% {
+                  transform: translate3d(-1px, 0, 0);
+                }
+                
+                20%, 80% {
+                  transform: translate3d(2px, 0, 0);
+                }
+              
+                30%, 50%, 70% {
+                  transform: translate3d(-4px, 0, 0);
+                }
+              
+                40%, 60% {
+                  transform: translate3d(4px, 0, 0);
+                }
+              }
+            
+            .put-phone .imy{
+            width: 100%;
+            height: 100%;
+            
+            
+            }
+            .mitad-2 .comms-container{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            width: 45%;
+            height: 100%;
+          
+            
+            
+            }
+            .comms-container .comms-content{
+            display: flex;
+            width: 95%;
+            height: 90%;
+           
+            font-size: 1.8vh;
+            font-family: hatton;
+            color: white;
+            
+            
+            }
+            .mitad-2 .container-numeros{
+                display: flex;
+                flex-direction: column;
+                background-color: #2E8DC6;
+            width: 34%;
+            height: 50%;
+           
+            align-self: center;
+            }
+            .container-numeros .divi-1{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: flex-end;
+            font-size: 1.8vh;
+            font-family: hatton;
+            color: white;
+            width: 100%;
+            height: 50%;
+            
+            
+            
+            }
+            .divi-1 .linea-3{
+            width: 80%;
+            height: 8%;
+            background-color: white;
+            
+            
+            }
+            .container-numeros .divi-2{
+            display: flex;
+            justify-content: center;
+            padding-top: 3%;
+            font-size: 1.8vh;
+            font-family: hatton;
+            color: white;
+            width: 100%;
+            height: 50%;
+            
+            
+            
+            }
+    
+    
+    
+    
+    }

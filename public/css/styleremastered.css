@@ -1,0 +1,443 @@
+body{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    
+    
+    }
+    
+    @font-face{
+        font-family:hatton;
+        src: url(../fonts/PP\ Hatton\ Medium\ 500.otf);
+               }
+    .contenedor_flex{
+    display: flex;
+    
+    width: 100%;
+    height: 20vh;
+    
+    
+    }
+    .contenedor_flex .contenedor_logo{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    width: 25%;
+    height: 100%;
+    
+    
+    }
+    
+    
+    
+    
+    
+    .contenedor_logo .perro{
+    width: 80%;
+    height: 80%;
+    
+    
+    
+    
+    }
+    .contenedor_flex .main_container_botones{
+    display:flex;
+    
+    justify-content: space-around;
+    width: 75%;
+    height: 100%;
+    
+    
+    
+    
+    
+    }
+    .main_container_botones .contedor_botones{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    width: 14%;
+    height: 100%;
+    
+    
+    
+    }
+    .contedor_botones .put_botones{
+    width: 50%;
+    height: 45%;
+    
+    margin-bottom: 1.2vh;
+    transition: 0.5s;
+    
+    
+    
+    }
+    .put_botones:hover{
+        
+      padding: 1vh;
+    border: 1vh solid #278FCE;
+    
+    
+    }
+    .put_botones .tamaño{
+    width: 100%;
+    height: 100%;
+    filter: brightness(1.1);
+    mix-blend-mode: multiply;
+    }
+    .contedor_botones .indices{
+    text-decoration: none;
+    font-size: 2vh;
+    color: #d9862c;
+    font-family:hatton ;
+    
+    
+    
+    }
+    .indices:hover{
+       
+    text-decoration: underline;
+    color: #278FCE;
+    
+    
+    }
+    
+    .middle_contenedor{
+    
+        display: flex;
+           
+            
+        width: 100%;
+        height: 60vh;
+    
+    
+    
+    } .middle_contenedor .primera_mitad{
+        display: flex;
+        flex-direction: column;
+    width: 53%;
+    height: 100%;
+    
+    
+    
+    }
+    
+    .primera_mitad .titulo{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-end;
+    width:100% ;
+    height: 55%;
+    color: #278FCE;
+    font-family: hatton;
+    font-size: 7vh;
+    
+    }
+    .primera_mitad .segunda_mitad{
+        display: flex;
+        justify-content: center;
+    width: 100%;
+    height: 45%;
+    
+    align-items: center;
+    
+    }
+    .segunda_mitad .boton_mascotas{
+        display: flex;
+    background-color: #F2A154;
+    width: 33%;
+    height: 36%;
+    align-items: center;
+    
+    text-decoration: none;
+    margin-right: 25%;
+    margin-bottom: 5%;
+    box-shadow: 1vh 2vh 0.9vh 0.2vh rgba(0,0,0,0.94);
+    border: none;
+    color: white;
+    font-family: hatton;
+    
+    font-size: 2.5vh;
+    transition: 0.5s;
+    
+    }
+    .boton_mascotas:hover{
+       
+    background-color: rgb(245, 131, 24);
+    color: #278FCE;
+    border-radius: 8vh;
+    
+    }
+    #masc{
+    margin-left: 8%;
+    
+    }
+    
+    
+    
+    .middle_contenedor .mitad_perro{
+    width: 47%;
+    height: 100%;
+    
+    
+    
+    }
+    .mitad_perro .dog{
+    width: 100%;
+    height: 100%;
+    
+    
+    }
+    .complete{
+        display: flex;
+    width: 100%;
+    flex-direction: column;
+    height: 20vh;
+    background-color: #268ECD;
+    
+    }
+    .complete .almacenar_redes{
+    display: flex;
+    
+    justify-content: center;
+    align-items: center;
+    width: 20%;
+    height: 10vh;
+    background-color: #268ECD;
+    
+    
+    }
+    .almacenar_redes .put_red{
+        display: flex;
+        justify-content: center;
+        
+    width: 20%;
+    height: 65%;
+    
+    margin-left: 1vh;
+    transition: 1s;
+    
+    }
+    .put_red:hover{
+        
+    
+    transform: rotate(360deg);
+    
+    
+    }
+    .put_red .cti{
+    width: 100%;
+    height: 100%;
+    
+    }
+    .contenedor_copy{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 10vh;
+    background-color: #268ECD;
+    justify-content: end;
+    align-items: center;
+    color:white;
+    font-size: 2vh;
+    }
+    @media (orientation:portrait){
+        .contenedor_flex{
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+            height: 20vh;
+            justify-content: center;
+            align-items: center;
+            
+            }
+            .contenedor_flex .contenedor_logo{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    width: 35%;
+    height: 55%;
+    
+    
+    }
+    .contenedor_logo .perro{
+        width: 100%;
+        height: 80%;
+        
+        
+        
+        
+        }
+    .contenedor_flex .main_container_botones{
+        display:flex;
+        
+        justify-content: space-around;
+        width: 85%;
+        height: 45%;
+        
+        
+        
+        
+        
+        }
+            .contedor_botones .indices{
+                text-decoration: none;
+                font-size: 1vh;
+                color: #d9862c;
+                font-family:hatton ;
+                
+                
+                
+                }
+                .indices:hover{
+       
+                    text-decoration: underline;
+                    color: #278FCE;
+                    
+                    
+                    }
+                .middle_contenedor{
+    
+                    display: flex;
+                       
+                        flex-direction: column;
+                    width: 100%;
+                    height: 60vh;
+                
+                
+                
+                }
+                
+                .middle_contenedor .primera_mitad{
+                    display: flex;
+                    flex-direction: column;
+                width: 100%;
+                height: 100%;
+                
+                background-image: url(../img/perro.jpeg);
+                background-position: center;
+                background-size: cover;
+                background-repeat:no-repeat;
+                
+    
+            }
+            .primera_mitad .titulo{
+                display: flex;
+                flex-direction: column;
+               justify-content: flex-start;
+                margin-top: 20%;
+                text-align: center;
+            width:100% ;
+            height: 55%;
+            color: #268ECD;
+            font-family: hatton;
+            font-size: 4vh;
+            
+            }
+            .primera_mitad .segunda_mitad{
+                display: flex;
+                flex-direction: column;
+                justify-content: start;
+            width: 100%;
+            height: 45%;
+            
+    
+            align-items: center;
+            
+            }
+            .segunda_mitad .boton_mascotas{
+                display: flex;
+            background-color: #F2A154;
+            width: 33%;
+            height: 36%;
+            align-items: center;
+            justify-content: center;
+            text-decoration: none;
+            margin-left: 25%;
+            margin-bottom: 5%;
+            box-shadow: 1vh 2vh 0.9vh 0.2vh rgba(0,0,0,0.94);
+            border: none;
+            color: white;
+            font-family: hatton;
+            
+            font-size: 1.5vh;
+            
+            
+            }
+            .boton_mascotas:hover{
+                transition: 0.5s;
+             background-color: rgb(245, 131, 24);
+             color: #278FCE;
+             border-radius: 8vh;
+             
+             }
+            .middle_contenedor .mitad_perro{
+                display: none;
+                width: 47%;
+                height: 30%;
+                
+                
+                
+                }
+    
+                .complete{
+                    display: flex;
+                width: 100%;
+                flex-direction: column;
+               align-items: center;
+                height: 20vh;
+                background-color: #268ECD;
+                
+                }
+                .complete .almacenar_redes{
+                display: flex;
+                
+                justify-content: center;
+                align-items: center;
+                width: 50%;
+                height: 10vh;
+               
+                
+                
+                }
+                .almacenar_redes .put_red{
+                    display: flex;
+                    justify-content: center;
+                    
+                width: 20%;
+                height: 60%;
+                
+                margin-left: 1vh;
+                
+                
+                }
+                .put_red:hover{
+                    transition: 1s;
+                
+                transform: rotate(360deg);
+                
+                
+                }
+                .put_red .cti{
+                width: 100%;
+                height: 100%;
+                
+                }
+                .contenedor_copy{
+                display: flex;
+                flex-direction: column;
+                width: 100%;
+                height: 10vh;
+                background-color: #268ECD;
+                justify-content: end;
+                align-items: center;
+                color:white;
+                font-size: 1.2vh;
+                }
+                
+    
+    }
+    

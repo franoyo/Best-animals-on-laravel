@@ -1,0 +1,363 @@
+body{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    
+    
+    }
+    @font-face{
+        font-family:hatton;
+        src: url(../fonts/PP\ Hatton\ Medium\ 500.otf);
+               }
+    .contenedor1{
+        display: flex;
+    width: 100%;
+    height: 20vh;
+    
+    align-items: center;
+    
+    
+    }
+    .contenido
+    {
+        display: flex;
+    width: 20%;
+    height:100% ;
+    
+    justify-content: center;
+    align-items: center;
+    margin-left: 4.1%;
+    
+    
+    
+    }
+    .contenido .nav_logo .img_logo{
+        width: 100%;
+        height: 80%;
+      
+    
+    
+    }
+    .middle_contenedor{
+        display: flex;
+    width: 100%;
+    height: 70vh;
+    
+    
+    }
+    .middle_contenedor .contenido1{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 55%;
+    height: 100%;
+    
+    
+    
+    }
+    .contenido1 .titulo{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 85%;
+    height: 20%;
+    
+    
+    
+    }
+    .titulo .main_tittle{
+        font-family:hatton;font-size: 8vh;
+     
+    
+        text-decoration: none;
+        color: #2e8dc6;
+    
+    
+    
+    }
+    .contenido1 .texto{
+        display: flex;
+    width: 85%;
+    height: 100%;
+    
+    
+    }
+    .texto .description{
+        font-family:hatton;font-size: 3vh;
+     font-weight:600;
+    margin-top: 10%;
+       
+    
+    
+    
+    }
+    .middle_contenedor .contenido2{
+        display: flex;
+       flex-direction: column;
+        width: 45%;
+        height: 100%;
+      
+        
+        
+        }
+        .contenido2 .icono{
+            display: flex;
+            width: 100%;
+            height: 50%;
+            
+         
+    
+    
+        }
+        .contenido2 .icono_general{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            width: 50%;
+            height: 100%;
+           
+           
+    
+    
+        }
+        .icono_general .ceta{
+    display: flex;
+    justify-content: center;
+    
+    width: 60%;
+    height: 50%;
+    
+    
+        }
+        .icono_general .size_images{
+    width: 100%;
+    height: 100%;
+    transition: 1s;
+    
+        }
+        .size_images:hover{
+            
+    transform: rotate(360deg);
+    
+    
+    
+        }
+        
+        .icono_general .letter{
+           font-family:hatton;font-size: 3vh;
+    
+    text-decoration: none;
+    
+    color: #2e8dc6;
+    transition: 0.8s;
+    
+        }
+        .letter:hover{
+            
+         
+    background-color: orange;
+    padding: 1vh;
+    border-radius: 10vh;
+    
+        }
+    
+    
+    
+    
+        .pie{
+            display: flex;
+            flex-direction: column;
+    width: 100%;
+    height: 10vh;
+    font-size: 2vh;
+    background-color: #2e8dc6;
+    justify-content: end;
+    align-items: center;
+    
+        }
+        @media(orientation:portrait){
+            .contenedor1{
+                display: flex;
+            width: 100%;
+            height: 20vh;
+            justify-content: center;
+            align-items: center;
+            
+            
+            
+            }
+            .contenedor1 .contenido
+            {
+                display: flex;
+              
+               
+            width: 40%;
+            height:50%;
+            
+            justify-content: center;
+            align-items: center;
+            position: relative;
+            right: 1.0vh;
+            
+            
+            
+            
+            
+            }
+            .contenedor1 .contenido .nav_logo .img_logo{
+                width: 100%;
+                height: 80%;
+              
+            
+            
+            }
+            .middle_contenedor{
+                display: flex;
+                flex-direction: column;
+            width: 100%;
+            height: 70vh;
+            
+            
+            }
+            .middle_contenedor .contenido1{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 100%;
+            height: 55%;
+            
+            
+            
+            
+            }
+            .contenido1 .titulo{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            text-align: center;
+            align-items: center;
+         
+            width: 100%;
+            height: 20%;
+            
+            
+            
+            }
+            .titulo .main_tittle{
+                font-family:hatton;font-size: 5vh;
+             
+            
+                text-decoration: none;
+                color: #2e8dc6;
+            
+            
+            
+            }
+            .contenido1 .texto{
+                display: flex;
+            width: 85%;
+            height: 100%;
+           
+            
+            
+            }
+            .texto .description{
+                font-family:hatton;font-size: 2vh;
+             font-weight:600;
+            margin-top: 10%;
+               
+            
+            
+            
+            }
+            .middle_contenedor .contenido2{
+                display: flex;
+               flex-direction: column;
+               flex-wrap: wrap;
+                width: 100%;
+                height: 40%;
+                
+              
+                
+                
+                }
+                .contenido2 .icono{
+                    display: flex;
+                    width: 100%;
+                    height: 50%;
+                    
+                 
+            
+            
+                }
+                .contenido2 .icono_general{
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    align-items: center;
+                    width: 50%;
+                    height: 100%;
+                   
+                   
+            
+            
+                }
+                .icono_general .ceta{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 40%;
+            height: 60%;
+            
+            
+                }
+                .icono_general .size_images{
+            width: 100%;
+            height: 100%;
+            
+            
+                }
+                .size_images:hover{
+                    transition: 1s;
+            transform: rotate(360deg);
+            
+            
+            
+                }
+                
+                .icono_general .letter{
+                   font-family:hatton;font-size: 1.5vh;
+            
+            text-decoration: none;
+            
+            color: #2e8dc6;
+            
+            
+                }
+                .letter:hover{
+                    transition: 1s;
+                 
+            background-color: orange;
+            border-radius: 10vh;
+            
+                }
+            
+            
+            
+            
+                .pie{
+                    display: flex;
+                    flex-direction: column;
+            width: 100%;
+            height: 10vh;
+            font-size: 2vh;
+            background-color: #2e8dc6;
+            justify-content: end;
+            align-items: center;
+            text-align: center;
+    
+    
+        }
+    }
+    

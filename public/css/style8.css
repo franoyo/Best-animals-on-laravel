@@ -1,0 +1,336 @@
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+
+}
+
+@font-face {
+    font-family: hatton;
+    src: url(../fonts/PP\ Hatton\ Medium\ 500.otf);
+}
+
+.contenedor1 {
+    display: flex;
+    width: 100%;
+    height: 20vh;
+
+    align-items: center;
+
+
+}
+
+.contenido {
+    display: flex;
+    width: 20%;
+    height: 100%;
+
+    justify-content: center;
+    align-items: center;
+    margin-left: 4.1%;
+
+
+
+}
+
+.contenido .nav_logo .img_logo {
+    width: 100%;
+    height: 80%;
+
+
+
+}
+
+.contenedor2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 30vh;
+    border-radius: 30px;
+    background-color: #278fce;
+    background-image: url(../img/burbu.png);
+    background-size: contain;
+
+}
+
+.contenedor2 .content {
+    display: flex;
+}
+
+.content .tittle {
+    font-family: hatton;
+    font-size: 10vh;
+    color: #d9862c;
+}
+
+.bubbles {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 50vh;
+
+}
+
+.bubbles .burbus {
+    display: flex;
+    width: 15%;
+    height: 100%;
+
+    align-items: center;
+}
+
+.burbus .burbus1 {
+    width: 100%;
+    height: 80%;
+
+}
+
+.bubbles .mensaje {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 45%;
+    height: 100%;
+
+}
+
+.mensaje .titulo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 80%;
+    height: 20%;
+
+
+
+}
+
+.titulo .mayus {
+
+    right: 200px;
+    font-family: hatton;
+    font-size: 5vh;
+    color: #278fce;
+
+}
+
+.mensaje .texts {
+    display: flex;
+    width: 80%;
+    height: 100%;
+
+
+    align-items: center;
+
+}
+
+.texts .desc {
+    font-family: hatton;
+    font-size: 4vh;
+    margin-bottom: 110px;
+
+}
+
+.bubbles .espacio {
+    display: flex;
+    width: 5%;
+    height: 100%;
+
+}
+
+.bubbles .contdog {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 35%;
+    height: 100%;
+
+
+}
+
+.contdog .perro {
+    width: 95%;
+    height: 80%;
+    margin-right: 150px;
+}
+
+@media(orientation:portrait) {
+    .contenedor1 {
+        display: flex;
+        width: 100%;
+        height: 20vh;
+
+        align-items: center;
+        justify-content: center;
+
+
+    }
+
+    .contenedor1 .contenido {
+        display: flex;
+        width: 50%;
+        height: 70%;
+
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        right: 1.6vh;
+
+
+    }
+
+    .contenido .nav_logo .img_logo {
+        width: 100%;
+        height: 80%;
+
+
+
+    }
+
+    .contenedor2 {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: 30vh;
+        border-radius: 30px;
+        background-color: #278fce;
+        background-image: url(../img/burbu.png);
+        background-size: contain;
+
+    }
+
+    .contenedor2 .content {
+        display: flex;
+    }
+
+    .content .tittle {
+        font-family: hatton;
+        text-align: center;
+        font-size: 6vh;
+
+    }
+
+    .bubbles {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+       
+        width: 100%;
+        height: 50vh;
+      
+    }
+
+    .bubbles .burbus {
+        display: flex;
+        width: 15%;
+        height: 100%;
+
+
+        align-items: center;
+    }
+
+    .burbus .burbus1 {
+        display: flex;
+        width: 100%;
+        height: 100%;
+
+    }
+
+    .bubbles .mensaje {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        height: 50%;
+
+
+    }
+
+    .mensaje .titulo {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+
+
+
+        width: 100%;
+        height: 20%;
+
+
+
+    }
+
+    .titulo .mayus {
+
+
+        font-family: hatton;
+        font-size: 4vh;
+        color: #278fce;
+
+    }
+
+    .mensaje .texts {
+        display: flex;
+        width: 80%;
+        height: 100%;
+
+
+        align-items: center;
+
+    }
+
+    .texts .desc {
+
+        font-family: hatton;
+        font-size: 2.0vh;
+position: relative;
+top: 2vh;
+
+    }
+
+    .bubbles .espacio {
+        display: none;
+        width: 5%;
+        height: 100%;
+
+
+    }
+
+    .bubbles .contdog {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-self: center;
+
+        width: 100%;
+        height: 100%;
+
+
+
+    }
+
+    .contdog .perro {
+
+        width: 45%;
+        height: 100%;
+position: relative;
+bottom: 3vh;
+        margin-left: 17vh;
+    }
+
+
+
+
+
+
+
+
+
+
+}

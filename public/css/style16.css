@@ -1,0 +1,424 @@
+body{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    
+    
+    }
+    @font-face{
+        font-family:hatton;
+        src: url(../fonts/PP\ Hatton\ Medium\ 500.otf);
+               }
+    .general-container{
+        display: flex;
+        flex-direction: column;
+    width: 100%;
+    height: 100vh;
+    
+    
+    
+    
+    } 
+    .general-container  .contenedor1{
+        display: flex;
+    width: 100%;
+    height: 20vh;
+    
+    align-items: center;
+    
+    
+    }
+    .contenedor1 .contenido
+    {
+        display: flex;
+    width: 20%;
+    height:100% ;
+    
+    justify-content: center;
+    align-items: center;
+    margin-left: 4.1%;
+    
+    
+    
+    }
+    .contenido .nav_logo .img_logo{
+        width: 100%;
+        height: 80%;
+      
+    
+    
+    }
+    .contenedor2{
+        display: flex;
+      justify-content: center;
+        width: 100%;
+        height: 30vh;
+        border-radius: 30px;
+        background-color: #278fce;
+     background-image: url(../img/—Pngtree—fluffy\ realistic\ clouds_8626302.png);
+    background-size: contain;
+    }
+    
+    
+    
+    .contenedor2 .contletras{
+        display: flex;
+    
+       flex-direction: column;
+       align-items: center;
+    
+       
+        width: 70%;
+        height: 100%;
+       
+       
+    
+    }
+    
+    
+    .contletras .mitad-title{
+    display: flex;
+    
+    width: 100%;
+    height: 50%;
+    
+    font-family:hatton ;
+    font-size: 6vh;
+    color: #d9862c;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    }
+    .contletras .cont-img{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 15%;
+    height: 40%;
+    
+    margin-top: 1.5%;
+    
+    
+    
+    }
+    .cont-img .avi{
+    width: 100%;
+    height: 100%;
+    
+    
+    }
+    .general-container .subtitle-contenedor{
+    display: flex;
+    width: 100%;
+    height: 10%;
+    
+    
+    
+    }
+    .subtitle-contenedor .contenido-subtitulo{
+        display: flex;
+        font-family: hatton;
+      align-items: center;
+      
+        color: #278fce;
+    font-size: 4vh;
+    margin-left: 7%;
+    
+    
+    }
+    .general-container .container-after-subti{
+    display:flex ;
+    width: 100%;
+    height:40%;
+    
+    
+    
+    }
+    .container-after-subti .mitad-texto{
+        display: flex;
+    width: 65%;
+    height: 100%;
+    
+    justify-content: center;
+    
+    }
+    .mitad-texto .put-text{
+        display: flex;
+    width: 88.5%;
+    height: 85%;
+    margin-left: 10%;
+    
+    align-items: center;
+    justify-content: center;
+    font-size: 3.5vh;
+    font-family: hatton;
+    
+    
+    }
+    .container-after-subti .mitad-image{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+    width: 35%;
+    height: 100%;
+    
+    
+    
+    }
+    .mitad-image .cont-link{
+    
+    width: 50%;
+    height: 80%;
+    margin-bottom: 2%;
+    }
+    .cont-link:hover {
+        animation: shake 0.82s cubic-bezier(.36,.07,.19,.97) both;
+        transform: translate3d(0, 0, 0);
+        backface-visibility: hidden;
+        perspective: 1000px;
+      }
+      @keyframes shake {
+        10%, 90% {
+          transform: translate3d(-1px, 0, 0);
+        }
+        
+        20%, 80% {
+          transform: translate3d(2px, 0, 0);
+        }
+      
+        30%, 50%, 70% {
+          transform: translate3d(-4px, 0, 0);
+        }
+      
+        40%, 60% {
+          transform: translate3d(4px, 0, 0);
+        }
+      }
+    
+    .cont-link .form-img{
+    width: 100%;
+    height: 100%;
+    
+    
+    }
+    .mitad-image .description{
+    color: #d9862c;
+    text-decoration: none;
+    font-size: 2.2vh;
+    font-family: hatton;
+    transition: 0.5s;
+    }
+    .description:hover{
+    padding: 1vh;
+    background-color: #278fce;
+    border-radius: 4vh;
+    
+    }
+    @media(max-width:1200px){
+        .mitad-texto .put-text{
+            display: flex;
+        width: 88.5%;
+        height: 85%;
+        margin-left: 10%;
+       
+        align-items: center;
+        justify-content: center;
+        font-size: 2.5vh;
+        font-family: hatton;
+        
+        
+        }
+        
+    
+    
+    }
+    @media(orientation:portrait){
+        .general-container{
+            display: flex;
+            flex-direction: column;
+        width: 100%;
+        height: 100vh;
+        
+        
+        
+        
+        } 
+        .general-container  .contenedor1{
+            display: flex;
+        width: 100%;
+        height: 20vh;
+        
+        align-items: center;
+        justify-content: center;
+        
+        }
+        .contenedor1 .contenido
+        {
+            display: flex;
+        width: 50%;
+        height:50% ;
+     
+        justify-content: center;
+        align-items: center;
+        margin-left: 0%;
+        
+        
+        
+        }
+        .contenido .nav_logo .img_logo{
+            width: 100%;
+            height: 80%;
+          
+        
+        
+        }
+        .contenedor2{
+            display: flex;
+          justify-content: center;
+            width: 100%;
+            height: 30vh;
+            border-radius: 30px;
+            background-color: #278fce;
+         
+          
+        }
+        
+        
+        
+        .contenedor2 .contletras{
+            display: flex;
+        
+           flex-direction: column;
+           align-items: center;
+        
+           
+            width: 70%;
+            height: 100%;
+           
+           
+        
+        }
+        
+        
+        .contletras .mitad-title{
+        display: flex;
+        
+        width: 100%;
+        height: 50%;
+        
+        font-family:hatton ;
+        font-size: 5vh;
+        color: #d9862c;
+        justify-content: center;
+        text-align: center;
+        align-items: center;
+        }
+        .contletras .cont-img{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 40%;
+        height: 40%;
+    
+        margin-top: 1.5%;
+        
+        
+        
+        }
+        .cont-img .avi{
+        width: 100%;
+        height: 100%;
+        
+        
+        }
+        .general-container .subtitle-contenedor{
+        display: flex;
+        width: 100%;
+        height: 10%;
+        
+        
+        
+        }
+        .subtitle-contenedor .contenido-subtitulo{
+            display: flex;
+            font-family: hatton;
+          align-items: center;
+           
+            color: #278fce;
+        font-size: 2vh;
+        margin-left: 7%;
+        
+        
+        }
+        .general-container .container-after-subti{
+        display:flex ;
+        width: 100%;
+        height:40%;
+        
+        
+        
+        }
+        .container-after-subti .mitad-texto{
+            display: flex;
+        width: 65%;
+        height: 100%;
+    
+        justify-content: center;
+        
+        }
+        .mitad-texto .put-text{
+            display: flex;
+        width: 88.5%;
+        height: 95%;
+        margin-left: 10%;
+        
+        align-items: center;
+        justify-content: center;
+        font-size: 2vh;
+        font-family: hatton;
+        
+        
+        }
+        .container-after-subti .mitad-image{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        
+        width: 35%;
+        height: 100%;
+       
+        
+        }
+        .mitad-image .cont-link{
+       
+        width: 80%;
+        height: 60%;
+        margin-bottom: 2%;
+        }
+        
+        .cont-link .form-img{
+        width: 100%;
+        height: 100%;
+        
+        
+        }
+        .mitad-image .description{
+        color: #d9862c;
+        text-align: center;
+        text-decoration: none;
+        font-size: 1.5vh;
+        font-family: hatton;
+        transition: 0.5s;
+        }
+        .description:hover{
+        padding: 1vh;
+        background-color: #278fce;
+        border-radius: 4vh;
+        
+        }
+    
+    
+    
+    }

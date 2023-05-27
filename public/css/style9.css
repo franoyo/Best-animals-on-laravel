@@ -1,0 +1,326 @@
+body{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    
+    
+    }
+    @font-face{
+        font-family:hatton;
+        src: url(../fonts/PP\ Hatton\ Medium\ 500.otf);
+               }
+ 
+    .contenedor1{
+        display: flex;
+    width: 100%;
+    height: 20vh;
+    
+    align-items: center;
+    
+    
+    }
+    .contenido
+    {
+        display: flex;
+    width: 20%;
+    height:100% ;
+    
+    justify-content: center;
+    align-items: center;
+    margin-left: 4.1%;
+    
+    
+    
+    }
+    .contenido .nav_logo .img_logo{
+        width: 100%;
+        height: 80%;
+      
+    
+    
+    }
+    .contenedor2{
+        display: flex;
+      
+        width: 100%;
+        height: 30vh;
+        border-radius: 30px;
+        background-color: #278fce;
+     
+      
+    }
+
+    .contenedor2 .contf{
+display: flex;
+flex-direction: column;
+width: 20%;
+height: 100%;
+
+justify-content: center;
+
+
+    }
+    .contf .huellas{
+display: flex;
+width: 100%;
+height: 25%;
+background-color: #278fce;
+background-image: url(../img/huellas.png);
+background-size: contain;
+
+    }
+
+    .contenedor2 .contletras{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 60%;
+        height: 100%;
+       
+
+    }
+    .contletras .maintitle{
+        font-family:hatton ;
+        font-size: 8vh;
+        color: #d9862c;
+
+    }
+    .espacio{
+display: flex;
+width: 100%;
+height: 8vh;
+
+
+
+    }
+    .contenedor3{
+display: flex;
+
+width: 100%;
+height: 42vh;
+
+
+    }
+    .contenedor3 .box1{
+        display: flex;
+        flex-direction: column;
+      
+        
+        width: 25%;
+        height: 100%;
+       
+        
+    }
+    .box1 .tituloo{
+display: flex;
+align-items: center;
+justify-content: center;
+width: 100%;
+height: 20%;
+
+
+    }
+    .tituloo .dentro{
+    
+        font-family:hatton ;
+        font-size: 4vh;
+        color: #278fce;
+      text-decoration: none;
+      transition: 1s;
+
+    }
+    .dentro:hover{
+background-color: orange;
+
+border-radius: 35px;
+
+    }
+    .box1 .contimages{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+width: 100%;
+height: 100%;
+
+
+
+    }
+    .contimages .photosurl{
+width: 90%;
+height: 70%;
+transition: 0.54s;
+box-shadow:10px 5px 5px  black;
+
+    }
+    .photosurl:hover{
+        
+    border:1vh solid #278fce;
+    }
+    .photosurl .kaw{
+width: 100%;
+height: 100%;
+
+    }
+    @media(orientation:portrait){
+        .contenedor1{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        width: 100%;
+        height: 20vh;
+ 
+        align-items: center;
+        
+        
+        }
+        .contenedor1 .contenido
+        {
+            display: flex;
+        width: 50%;
+        height:100% ;
+        
+        justify-content: center;
+        align-items: center;
+       
+        
+        
+        
+        }
+        .contenido .nav_logo .img_logo{
+            width: 100%;
+            height: 80%;
+          
+        
+        
+        }
+        .contenedor2{
+            display: flex;
+          
+            width: 100%;
+            height: 20vh;
+            border-radius: 30px;
+            background-color: #278fce;
+         
+          
+        }
+    
+        .contenedor2 .contf{
+    display: flex;
+    flex-direction: column;
+    width: 20%;
+    height: 100%;
+    
+    justify-content: center;
+    
+    
+        }
+        .contf .huellas{
+    display: flex;
+    width: 100%;
+    height: 25%;
+    background-color: #278fce;
+    background-image: url(../img/huellas.png);
+    background-size: contain;
+    
+        }
+    
+        .contenedor2 .contletras{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 60%;
+            height: 100%;
+           
+    
+        }
+        .contletras .maintitle{
+            font-family:hatton ;
+            font-size: 4vh;
+            color: #d9862c;
+            text-align: center;
+    
+        }
+        .espacio{
+    display: flex;
+    width: 100%;
+    height: 1vh;
+    
+    
+    
+        }
+        .contenedor3{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    
+    width: 100%;
+    height: 59vh;
+    
+    
+        }
+        .contenedor3 .box1{
+            display: flex;
+            flex-direction: column;
+          
+            
+            width: 40%;
+            height: 100%;
+           
+            
+        }
+        .box1 .tituloo{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 20%;
+    
+    
+        }
+        .tituloo .dentro{
+        
+            font-family:hatton ;
+            font-size: 1.5vh;
+            text-align: center;
+            color: #278fce;
+          text-decoration: none;
+    
+    
+        }
+        .dentro:hover{
+    background-color: orange;
+    transition: 1s;
+    border-radius: 35px;
+    
+        }
+        .box1 .contimages{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+    width: 100%;
+    height: 100%;
+    
+    
+    
+        }
+        .contimages .photosurl{
+    width: 90%;
+    height: 70%;
+    
+    box-shadow:10px 5px 5px  black;
+        }
+        .photosurl:hover{
+            transition: 0.54s;
+        border:7px solid #278fce;
+        }
+        .photosurl .kaw{
+    width: 100%;
+    height: 100%;
+    
+        }
+
+
+
+
+    }
