@@ -44,7 +44,7 @@
     <br>
     <input class="boton" id="iniciar_sesion" name="ingresar"  type="submit" value="iniciar sesion">
 </form>
-    <p class="not_account">¿No tiene cuenta? <a class="regist" href="registrarse.html">registrese aqui</a></p>
+    <p class="not_account">¿No tiene cuenta? <a class="regist" href="{{route('registro')}}">registrese aqui</a></p>
 <p class="not_account" >¿olvido su contraseña?<a class="coloru" href="">haga click aqui para recuperarla</a></p>
 
 

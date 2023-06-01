@@ -62,8 +62,23 @@ Route::get("/inicio", function(){
                                 return view("tienda");
                                 
                                 })->name('tienda');
-                                Route::get("/login", function(){
+                               
+                                    route::controller(LoginRegisterController::class)->group(function(){
+                                        Route::get("/login", function(){
 
-                                    return view("login");
+                                            return view("login");
+                                            
+                                            })->name('login');
+                                            Route::get("/register", function(){
+                                                return view("registrarse");
+                                                })->name('registro');
+                                                Route::post('/store', 'store')->name('store');
+                                                Route::post('/authenticate', 'authenticate')->name('authenticate');
+                                                Route::get('/dashboard', 'dashboard')->name('dashboard');
+                                                Route::post('/logout', 'logout')->name('logout');
+
+
+                                    });
+
+
                                     
-                                    })->name('login');

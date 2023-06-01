@@ -1,0 +1,283 @@
+body{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+
+}
+@font-face{
+    font-family:hatton;
+    src: url(../fonts/PP\ Hatton\ Medium\ 500.otf);
+           }
+.maincointainer1{
+    display: flex;
+    flex-direction: row;
+width: 100%;
+height: 90vh;
+
+
+
+
+}
+.contenido1{
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    height: 90vh;
+   
+
+    
+    }
+    .contenido1 .logo{
+
+        display: flex;
+
+align-items: center;
+        width: 100%;
+        height: 20vh;
+
+    }
+    .logo .logeishon{
+
+display: flex;
+        width: 34vh;
+        height: 15vh;
+        margin: 35px;
+        margin-right: 80px;
+    }
+    .contenido1 .gato{
+        display: flex;
+width: 94%;
+height: 77.8%;
+
+
+
+
+
+    }
+    .contenido2{
+        display: flex;
+        flex-direction: column;
+        width: 50%;
+        height: 90vh;
+        
+       
+        
+        
+        }
+        .contenido2 .register{
+           
+            color: #268ecd;
+            font-size: 5vh;
+            font-family: hatton;
+        }
+        .contenido2 .formulario{
+            width: 100%;
+            height: 100%;
+display: flex;
+flex-direction: column;
+justify-content: space-evenly;
+align-items: center;
+
+
+
+        }
+        .contenido2 .reg {
+width: 90%;
+height: 4vh;
+border: solid 0.4vh #268ecd;
+border-radius: 0.6vh;
+font-family: hatton;
+
+
+        }
+        ::placeholder{
+            color: #0a8bdb;
+            opacity: 1;
+
+        }
+        .contenido2 .reg1{
+
+
+font-size: 5vh;
+
+color: #268ecd;
+background: none;
+border: none;
+transition: 0.5s;
+
+        }
+        .reg1:hover{
+           
+background-color: orange;
+border: solid orange;
+border-radius: 6vh;
+
+
+        }
+        
+        
+        .fnn{
+            display: flex;
+width: 100%;
+height: 10vh;
+background-color: #268ecd;
+justify-content: center;
+align-items: flex-end;
+
+        }
+        .fnn .finn{
+            display: flex;
+        }
+        .finn .vet{
+font-size: 2vh;
+
+        }
+        @media(orientation:portrait){
+            body{
+                margin: 0;
+                padding: 0;
+                box-sizing: border-box;
+            
+            
+            }
+            .maincointainer1{
+                display: flex;
+                flex-direction: row;
+            width: 100vw;
+            height: 90vh;
+            
+            
+            
+            
+            }
+            .contenido1{
+                display: flex;
+                flex-direction: column;
+                width: 50%;
+                height: 100%;
+               
+               
+            
+                
+                }
+                .contenido1 .logo{
+            
+                    display: flex;
+            justify-content: center;
+            align-items: center;
+                    width: 100%;
+                    height: 20%;
+      
+                }
+                .logo .fix{
+width: 80%;
+height: 60%;
+display: flex;
+justify-content: center;
+align-items: center;
+
+
+                }
+                .fix .logeishon{
+            
+            display: flex;
+                    width: 100%;
+                    height: 100%;
+                    
+                    margin: 0;
+                    margin-right: 0;
+                   
+                }
+                .contenido1 .gato{
+                    display: flex;
+                    position: relative;
+                    top: 50%;
+                    margin-top: 0;
+                    
+            width: 100%;
+            height: 30%;
+            
+            
+            
+            
+            
+                }
+                .contenido2{
+                    display: flex;
+                    flex-direction: column;
+                    width: 50%;
+                    height: 100%;
+                  
+                   
+                    
+                    
+                    }
+                    .contenido2 .register{
+                       text-align: center;
+                        color: #268ecd;
+                        font-size: 2.95vh;
+                        margin-top: 20%;
+                    }
+                    .contenido2 .formulario{
+                        width: 100%;
+                        height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-evenly;
+            align-items: center;
+            
+            
+            
+                    }
+                    .contenido2 .reg {
+            width: 90%;
+            height: 4vh;
+            
+            
+                    }
+                    .contenido2 .reg1{
+            
+            
+            font-size: 3.2vh;
+            
+            color: #268ecd;
+            background: none;
+            border: none;
+            
+            
+                    }
+                    .reg1:hover{
+                        transition: 0.5s;
+            background-color: orange;
+            border: solid orange;
+            border-radius: 6vh;
+            
+            
+                    }
+                    
+                    
+                    .fnn{
+                        display: flex;
+            width: 100%;
+            height: 10vh;
+            background-color: #268ecd;
+            justify-content: center;
+            align-items: flex-end;
+            
+                    }
+                    .fnn .finn{
+                        display: flex;
+                        text-align: center;
+                    }
+                    .finn .vet{
+            font-size: 1.4vh;
+            
+                    }
+
+
+
+
+
+
+        }
