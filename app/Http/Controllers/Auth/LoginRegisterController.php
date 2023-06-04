@@ -3,8 +3,8 @@
 namespace App\Http\Controllers\Auth;
 
 use App\Models\User;
-use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
+use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Hash;
 
@@ -20,71 +20,78 @@ class LoginRegisterController extends Controller
     }
 
  function register(){
-    return view('auth.register');
+    return view('auth.registrarse');
  }
- function store(Request $request){
-    $request->validate([
-        'nombre_registro' => 'required|string|max:250',
-        'email_registro' => 'required|email|max:250|unique:users',
-        'password_registro' => 'required|min:8|confirmed'
-    ]);
-    
-      User::create([
-            'nombre_registro' => $request->name,
-            'email_registro' => $request->email,
-            'password_registro' => Hash::make($request->password)
-        ]);
-        $credentials = $request->only('email_registro', 'password_registro');
-        Auth::attempt($credentials);
-        $request->session()->regenerate();
-        return redirect()->route('dashboard')
-        ->withSuccess('You have successfully registered & logged in!');
+ public function store(Request $request)
+ {
+     $request->validate([
+         'name' => 'required|string|max:250',
+         //'apellidos' => 'required|string|max:250',
+         //'documento' => 'required|string|max:250',
+         //'celular' => 'required|string|max:250',
+         //'direccion' => 'required|string|max:250',
+         'email' => 'required|email|max:250|unique:users',
+         'password' => 'required|min:8|confirmed'
+     ]);
+ 
+     User::create([
+         'name' => $request->name,
+        // 'apellidos' => $request->apellidos,
+         //'documento' => $request->documento,
+        // 'celular' => $request->celular,
+         //'direccion' => $request->direccion,
+         'email' => $request->email,
+         'password' => Hash::make($request->password)
+     ]);
+ 
+     $credentials = $request->only('email', 'password');
+     return redirect()->route('sucessfully');
+ }
+ public function alert_register(){
+return view('auth.registro_alert');
  }
 
- function login(){
+ public function dashboard()
+ {
+     if(Auth::check())
+     {
+         return view('auth.dashboard');
+     }
 
+     return redirect()->route('login')
+         ->withErrors([
+         'email' => 'Please login to access the dashboard.',
+     ])->onlyInput('email');
+ }
+ public function authenticate(Request $request)
+ {
+     $credentials = $request->validate([
+         'email' => 'required|email',
+         'password' => 'required'
+     ]);
+
+     if(Auth::attempt($credentials))
+     {
+         $request->session()->regenerate();
+         return redirect()->route('dashboard')
+             ->withSuccess('You have successfully logged in!');
+     }
+
+     return back()->withErrors([
+         'email' => 'Your provided credentials do not match in our records.',
+     ])->onlyInput('email');
+
+ }
+
+function login(){
     return view('auth.login');
  }
-
- function authenticate(Request $request){
-    $credentials = $request->validate([
-        'email_registro' => 'required|email',
-        'password_registro' => 'required'
-    ]);
-    if(Auth::attempt($credentials))
-        {
-            $request->session()->regenerate();
-            return redirect()->route('dashboard')
-                ->withSuccess('TE HAS LOGGEADO CORRECTAMENTE');
-        }
-
-        return back()->withErrors([
-            'email_registro' => 'NO HAS PROPORCIANDO LO DATOS CORRECTAMENTE.',
-        ])->onlyInput('email_registro');
-
-
-    
- }
- 
- function dashboard(){
-    if(Auth::check())
-    {
-        return view('auth.dashboard');
-    }
-
-    return redirect()->route('login')
-        ->withErrors([
-        'email_registro' => 'Please login to access the dashboard.',
-    ])->onlyInput('email_registro');
-
- }
-
- function logout(Request $request){
-    Auth::logout();
-    $request->session()->invalidate();
-    $request->session()->regenerateToken();
-    return redirect()->route('login')
-        ->withSuccess('HAS CERRADO SESION CORRECTAMENTE!');;
-
+ public function logout(Request $request)
+ {
+     Auth::logout();
+     $request->session()->invalidate();
+     $request->session()->regenerateToken();
+     return redirect()->route('login')
+         ->withSuccess('You have logged out successfully!');;
  }
 }

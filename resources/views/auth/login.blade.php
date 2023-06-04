@@ -14,7 +14,7 @@
 <body>
     
     
-       
+
         <div class="modal-container" id="content-modal">
 <div class="modal">
     USUARIO NO ENCONTRADO
@@ -22,6 +22,15 @@
 </div>
         </div>
     <header class="org">
+    @unless($errors->isEmpty())
+@include('alerts.alert_register');
+<script>
+const alerta=document.getElementById("main-container");
+setTimeout(() => {
+    alerta.classList.add("mostrar")
+}, 500);
+</script>
+@endunless
         <div class="cont">
 <a   href="{{route('index')}}"><img class="img5" src="img/best animal2-01 (1).png" alt="logo"></a>
 
@@ -33,23 +42,17 @@
         
 <div class="cont2">
  
-  <form class="formu" action="login_roles.php" method="post">
+  <form class="formu" action="{{route('authenticate')}}" method="post">
+    @csrf
     <p class="sesion">INICIAR SESION</p>
-    
-    
-
-    <input class="correo" type="email" name="correo" id="correo" placeholder="ej:example@gmail.com" required>
-    
-    <input class="correo"  type="password" name="contraseña" placeholder="Ingrese su contraseña:" required>
+    <input class="correo" type="email" name="email" id="correo" placeholder="ej:example@gmail.com" required>
+    <input class="correo"  type="password" name="password" placeholder="Ingrese su contraseña:" required>
     <br>
     <input class="boton" id="iniciar_sesion" name="ingresar"  type="submit" value="iniciar sesion">
 </form>
-    <p class="not_account">¿No tiene cuenta? <a class="regist" href="{{route('registro')}}">registrese aqui</a></p>
+    <p class="not_account">¿No tiene cuenta? <a class="regist" href="{{route('register')}}">registrese aqui</a></p>
 <p class="not_account" >¿olvido su contraseña?<a class="coloru" href="">haga click aqui para recuperarla</a></p>
-
-
 </div>
-
     </div>
 <footer class="fn">
 <div class="tulia">

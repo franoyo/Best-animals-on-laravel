@@ -1,0 +1,126 @@
+body{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    }
+    @font-face{
+        font-family:hatton;
+        src: url(../fonts/PP\ Hatton\ Medium\ 500.otf);
+               }
+     .contenedor-general{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100vh;
+    
+    
+     }
+     .contenedor-general .contenedor-header{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 20%;
+    
+    
+    
+     }
+     .contenedor-header .contenido-header{
+    display: flex;
+    width: 20%;
+    height: 80%;
+    
+    
+     }
+     .contenido-header .img1{
+    width: 100%;
+    height: 100%;
+    
+     }
+     .contenedor-general .middle-contenedor{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: 70%;
+    
+    
+    
+     }
+     .middle-contenedor .contenido-medio{
+        display: flex;
+        flex-direction: column;
+    width: 60%;
+    height: 100%;
+    
+    
+    
+     }
+     .contenido-medio .main-text{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: 100%;
+    height: 30%;
+    
+    color: rgb(255, 0, 0);
+    font-size: 4vh;
+    font-family:hatton;
+     }
+     .contenido-medio .sub-text{
+    display: flex;
+    text-align: center;
+    font-family: hatton;
+    font-size: 2.5vh;
+    width: 100%;
+    height: 15%;
+    
+    
+    
+     }
+     .contenido-medio .botones{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    height: 55%;
+    
+    
+    
+     }
+     .botones .button{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: 25%;
+    height: 30%;
+    font-size: 2vh;
+    background-color: #268ECD;
+    color: white;
+    font-family:hatton;
+    text-decoration: none;
+    box-shadow: 3vh 3vh 2vh 0.1vh rgba(0,0,0,1);
+    transition: 0.5s;
+    
+     }
+     .button:hover{
+        background: linear-gradient(90deg, rgba(92,167,11,1) 17%, rgba(255,171,0,1) 59%, rgba(0,108,255,1) 100%);
+        padding: 1vh;
+        color: black;
+        
+        font-size: 3vh;
+    border-radius: 6vh;
+    
+     }
+    
+     .contenedor-general .contendor-footer{
+    display:flex;
+    width: 100%;
+    height: 10%;
+    background-color: #268ECD;
+    align-items: end;justify-content: center;
+    text-align: center;
+    color: white;
+    font-size: 2vh;
+    }
