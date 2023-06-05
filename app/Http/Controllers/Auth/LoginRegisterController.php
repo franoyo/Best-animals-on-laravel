@@ -60,7 +60,7 @@ return view('auth.registro_alert');
 
      return redirect()->route('login')
          ->withErrors([
-         'email' => 'Please login to access the dashboard.',
+         'email' => 'Porfavor inicie sesion para acceder al dashboard.',
      ])->onlyInput('email');
  }
  public function authenticate(Request $request)
@@ -78,7 +78,7 @@ return view('auth.registro_alert');
      }
 
      return back()->withErrors([
-         'email' => 'Your provided credentials do not match in our records.',
+         'email' => 'Sus credenciales proporcionadas no coinciden en nuestros registros.',
      ])->onlyInput('email');
 
  }
