@@ -10,22 +10,17 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.4/font/bootstrap-icons.css">
 
 </head>
-
-<body>
-    
-    
-
-        <div class="modal-container" id="content-modal">
-<div class="modal">
-    USUARIO NO ENCONTRADO
-    <button class="visto" id="cerrar"><i class="bi bi-check-lg"></i></button>
-</div>
-        </div>
+<body>    
     <header class="org">
     @unless($errors->isEmpty())
-@include('alerts.alert_register');
+@include('alerts.alerta_login');
 <script>
 const alerta=document.getElementById("main-container");
+const boton=document.getElementById("boton");
+function cerrar(){
+alerta.classList.remove("mostrar")
+
+}
 setTimeout(() => {
     alerta.classList.add("mostrar")
 }, 500);
@@ -41,7 +36,7 @@ setTimeout(() => {
        
         
 <div class="cont2">
- 
+
   <form class="formu" action="{{route('authenticate')}}" method="post">
     @csrf
     <p class="sesion">INICIAR SESION</p>

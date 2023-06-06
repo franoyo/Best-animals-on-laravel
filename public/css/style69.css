@@ -17,6 +17,7 @@ body{
     pointer-events: none;
     justify-content: center;
     align-items: center;
+    
     }
     .container-alert .alert-body{
     width: 25%;
@@ -63,5 +64,6 @@ body{
     .mostrar{
 opacity: 1;
 transition: 0.5s;
+
 
     }

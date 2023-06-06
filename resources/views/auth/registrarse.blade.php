@@ -9,6 +9,7 @@
 </head>
 <body>
     <div class="maincointainer1">
+    
     @unless($errors->isEmpty())
 @include('alerts.alert_register');
 <script>

@@ -10,9 +10,10 @@
   </head>
   
   <body>
-      
+ 
       <div class="maincontainer">
           <div class="cont1">
+        
               <header class="logo">
                 <img class="best" src="img/best animal2-01 (1).png" alt="main">
               
