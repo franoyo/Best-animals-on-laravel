@@ -11,7 +11,7 @@
     <div class="maincointainer1">
     
     @unless($errors->isEmpty())
-@include('alerts.alert_register');
+@include('alerts.alert_register')
 <script>
 const alerta=document.getElementById("main-container");
 setTimeout(() => {
@@ -31,6 +31,10 @@ setTimeout(() => {
 <form class="formulario"  action="{{route('store')}}"  method="post">
 @csrf
 <input class="reg" name="name" type="text" placeholder="Nombre:" value="{{ old('name') }}" required>
+<input class="reg" name="apellido" type="text" placeholder="Apellido:" value="{{ old('apellido') }}" required>
+<input class="reg" name="documento" type="number" placeholder="Documento:" value="{{ old('documento') }}" required>
+<input class="reg" name="direccion" type="text" placeholder="Direccion:" value="{{ old('direccion') }}" required>
+<input class="reg" name="celular" type="number" placeholder="Celular:" value="{{ old('celular') }}" required>
 
 
 <input class="reg" name="email" type="email" value="{{ old('email') }}" placeholder="Email:" required>

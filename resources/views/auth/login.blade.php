@@ -12,11 +12,24 @@
 </head>
 <body>    
     <header class="org">
+    @if(session('success'))
+      @include('alerts.alert_sucess')
+    <script>
+      const alert=document.getElementById("launch-alert")
+      setTimeout(() => {
+        alert.classList.add("mostrar")
+      }, 350);
+      setTimeout(() => {
+        alert.classList.remove("mostrar")
+      }, 2200);
+    </script>
+@endif
     @unless($errors->isEmpty())
-@include('alerts.alerta_login');
+@include('alerts.alerta_login')
 <script>
 const alerta=document.getElementById("main-container");
 const boton=document.getElementById("boton");
+
 function cerrar(){
 alerta.classList.remove("mostrar")
 

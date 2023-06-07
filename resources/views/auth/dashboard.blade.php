@@ -12,6 +12,30 @@
   <body>
  
       <div class="maincontainer">
+      @if(session('success'))
+      @include('alerts.alert_sucess')
+    <script>
+      const alert=document.getElementById("launch-alert")
+      setTimeout(() => {
+        alert.classList.add("mostrar")
+      }, 500);
+      setTimeout(() => {
+        alert.classList.remove("mostrar")
+      }, 1700);
+    </script>
+@endif
+@unless($errors->isEmpty())
+@include('alerts.alert_sucess')
+<script>
+     
+      setTimeout(() => {
+        alert.classList.add("mostrar")
+      }, 500);
+      setTimeout(() => {
+        alert.classList.remove("mostrar")
+      }, 1700);
+    </script>
+@endunless
           <div class="cont1">
         
               <header class="logo">
@@ -66,7 +90,7 @@
                         <a href=""><img class="user" src="img/buttton.png" alt=""></a>
                         
                             </nav> 
-                            <p class="admn">{{ Auth::user()->name }}</p>                </div>
+                            <p class="admn">{{ Auth::user()->name }} {{ Auth::user()->apellido }}</p>                </div>
                   <div class="mitad2">
                     <a class="button" href="{{route('logout')}}" onclick="event.preventDefault();
                             document.getElementById('logout-form').submit();">SALIR</a> 
@@ -80,7 +104,7 @@
                           <p>BIENVENIDO!</p>
                       </div>
                       <div class="administrador">
-                          <p class="auth">{{ Auth::user()->name }}</p>Es un gusto tenerlo de vuelta!
+                          <p class="auth">{{ Auth::user()->name }} {{ Auth::user()->apellido }}</p>Es un gusto tenerte de vuelta!
                       </div>
                       <div class="cont-image">
                           <div class="put-gift">

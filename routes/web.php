@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Auth\LoginRegisterController;
+use App\Http\Controllers\admin\AdminController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -71,6 +72,14 @@ Route::get("/inicio", function(){
                                                 Route::post('/authenticate', 'authenticate')->name('authenticate');
                                                 Route::get('/dashboard', 'dashboard')->name('dashboard');
                                                 Route::post('/logout', 'logout')->name('logout');
+                                    });
+                                    route::controller(AdminController::class)->group(function(){
+route::get('/admin', 'index')->name('admin');
+route::get('/caja', 'caja')->name('caja');
+route::get('/registroStock', 'stock')->name('registroStock');
+
+
+
 
 
                                     });

@@ -1,0 +1,1288 @@
+body{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+   
+    }
+    @font-face{
+        font-family:hatton;
+        src: url(../fonts/PP\ Hatton\ Medium\ 500.otf);
+               }
+               .container-alerta{
+                display: flex;
+                width: 100vw;
+                height: 17vh;
+                position: fixed;
+                
+                align-items: center;
+                justify-content: center;
+                opacity: 0;
+                pointer-events: none;
+                
+                transition: 1.0s;
+                
+                
+                               }
+                               .container-alerta .alerta{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                width: 30vw;
+                height: 90%;
+                background-color: white;
+                border: solid #268ecd;
+                border-radius: 2vw;
+                transition: 1.0s;
+                
+                
+                
+                               }
+                               .alerta .contenido-alerta{
+                display: flex;
+                align-items: center;
+                
+                width: 90%;
+                height: 80%;
+                
+                
+                
+                               }
+                               .contenido-alerta .alert-image{
+                                display: flex;
+                width: 30%;
+                height: 80%;
+                
+                
+                
+                               }
+                               .alert-image .perro-alerta{
+                width: 100%;
+                height: 100%;
+                
+                               }
+                               .contenido-alerta .text-alert{
+                                display: flex;
+                width: 70%;
+                height: 80%;
+                justify-content: center;
+                align-items: center;
+                text-align: center;
+                font-family: hatton;
+                font-size: 1.5vw;
+                               }
+                               .ocultar{
+                                opacity: 1;
+                                pointer-events: none;
+                                
+                                
+                                
+                                               }
+             
+    .maincontainer{
+        display: flex;
+        flex-direction: row;
+width: 100%;
+height: 100vh;
+
+
+
+
+
+
+    }
+    .maincontainer .cont1{
+        display: flex;
+        width: 23vw;
+        height: 100%;
+        background-color: #313e54;
+flex-direction: column;
+align-items: center;
+
+
+
+
+    }
+    .cont1 .logo{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+width: 100%;
+height: 25vh;
+background-color: #313e54;
+
+
+    }
+    .logo .best{
+        width: 90%;
+height: 60%;
+
+
+
+    }
+    .cont1 .dash{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+width: 80%;
+height: 11.11%;
+
+
+background-color: #313e54;
+transition: 0.5s;
+
+
+
+
+
+        
+    }
+    .dash:hover{
+        
+background-color: rgb(13, 105, 117);
+
+
+
+    }
+    .cont1 .linea{
+        background-color: rgb(255, 255, 255);
+        width: 100%;
+        height: 0.4vh;
+    }
+    
+    .cont1 .ins {
+text-decoration: none;
+
+    }
+    .cont1 .b{
+color: white;
+width: 100%;
+
+    }
+    .cont1 .t1{
+        display: flex;
+width: 100%;
+height: 20%;
+font-size: 2.35vh;
+color: beige;
+font-family:hatton;
+
+
+
+    }
+    
+    .maincontainer .cont2{
+
+        display: flex;
+        flex-direction: column;
+        width: 80%;
+        height: 100vh;
+       
+
+
+    }
+    .cont2 .subuser{
+        display: flex;
+        
+        align-items: center;
+width: 100%;
+height: 15vh;
+background-color: white;
+
+
+    }
+    .subuser .mitad{
+        display: flex;
+       align-items: center;
+width: 50%;
+height: 15vh;
+
+
+    }
+
+    .mitad .admn{
+       
+width: 100%;
+height: 20%;
+font-size: 2vh;
+font-family:hatton;
+margin-top: 2.8%;
+margin-left: 5vh;
+
+
+    }
+    .mitad .user{
+width: 70%;
+height: 7vh;
+margin-left: 5vh;
+
+
+
+    }
+
+
+
+    .subuser .mitad2{
+        width: 50%;
+height: 15vh;
+display: flex;
+flex-direction: row-reverse;
+align-items: center;
+
+
+
+    }
+    .mitad2 .button{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-decoration: none;
+        width: 14%;
+height: 6vh;
+margin-right: 3vh;
+background: none;
+border: solid orange;
+color: #268ecd;
+font-size: 20px;
+font-family: hatton;
+font-size: 2.5vh;
+transition: 1s;
+    }
+    .button:hover{
+        
+background-color: orange;
+
+
+    }
+   .cont2 .cont3{
+    display: flex;
+flex-direction: row;
+width: 100%;
+height: 100%;
+
+
+
+
+   }
+   .cont3 .menumin{
+    display: flex;
+    
+width: 10%;
+height: 100%;
+background-color: darkgray;
+
+
+   }
+   .modify-buttons .create{
+    width: 90%;
+    height: 7vh;
+    margin-top: 64%;
+   margin-bottom: 15%;
+   font-size: 1.5vh;
+   justify-content: center;
+   align-items: center;
+    border: none;
+    background-color: #313e54;
+    color: white;
+    font-family: hatton;
+    transition: 0.5s;
+    
+    
+       }
+       .create:hover{
+        
+      
+        background-color: rgb(13, 105, 117);
+        padding: 30%;
+       
+         }
+       .modify-buttons .search{
+       
+        width: 90%;
+        height: 7vh;
+        font-size: 1.5vh;
+   
+        font-family: hatton;
+        margin-bottom: 15%;
+        border: none;
+        background-color: #313e54;
+        color: white;
+        transition: 0.5s;
+        
+        
+           }
+           .search:hover{
+            
+    
+      background-color: rgb(13, 105, 117);
+      padding: 30%;
+           }
+          
+  .modify-buttons .categoria{
+    width: 90%;
+    height: 7vh;
+    font-size: 1.5vh;
+    font-family: hatton;
+    margin-bottom: 15%;
+    border: none;
+    background-color: #313e54;
+    color: white;
+    transition: 0.5s;
+
+
+  }
+  .categoria:hover{
+
+   
+    
+    background-color: rgb(13, 105, 117);
+    padding: 30%
+
+
+
+  } 
+  .modify-buttons .vencimiento{
+
+
+    width: 90%;
+    height: 7vh;
+    font-family: hatton;
+    font-size: 1.5vh;
+    margin-bottom: 15%;
+    border: none;
+    background-color: #313e54;
+    color: white;
+    transition: 0.5s;
+
+
+
+  }
+  .vencimiento:hover{
+    display: flex;
+   
+    
+    background-color: rgb(13, 105, 117);
+    padding: 30%
+
+
+
+  }
+           .cont3 .container_form_external{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+           
+        
+    width: 100%;
+    height: 100%;
+    background-color: #f6f6f6;
+    
+        }
+        .container_form_external .container_form_internal{
+    
+            display: flex;
+            
+        flex-direction: column;
+            width: 80%;
+            height: 80%;
+          background-color: white;
+         
+    
+    
+    
+    
+        }
+        .container_form_internal .formz{
+    width: 100%;
+    border: none;
+    outline: none;
+    font-size: 2vh;
+    
+    
+        }
+        .container_form_internal .title_form{
+    display: flex;
+    width: 100%;
+    height: 25%;
+    
+    text-align: center;
+    
+    
+    
+    
+        }
+        .title_form .titulo_central{
+            display: flex;
+            width: 75%;
+            height: 70%;
+            
+       
+    
+    align-items: center;
+    justify-content: center;
+    font-family: hatton;
+    font-size:5vh;
+    
+    
+    
+    
+        }
+        .title_form .logo{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+    width: 25%;
+    height: 100%;
+    
+    
+    
+        }
+        .logo .logoz{
+    width: 90%;
+    height: 60%;
+    
+    
+        }
+        .formz:hover{
+    
+            background-color: #def;
+    
+    
+        }
+        .container_form_internal .example_1{
+            display: flex;
+            width: 100%;
+            height: 10%;
+     
+           
+    
+    
+    
+    
+    
+    
+        }
+       
+        .example_1 .sub_form_class{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 20%;
+    height: 100%;
+    
+    
+    margin-right: 2%;
+    text-align: center;
+    
+        }
+        .sub_form_class .tex_gen{
+    font-family: hatton;
+    text-align: center;
+    font-size: 2vh;
+    
+    
+    
+    
+        }
+        .example_1 .container_formulario{
+    display: flex;
+    width: 75%;
+    height: 80%;
+    
+    border: solid #268ecd;
+    margin: 5px;
+    
+    
+    
+        }
+        .example_1 .container_formulario2{
+            display: flex;
+            width: 35%;
+            height: 80%;
+     font-size: 1.5vw;
+     font-family: hatton;
+     align-items: center;
+            border: solid #268ecd;
+            margin: 5px;
+            
+            
+            
+                }
+                .example_1 .container_formulario3{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    width: 13%;
+    height: 100%;
+    
+    
+    
+    
+    
+    
+                }
+                .container_formulario3 .excrit{
+    font-family: hatton;
+    text-align: center;
+    font-size: 2vh;
+    
+    
+    
+                }
+        .example_1 .container_formulario4{
+    
+    display: flex;
+    width: 25%;
+    height: 80%;
+    
+    margin: 5px;
+    border: solid #268ecd;
+    
+    
+    
+        } .container_form_internal .container_final_buttons{
+    display: flex;
+    justify-content: end;
+    
+    width: 100%;
+    height: 100%;
+    
+    
+    
+        }
+     
+        .container_final_buttons .middle_butons{
+            display: flex;
+        justify-content: end;
+            width: 100%;
+            height: 100%;
+            
+          
+    
+    
+    
+    
+        }
+        .container_final_buttons .end_b{
+            display: flex;
+    width: 10%;
+    height: 100%;
+
+    flex-direction: column-reverse;
+    
+        }
+        .end_b .text-label{
+            display: flex;
+            
+          
+text-align: center;
+font-family: hatton;
+font-size: 0.8vw;
+transition: 0.5s;
+cursor: pointer;
+
+        }
+        .text-label:hover{
+color: orange;
+
+
+        }
+        .end_b .bad-input{
+            position: absolute;
+display: flex;
+width: 0.5%;
+height: 0.5%;
+opacity: 0;
+pointer-events: none;
+
+
+        }
+        .end_b .create-upload{
+            display: flex;
+            color: orange;
+            justify-content: center;
+            align-items: center;
+            font-size: 3vw;
+            cursor: pointer;
+width: 4vw;
+height: 4vw;
+border-radius: 50%;
+background-color: #268ecd;
+align-self: center;
+margin-bottom: 10%;
+transition: 0.5s;
+
+        }
+        .create-upload:hover{
+background-color: orange;
+color: #268ecd;
+
+
+        }
+        .dentro_buttons{
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+    width: 80%;
+    height: 100%;
+    
+    
+    
+    
+    
+        }
+        .dentro_buttons .votones{
+            width: 30%;
+            height: 40%;
+    border: solid #268ecd;
+    background: none;
+    font-family: hatton;
+    font-size: 3vh;
+    transition: 0.5s;
+    
+        }
+        .votones:hover{
+   
+    background-color: orange;
+    border: solid orange;
+    border-radius: 40px;
+    
+    
+        }
+        .end_b .num_orden{
+            display:flex ;
+            justify-content: center;
+            align-items: center;
+    width: 100%;
+    height: 20%;
+    
+    
+        }
+        .num_orden .insertar_numero{
+    width: 40%;
+    height: 80%;
+    
+    border: solid #268ecd;
+    
+    
+        }
+        @media (max-width:1000px) {
+            .example_1 .container_formulario{
+                display: flex;
+                width: 75%;
+                height: 60%;
+                
+                border: solid #268ecd;
+                margin: 5px;
+                
+                
+                
+                    }
+                    .example_1 .container_formulario2{
+                        display: flex;
+                        width: 35%;
+                        height: 60%;
+                 
+                        border: solid #268ecd;
+                        margin: 5px;
+                        
+                        
+                        
+                            }
+                            .example_1 .container_formulario3{
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                text-align: center;
+                width: 13%;
+                height: 80%;
+                
+                
+                
+                
+                
+                
+                            }
+                            .container_formulario3 .excrit{
+                font-family: hatton;
+                text-align: center;
+                font-size: 2vh;
+                
+                
+                
+                            }
+                    .example_1 .container_formulario4{
+                
+                display: flex;
+                width: 25%;
+                height: 60%;
+                
+                margin: 5px;
+                border: solid #268ecd;
+                
+                
+                
+                    } 
+            
+        }
+        @media(orientation:portrait){
+            body{
+                background-color: #313e54;
+            }
+            .maincontainer{
+                display: flex;
+                flex-direction: column;
+        width: 100%;
+        height: 100vh;
+        
+        
+        
+        
+        
+        
+        
+            }
+            .maincontainer .cont1{
+                display: flex;
+                width: 100%;
+                height: 10%;
+                background-color: #313e54;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        
+        
+        
+        
+            }
+            .cont1 .logo{
+                display: none;
+                justify-content: center;
+                align-items: center;
+        width: 100%;
+        height: 25vh;
+        background-color: #313e54;
+        
+        
+            }
+            .logo .best{
+                width: 90%;
+        height: 80%;
+        
+        
+        
+            }
+            .cont1 .dash{
+                display: flex;
+                flex-direction: column;
+               text-align: center;
+                align-items: center;
+                overflow: hidden;
+        width: 80%;
+        height: 100%;
+        
+        
+        background-color: #313e54;
+        
+        
+        
+        
+        
+        
+        
+                
+            }
+            .dash:hover{
+                transition: 0.5s;
+        background-color: rgb(13, 105, 117);
+        
+        
+        
+            }
+            .cont1 .linea{
+                display: none;
+                background-color: rgb(255, 255, 255);
+                width: 20%;
+                height: 1vh;
+            }
+            
+            .cont1 .ins {
+        text-decoration: none;
+        
+            }
+            .cont1 .b{
+        color: white;
+        width: 100%;
+        
+            }
+            .cont1 .t1{
+                display: flex;
+              
+                width: 100%;
+                height: 100%;
+                
+                font-size: 1.7vw;
+                text-align: center;
+                color: beige;
+                font-family:hatton;
+                margin-top: 12%;
+        
+        
+        
+            }
+            
+            
+            .maincontainer .cont2{
+        
+                display: flex;
+                flex-direction: column;
+                width: 100%;
+                height: 100vh;
+               
+        
+        
+            }
+            .cont2 .subuser{
+                display: flex;
+                
+                align-items: center;
+        width: 100%;
+        height: 5vh;
+        background-color: white;
+        
+        
+            }
+            .subuser .mitad{
+                display: flex;
+               align-items: center;
+        width: 50%;
+        height: 100%;
+        
+        
+        
+            }
+        
+            .mitad .admn{
+               
+        width: 100%;
+        height: 20%;
+        font-size: 1vh;
+        font-family:hatton;
+        margin-left: 3.4vh;
+        
+        
+            }
+            .mitad .user{
+        width: 70%;
+        height: 4vh;
+        margin-left:4.2vh ;
+        
+        
+        
+        
+            }
+        
+        
+        
+            .subuser .mitad2{
+                width: 50%;
+        height: 100%;
+        display: flex;
+        flex-direction: row-reverse;
+        align-items: center;
+        
+        
+        
+            }
+            .mitad2 .button{
+                width: 30%;
+        height: 3vh;
+        margin-right: 1vh;
+        background: none;
+        border: solid orange;
+        color: #268ecd;
+        
+        font-family: hatton;
+        font-size: 1vh;
+        
+            }
+            .button:hover{
+                transition: 1s;
+        background-color: orange;
+        
+        
+            }
+           .cont2 .cont3{
+            display: flex;
+        flex-direction: row;
+        width: 100%;
+        height: 100%;
+        
+        
+        
+        
+           }
+           .cont3 .menumin{
+            display: flex;
+            flex-direction: column;
+        width: 10%;
+        height: 100%;
+        background-color: darkgray;
+        
+        
+           }
+           .modify-buttons{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: start;
+            
+        width: 100%;
+        height: 100%;
+        
+        
+           }  
+           .modify-buttons .create{
+            width: 100%;
+            height: 3%;
+            
+          
+            font-family:hatton;
+            margin-top: 64%;
+           margin-bottom: 15%;
+            border: none;
+            background-color: #313e54;
+            color: white;
+            font-size: 1vh;
+            
+            
+            
+               }
+               .create:hover{
+              transition: 0.5s;
+            
+              background-color: rgb(13, 105, 117);
+              padding: 30%;
+             
+               }
+               .modify-buttons .search{
+               
+                width: 100%;
+                height: 3%;
+                font-family:hatton;
+               font-size: 1vh;
+                border: none;
+                background-color: #313e54;
+                color: white;
+                
+                
+                
+                   }
+                   .search:hover{
+                    transition: 0.5s;
+            
+              background-color: rgb(13, 105, 117);
+              padding: 30%;
+                   }
+                   .modify-buttons .categoria{
+                    width: 100%;
+                    height: 3%;
+                    font-family:hatton;
+                   font-size: 1vh;
+                    border: none;
+                    background-color: #313e54;
+                    color: white;
+                    
+                
+                
+                  }
+                  .categoria:hover{
+                
+                    transition: 0.5s;
+                    
+                    background-color: rgb(13, 105, 117);
+                    padding: 30%
+                
+                
+                
+                  } 
+                  .modify-buttons .vencimiento{
+                
+                
+                    width: 100%;
+                height: 3%;
+                font-family:hatton;
+               font-size: 1vh;
+                border: none;
+                background-color: #313e54;
+                color: white;
+                    
+                
+                
+                
+                  }
+                  .vencimiento:hover{
+                    display: flex;
+                    transition: 0.5s;
+                    
+                    background-color: rgb(13, 105, 117);
+                    padding: 30%
+                
+                
+                
+                  }
+                  .cont3 .container_form_external{
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                  
+                
+            width: 100%;
+            height: 100%;
+            background-color: #f6f6f6;
+            
+                }
+                .container_form_external .container_form_internal{
+            
+                    display: flex;
+                    
+                flex-direction: column;
+               
+                    width: 98%;
+                    height: 80%;
+                  background-color: white;
+                 
+            
+            
+            
+            
+                }
+                .container_form_internal .formz{
+            width: 100%;
+            height: 80%;
+            border: none;
+            outline: none;
+            font-size: 1vh;
+            
+            
+                }
+                .container_form_internal .title_form{
+            display: flex;
+            width: 100%;
+            height: 25%;
+           
+            text-align: center;
+            
+            
+            
+            
+                }
+                .title_form .titulo_central{
+                    display: flex;
+                    width: 75%;
+                    height: 70%;
+                    
+               
+            
+            align-items: center;
+            justify-content: center;
+            font-family: hatton;
+            font-size:3vh;
+            
+            
+            
+            
+                }
+                .title_form .logo{
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+            width: 40%;
+            height: 80%;
+           
+            
+            
+            
+                }
+                .logo .logoz{
+            width: 60%;
+            height: 40%;
+            
+            
+                }
+                .formz:hover{
+            
+                    background-color: #def;
+            
+            
+                }
+                .container_form_internal .example_1{
+                    display: flex;
+                    width: 100%;
+                    height: 10%;
+            
+                    
+            
+            
+            
+            
+            
+            
+                }
+                .example_1 .sub_form_class{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 20%;
+            height: 100%;
+            
+            
+            margin-right: 2%;
+            text-align: center;
+          
+                }
+                .sub_form_class .tex_gen{
+            font-family: hatton;
+            text-align: center;
+            font-size: 1vh;
+            
+            
+            
+            
+                }
+                .example_1 .container_formulario{
+            display: flex;
+            width: 75%;
+            height: 60%;
+            
+            border: solid #268ecd;
+            margin: 5px;
+            
+            
+            
+                }
+                .example_1 .container_formulario2{
+                    display: flex;
+                    width: 32%;
+                    height: 60%;
+             
+                    border: solid #268ecd;
+                    margin: 5px;
+                    
+                    
+                    
+                        }
+                        .example_1 .container_formulario3{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            width: 13%;
+            height: 100%;
+            
+            
+            
+            
+            
+            
+                        }
+                        .container_formulario3 .excrit{
+            font-family: hatton;
+            text-align: center;
+            font-size: 1vh;
+            
+            
+            
+                        }
+                .example_1 .container_formulario4{
+            
+            display: flex;
+            width: 25%;
+            height: 60%;
+            
+            margin: 5px;
+            border: solid #268ecd;
+           
+            
+            
+                } .container_form_internal .container_final_buttons{
+            display: flex;
+            justify-content: end;
+            width: 100%;
+            height: 100%;
+            
+            
+            
+                }
+                .container_final_buttons .middle_butons{
+                    display: flex;
+                justify-content: end;
+                    width: 100%;
+                    height: 100%;
+                  
+            
+            
+            
+            
+                }
+                .container_final_buttons .end_b{
+                    display: flex;
+            width: 10%;
+            height: 100%;
+            font-size: 1vh;
+            flex-direction: column-reverse;
+            
+                }
+                .dentro_buttons{
+                    display: flex;
+                    justify-content: space-evenly;
+                    align-items: center;
+            width: 80%;
+            height: 100%;
+            
+            
+            
+            
+            
+                }
+                .dentro_buttons .votones{
+                    width: 40%;
+                    height: 25%;
+            border: solid #268ecd;
+            background: none;
+            font-family: hatton;
+            font-size: 1.5vh;
+            
+            
+                }
+                .votones:hover{
+            transition: 0.5s;
+            background-color: orange;
+            border: solid orange;
+            border-radius: 40px;
+            
+            
+                }
+                .end_b .num_orden{
+                    display:flex ;
+                    justify-content: center;
+                    align-items: center;
+            width: 100%;
+            height: 20%;
+            
+            
+                }
+                .num_orden .insertar_numero{
+            width: 50%;
+            height: 60%;
+            
+            border: solid #268ecd;
+            
+            
+                }
+                  
+        
+        
+        
+        
+        }

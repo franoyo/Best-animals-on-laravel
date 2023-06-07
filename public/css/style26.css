@@ -190,7 +190,7 @@ body{
     }
     .cont3{
         display: flex;
-    flex-direction: column;
+    flex-direction: row;
     width: 100%;
     height: 85%;
     background-color: #f6f6f6;
@@ -198,6 +198,17 @@ body{
     
     
        }
+       .cont3 .menumin{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    width: 10%;
+    height: 100%;
+    background-color: darkgray;
+    
+    
+       }
+       
        .cont3 .welcome{
     display: flex;
     justify-content: center;

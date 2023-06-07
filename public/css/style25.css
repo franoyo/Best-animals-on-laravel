@@ -1,0 +1,80 @@
+body{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    
+    
+    
+    }
+    @font-face{
+        font-family:hatton;
+        src: url(../fonts/PP\ Hatton\ Medium\ 500.otf);
+               }
+    
+    .container-alertaz{
+        display: flex;
+        width: 100vw;
+        height: 17vh;
+        position: fixed;
+        
+        align-items: center;
+        justify-content: center;
+        opacity: 0;
+        pointer-events: none;
+        
+        transition: 0.5s;
+        
+        
+                       }
+                       .container-alertaz .alertaz{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 30vw;
+        height: 90%;
+        background-color: white;
+        border: solid #268ecd;
+        border-radius: 2vw;
+        transition: 0.5s;
+        
+        
+        
+                       }
+                       .alertaz .contenido-alertaz{
+        display: flex;
+        align-items: center;
+        
+        width: 90%;
+        height: 80%;
+        
+        
+        
+                       }
+                       .contenido-alertaz .alert-imagez{
+                        display: flex;
+        width: 30%;
+        height: 80%;
+        
+        
+        
+                       }
+                       .alert-imagez .perro-alertaz{
+        width: 100%;
+        height: 100%;
+        
+                       }
+                       .contenido-alertaz .text-alertz{
+                        display: flex;
+        width: 70%;
+        height: 80%;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        font-family: hatton;
+        font-size: 1.5vw;
+                       }
+                       .mostrar{
+                        opacity: 1;
+                        pointer-events: none;
+                                       }
+                       
