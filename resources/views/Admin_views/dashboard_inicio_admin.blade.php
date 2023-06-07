@@ -7,7 +7,7 @@
     <div class="linea"></div>
 </div>
 <div class="dash">
-    <a class="ins" href="dashboar_caja_registro.php">
+    <a class="ins" href="{{route('registroStock')}}">
         <p class="t1">STOCK</p>
     </a>
     <div class="linea"></div>

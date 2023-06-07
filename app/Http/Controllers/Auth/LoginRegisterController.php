@@ -77,12 +77,16 @@ class LoginRegisterController extends Controller
             if (auth()->user()->rol=='administrador') {
                 $request->session()->regenerate();
                 return redirect()->route('admin')->withSuccess('Te has logueado correctamente!');
-            }else{
+            }elseif (auth()->user()->rol=='veterinario') {
+                $request->session()->regenerate();
+                return redirect()->route('veterinario')->withSuccess('Te has logueado correctamente!');
+            }
+            elseif(auth()->user()->rol=='cliente'){
+                $request->session()->regenerate();
                 return redirect()->route('dashboard')
                 ->withSuccess('Te has logueado correctamente!');
-            }
+            } 
         }
-
         return back()->withErrors([
             'email' => 'Sus credenciales proporcionadas no coinciden en nuestros registros.',
         ])->onlyInput('email');

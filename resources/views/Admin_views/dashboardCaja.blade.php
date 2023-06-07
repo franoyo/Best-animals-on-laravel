@@ -27,11 +27,11 @@
         
         
         <div class="dash">
-        <a class="ins" href="dashboar_caja_registro.html"><p class="t1">CAJA</p></a>
+        <a class="ins" href="{{route('caja')}}"><p class="t1">CAJA</p></a>
         <div class="linea"></div>
         </div>
         <div class="dash">
-            <a class="ins" href="dashoboard_admin_stock.php"><p class="t1">STOCK</p></a>
+            <a class="ins" href="{{route('registroStock')}}"><p class="t1">STOCK</p></a>
             <div class="linea"></div>
           </div>
           <div class="dash">
