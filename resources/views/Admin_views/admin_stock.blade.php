@@ -9,21 +9,18 @@
     <title>Admin_stock</title>
 </head>
 <body>
-  <div class="container-alerta" id="alert-disp">
-    
-    <div class="alerta">
-      <div class="contenido-alerta">
-    <div class="alert-image">
-      <img class="perro-alerta" src="img/pug.PNG" alt="">
-    </div>
-    <div class="text-alert">
-      <p>Datos Ingresados Correctamente!</p>
-    </div>
-    
-      </div>
-    </div>
-    
-      </div>
+@if(session('success'))
+      @include('alerts.alert_datos_ingresados_correctamente')
+    <script>
+      const alert=document.getElementById("alert-disponible")
+      setTimeout(() => {
+        alert.classList.add("ocultar")
+      }, 350);
+      setTimeout(() => {
+        alert.classList.remove("ocultar")
+      }, 2200);
+    </script>
+@endif
     <div class="maincontainer">
     
         <div class="cont1">
@@ -93,7 +90,8 @@
             </div>
             </header>
             <div class="cont3">
-              <form class="cont3" enctype="multipart/form-data" action="registro_stock.php" method="post">
+              <form class="cont3" enctype="multipart/form-data" action="{{route('storeStock')}}" method="post">
+              @csrf
               <div class="menumin">
                 <nav class="modify-buttons">
                     <nav class="modify-buttons">
@@ -117,7 +115,7 @@
   </div>
   <div class="example_1">
       <div class="sub_form_class"><p class="tex_gen">CODIGO</p></div>
-      <div class="container_formulario2">
+      <div id="captar" class="container_formulario2">{{ $captar }}
       </div>
   
       <div class="container_formulario3"><p class="excrit">STOCK</p></div>
@@ -137,11 +135,11 @@
   </div>
   <div class="example_1">
       <div class="sub_form_class"><p class="tex_gen">FECHA DE VENCIMIENTO</p></div>
-      <div class="container_formulario"><input class="formz" name="fecha_vencimiento_producto" type="text" placeholder="Ingrese texto" required ></div>
+      <div class="container_formulario"><input class="formz" name="fecha_vencimiento_producto" type="date" placeholder="Ingrese texto" required ></div>
   </div>
       <footer class="container_final_buttons">
-      
-  <div class="middle_butons"><div class="dentro_buttons"><input class="votones" type="button" value="actualizar"> <input class="votones" type="submit" id="registrar" name="registrar" value="registrar"></div><div class="end_b"><div class="num_orden">No. <div class="insertar_numero"></div></div><label class="create-upload" for="suv-image"><input class="bad-input" type="file" name="imagen-producto" id="suv-image" accept=".png, .jpg, .jpeg" required><i class="bi bi-card-image"></i></label><label class="text-label" for="suv-image">IMAGEN PRODUCTO</label></div></div>
+     
+  <div class="middle_butons"><div class="dentro_buttons"><input class="votones" type="button" value="actualizar" onclick="porQueMedaperezaCambiarloPorUnAxd()"> <input class="votones" type="submit" id="registrar" name="registrar" value="registrar"></div><div class="end_b"><div class="num_orden">No. <div class="insertar_numero">{{ $captar }}</div></div><label class="create-upload" for="suv-image"><input class="bad-input" type="file" name="imagen_producto" id="suv-image" accept=".png, .jpg, .jpeg" required><i class="bi bi-card-image"></i></label><label class="text-label" for="suv-image">IMAGEN PRODUCTO</label></div></div>
 
 
   
@@ -152,7 +150,11 @@
         
         
 
-    
+<script>
+        function porQueMedaperezaCambiarloPorUnAxd(){
+          window.location.href="{{route('listaProductos')}}"
+        }
+      </script>
 </body>
 </html>
 

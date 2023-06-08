@@ -1,0 +1,328 @@
+.cont3 .titulo-container{
+width: 100%;
+height: 15%;
+display: flex;
+justify-content: space-around;
+align-items: center;
+
+}
+.titulo-container .put-variants{
+width:22.5%;
+height: 100%;
+display: flex;
+justify-content: space-evenly;
+flex-direction: column;
+align-items: center;
+
+}
+.put-variants .put-input{
+height: 30%;
+width: 85%;
+display: flex;
+
+
+}
+.put-input .search{
+    display: flex;
+    width: 100%;
+    height: 97%;
+    font-size: 1.7vh;
+    font-family: hatton;
+    border: 0.2vw solid #268ecd;
+    border-radius: 0.5vw;
+    outline-offset: 0.25vh;
+    outline-color: rgba(194, 219, 254, 1);
+
+
+
+    transition: all 0.2s ease-in-out;
+}
+.search:focus {
+    outline-offset: 0.4vh;
+
+    outline-color: rgba(194, 219, 254, 1);
+    border: 0.2vh solid #86B7FE;
+    transition: all 0.2s ease-in-out;
+
+
+}
+
+.titulo-container .main-title{
+width: 55%;
+height: 100%;
+display: flex;
+justify-content: center;
+align-items: center;
+text-align: center;
+
+font-family: hatton;
+font-size: 1.3vw;
+
+}
+.cont3 .container-content{
+width: 100%;
+height: 85%;
+display: flex;
+flex-direction: column;
+background-color: rgb(230, 239, 247);
+justify-content: center;
+align-items: center;
+}
+.container-content .tabla-container{
+width: 95%; 
+height: 90%;
+display: flex;
+flex-direction: column;
+background-color: blanchedalmond;
+border: solid 0.25vh black;
+overflow:hidden;
+
+}
+.tabla-container .row-title {
+    width: 100%;
+    height: 10%;
+    display: flex;
+    background-color: rgb(200, 248, 145);
+
+}
+
+.row-title .put-id {
+    width: 6%;
+    height: 100%;
+    display: flex;
+    border-bottom: solid 0.2vw gray;
+    border-right: solid 0.2vw gray;
+    justify-content: center;
+    align-items: center;
+    font-size: 2vh;
+    font-family: hatton;
+
+
+}
+
+.row-title .name-mascota {
+    width: 14%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    border-bottom: solid 0.2vw gray;
+    border-right: solid 0.2vw gray;
+    align-items: center;
+    font-size: 1.2vw;
+    font-family: hatton;
+    text-align: center;
+
+
+}
+
+.row-title .name-dueño {
+    width: 14%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    border-bottom: solid 0.2vw gray;
+    border-right: solid 0.2vw gray;
+    align-items: center;
+    font-size: 1.2vw;
+    font-family: hatton;
+    text-align: center;
+
+
+}
+
+.row-title .botones {
+    width: 8%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-bottom: solid 0.2vw gray;
+    border-right: solid 0.2vw gray;
+    font-size: 1.2vw;
+    font-family: hatton;
+    text-align: center;
+
+}
+
+.row-title .botones-1 {
+    width: 8%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-bottom: solid 0.2vw gray;
+
+    font-size: 1.2vw;
+    font-family: hatton;
+    text-align: center;
+    overflow: hidden;
+
+}
+.container-content .container-move-buttons{
+    width: 95%;
+    height: 8%;
+    display: flex;
+    justify-content: center;
+  
+    align-items: center;
+    background-color: #313e54;
+
+
+   }
+   .container-move-buttons .content-buttons{
+display: flex;
+justify-content: space-around;
+    width: 40%;
+    height: 80%;
+    
+   }
+   .content-buttons .division{
+display: flex;
+justify-content: space-around;
+width: 30%;
+height: 100%;
+background-color: goldenrod;
+border-radius: 2vw;
+
+   }
+   .division .arrow-button{
+display: flex;
+background:none;
+color: white;
+
+border: none;
+width: 30%;
+height: 100%;
+font-size:2.4vw;
+justify-content: center;
+align-items: center;
+cursor: pointer;
+transition: 0.5s;
+
+   }
+   .arrow-button:hover{
+color: #268ECD;
+
+
+
+
+   }
+   .tabla-container .row-info {
+    width: 100%;
+    height: 10%;
+    display: flex;
+    background-color: rgb(233, 241, 224);
+}
+
+.row-info .put-id {
+    width: 6%;
+    height: 100%;
+    display: flex;
+    border-top: solid 0.2vw gray;
+    border-right: solid 0.2vw gray;
+    border-bottom: solid 0.2vw gray;
+    justify-content: center;
+    align-items: center;
+    font-size: 2vh;
+    font-family: hatton;
+
+
+}
+
+.row-info .name-mascota {
+    width: 14%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    border-top: solid 0.2vw gray;
+    border-right: solid 0.2vw gray;
+    border-bottom: solid 0.2vw gray;
+    align-items: center;
+    font-size: 1.2vw;
+    font-family: hatton;
+    text-align: center;
+    overflow: hidden;
+
+
+}
+.name-mascota .mage{
+width: 50%;
+height: 90%;
+
+}
+
+.row-info .name-dueño {
+    width: 14%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    border-top: solid 0.2vw gray;
+    border-right: solid 0.2vw gray;
+    border-bottom: solid 0.2vw gray;
+    align-items: center;
+    font-size: 1.2vw;
+    font-family: hatton;
+    text-align: center;
+    overflow: hidden;
+
+
+}
+
+.row-info .botones {
+    width: 8%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-top: solid 0.2vw gray;
+    border-right: solid 0.2vw gray;
+    border-bottom: solid 0.2vw gray;
+    font-size: 1.2vw;
+    font-family: hatton;
+    text-align: center;
+
+}
+
+.row-info .botones-1 {
+    width: 8%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-top: solid 0.2vw gray;
+    border-bottom: solid 0.2vw gray;
+    font-size: 1.2vw;
+    font-family: hatton;
+    text-align: center;
+
+}
+
+.botones .put-icon {
+    width: 50%;
+    height: 80%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    color: #268ecd;
+    font-size: 4vh;
+    transition: .2s;
+
+}
+
+.botones-1 .put-icon {
+    width: 50%;
+    height: 80%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    color: #268ecd;
+    font-size: 4vh;
+    transition: .2s;
+}
+
+.put-icon:hover {
+    color: #860069;
+
+}

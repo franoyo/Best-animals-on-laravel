@@ -1,0 +1,460 @@
+body{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+   
+    }
+    @font-face{
+        font-family:hatton;
+        src: url(../fonts/PP\ Hatton\ Medium\ 500.otf);
+               }
+               .container-alerta{
+                display: flex;
+                width: 100vw;
+                height: 17vh;
+                position: fixed;
+                
+                align-items: center;
+                justify-content: center;
+                opacity: 0;
+                pointer-events: none;
+                
+                transition: 1.0s;
+                
+                
+                               }
+                               .container-alerta .alerta{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                width: 30vw;
+                height: 90%;
+                background-color: white;
+                border: solid #268ecd;
+                border-radius: 2vw;
+                transition: 1.0s;
+                
+                
+                
+                               }
+                               .alerta .contenido-alerta{
+                display: flex;
+                align-items: center;
+                
+                width: 90%;
+                height: 80%;
+                
+                
+                
+                               }
+                               .contenido-alerta .alert-image{
+                                display: flex;
+                width: 30%;
+                height: 80%;
+                
+                
+                
+                               }
+                               .alert-image .perro-alerta{
+                width: 100%;
+                height: 100%;
+                
+                               }
+                               .contenido-alerta .text-alert{
+                                display: flex;
+                width: 70%;
+                height: 80%;
+                justify-content: center;
+                align-items: center;
+                text-align: center;
+                font-family: hatton;
+                font-size: 1.5vw;
+                               }
+                               .ocultar{
+                                opacity: 1;
+                                pointer-events: none;
+                                
+                                
+                                
+                                               }
+             
+    .maincontainer{
+        display: flex;
+        flex-direction: row;
+width: 100%;
+height: 100vh;
+
+
+
+
+
+
+    }
+    .maincontainer .cont1{
+        display: flex;
+        width: 23vw;
+        height: 100%;
+        background-color: #313e54;
+flex-direction: column;
+align-items: center;
+
+
+
+
+    }
+    .cont1 .logo{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+width: 100%;
+height: 25vh;
+background-color: #313e54;
+
+
+    }
+    .logo .best{
+        width: 90%;
+height: 60%;
+
+
+
+    }
+    .cont1 .dash{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+width: 80%;
+height: 11.11%;
+
+
+background-color: #313e54;
+transition: 0.5s;
+
+
+
+
+
+        
+    }
+    .dash:hover{
+        
+background-color: rgb(13, 105, 117);
+
+
+
+    }
+    .cont1 .linea{
+        background-color: rgb(255, 255, 255);
+        width: 100%;
+        height: 0.4vh;
+    }
+    
+    .cont1 .ins {
+text-decoration: none;
+
+    }
+    .cont1 .b{
+color: white;
+width: 100%;
+
+    }
+    .cont1 .t1{
+        display: flex;
+width: 100%;
+height: 20%;
+font-size: 2.35vh;
+color: beige;
+font-family:hatton;
+
+
+
+    }
+    
+    .maincontainer .cont2{
+
+        display: flex;
+        flex-direction: column;
+        width: 80%;
+        height: 100vh;
+       
+
+
+    }
+    .cont2 .subuser{
+        display: flex;
+        
+        align-items: center;
+width: 100%;
+height: 15vh;
+background-color: white;
+
+
+    }
+    .subuser .mitad{
+        display: flex;
+       align-items: center;
+width: 50%;
+height: 15vh;
+
+
+    }
+
+    .mitad .admn{
+       
+width: 100%;
+height: 20%;
+font-size: 2vh;
+font-family:hatton;
+margin-top: 2.8%;
+margin-left: 5vh;
+
+
+    }
+    .mitad .user{
+width: 70%;
+height: 7vh;
+margin-left: 5vh;
+
+
+
+    }
+
+
+
+    .subuser .mitad2{
+        width: 50%;
+height: 15vh;
+display: flex;
+flex-direction: row-reverse;
+align-items: center;
+
+
+
+    }
+    .mitad2 .button{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-decoration: none;
+        width: 14%;
+height: 6vh;
+margin-right: 3vh;
+background: none;
+border: solid orange;
+color: #268ecd;
+font-size: 20px;
+font-family: hatton;
+font-size: 2.5vh;
+transition: 1s;
+    }
+    .button:hover{
+        
+background-color: orange;
+
+
+    }
+   .cont2 .cont3{
+    display: flex;
+flex-direction: column;
+width: 100%;
+height: 85%;
+background-color: #F6F6F6;
+   }
+   @media(orientation:portrait){
+    body{
+        background-color: #313e54;
+    }
+    .maincontainer{
+        display: flex;
+        flex-direction: column;
+width: 100%;
+height: 100vh;
+
+
+
+
+
+
+
+    }
+    .maincontainer .cont1{
+        display: flex;
+        width: 100%;
+        height: 10%;
+        background-color: #313e54;
+flex-direction: row;
+align-items: center;
+justify-content: center;
+
+
+
+
+    }
+    .cont1 .logo{
+        display: none;
+        justify-content: center;
+        align-items: center;
+width: 100%;
+height: 25vh;
+background-color: #313e54;
+
+
+    }
+    .logo .best{
+        width: 90%;
+height: 80%;
+
+
+
+    }
+    .cont1 .dash{
+        display: flex;
+        flex-direction: column;
+       text-align: center;
+        align-items: center;
+        overflow: hidden;
+width: 80%;
+height: 100%;
+
+
+background-color: #313e54;
+
+
+
+
+
+
+
+        
+    }
+    .dash:hover{
+        transition: 0.5s;
+background-color: rgb(13, 105, 117);
+
+
+
+    }
+    .cont1 .linea{
+        display: none;
+        background-color: rgb(255, 255, 255);
+        width: 20%;
+        height: 1vh;
+    }
+    
+    .cont1 .ins {
+text-decoration: none;
+
+    }
+    .cont1 .b{
+color: white;
+width: 100%;
+
+    }
+    .cont1 .t1{
+        display: flex;
+      
+        width: 100%;
+        height: 100%;
+        
+        font-size: 1.7vw;
+        text-align: center;
+        color: beige;
+        font-family:hatton;
+        margin-top: 12%;
+
+
+
+    }
+    
+    
+    .maincontainer .cont2{
+
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        height: 100vh;
+       
+
+
+    }
+    .cont2 .subuser{
+        display: flex;
+        
+        align-items: center;
+width: 100%;
+height: 5vh;
+background-color: white;
+
+
+    }
+    .subuser .mitad{
+        display: flex;
+       align-items: center;
+width: 50%;
+height: 100%;
+
+
+
+    }
+
+    .mitad .admn{
+       
+width: 100%;
+height: 20%;
+font-size: 1vh;
+font-family:hatton;
+margin-left: 3.4vh;
+
+
+    }
+    .mitad .user{
+width: 70%;
+height: 4vh;
+margin-left:4.2vh ;
+
+
+
+
+    }
+
+
+
+    .subuser .mitad2{
+        width: 50%;
+height: 100%;
+display: flex;
+flex-direction: row-reverse;
+align-items: center;
+
+
+
+    }
+    .mitad2 .button{
+        width: 30%;
+height: 3vh;
+margin-right: 1vh;
+background: none;
+border: solid orange;
+color: #268ecd;
+
+font-family: hatton;
+font-size: 1vh;
+
+    }
+    .button:hover{
+        transition: 1s;
+background-color: orange;
+
+
+    }
+   .cont2 .cont3{
+    display: flex;
+flex-direction: column;
+width: 100%;
+height: 100%;
+
+
+
+
+   } 
+}

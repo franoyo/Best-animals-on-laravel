@@ -43,6 +43,12 @@ return [
             'visibility' => 'public',
             'throw' => false,
         ],
+        'public_images' => [
+    'driver' => 'local',
+    'root' => public_path('images'), // Ubicación donde se almacenarán las imágenes públicas
+    'url' => env('APP_URL').'/images', // URL pública para acceder a las imágenes
+    'visibility' => 'public',
+],
 
         's3' => [
             'driver' => 's3',

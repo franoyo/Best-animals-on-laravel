@@ -70,6 +70,10 @@ route::controller(AdminController::class)->group(function () {
     route::get('/admin', 'index')->name('admin');
     route::get('/caja', 'caja')->name('caja');
     route::get('/registroStock', 'stock')->name('registroStock');
+    route::post('/storeStock', 'storeStock')->name('storeStock');
+    route::get("/listaProductos", 'crudProductos')->name("listaProductos");
+    route::post('/eliminarProducto', 'eliminarProducto')->name('eliminarProducto');
+    route::get('/editarProducto', 'editarProducto')->name('editarProducto');
 });
 route::controller(VeterinarioController::class)->group(function(){
 route::get('/veterinario','veterinarioDashboard')->name('veterinario');
