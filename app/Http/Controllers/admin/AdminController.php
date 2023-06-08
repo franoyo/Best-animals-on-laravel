@@ -61,8 +61,37 @@ if ($request->hasFile('imagen_producto')) {
         return redirect()->route('listaProductos')->withSuccess('Usuario eliminado correctamente!');
     }
     public function editarProducto($id){
-
-
+        $producto= Producto::find($id);
+        if (!$producto) {
+            return redirect()->back()->withErrors("El producto no existe");
+        }      
+        return view('Admin_views.editar_producto',['producto' => $producto]);
     }
+    public function updateProducto(Request $request){
+        $id = $request->input('id');
+        $producto = Producto::find($id);
+        $producto->descripcion = $request->input('descripcion_producto');
+        $producto->marca = $request->input('marca_producto');
+        $producto->peso = $request->input('peso_producto');
+        $producto->stock = $request->input('stock_producto');
+        $producto->precio = $request->input('precio_producto');
+        $producto->ubicacion = $request->input('ubicacion_producto');
+        $producto->vencimiento = $request->input('fecha_vencimiento_producto');
+
+        if ($request->hasFile('imagen_producto')) {
+            $imagen = $request->file('imagen_producto');
     
+            // Eliminar la imagen existente en la ruta correspondiente
+            Storage::delete($producto->imagen);
+    
+            // Guardar la nueva imagen en la misma ruta
+            $rutaImagen = $imagen->store('public/images');
+            $rutaRelativaImagen = Storage::url($rutaImagen);
+            $producto->imagen = $rutaRelativaImagen;
+        }
+    
+        // Guardar los cambios en la base de datos
+        $producto->save();
+    
+}
 }

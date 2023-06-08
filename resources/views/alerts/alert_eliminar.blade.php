@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="CSS/style23.css?v=1.0">
+    <link rel="stylesheet" href="{{asset('CSS/style23.css?v=1.0')}}">
     <title>alerta</title>
 </head>
 <body>
@@ -13,7 +13,7 @@
     @csrf
 <div class="mitad1">
     <div class="put-foto">
-        <img class="foto" src="img/alerta-removebg-preview.png" alt="alerta">
+        <img class="foto" src="{{asset('img/alerta-removebg-preview.png')}}" alt="alerta">
     </div>
     <div class="put-text" >
         <div class="text">ESTA SEGURO DE ELIMINAR EL PRODUCTO? DE ID:</div>

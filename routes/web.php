@@ -73,7 +73,8 @@ route::controller(AdminController::class)->group(function () {
     route::post('/storeStock', 'storeStock')->name('storeStock');
     route::get("/listaProductos", 'crudProductos')->name("listaProductos");
     route::post('/eliminarProducto', 'eliminarProducto')->name('eliminarProducto');
-    route::get('/editarProducto', 'editarProducto')->name('editarProducto');
+    route::get('/editarProducto/{id}', 'editarProducto')->name('editarProducto');
+    route::post('/updateProducto', 'updateProducto')->name('updateProducto');
 });
 route::controller(VeterinarioController::class)->group(function(){
 route::get('/veterinario','veterinarioDashboard')->name('veterinario');

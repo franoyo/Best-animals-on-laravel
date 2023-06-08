@@ -17,6 +17,7 @@ body{
     pointer-events: none;
     justify-content: center;
     align-items: center;
+    transition: 0.5s;
     
     }
     .container-alert .alert-body{
@@ -63,7 +64,7 @@ body{
     }
     .mostrar{
 opacity: 1;
-transition: 0.5s;
+
 
 
     }
