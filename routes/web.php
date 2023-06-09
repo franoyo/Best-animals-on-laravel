@@ -74,6 +74,7 @@ route::controller(AdminController::class)->group(function () {
     route::get("/listaProductos", 'crudProductos')->name("listaProductos");
     route::post('/eliminarProducto', 'eliminarProducto')->name('eliminarProducto');
     route::get('/editarProducto/{id}', 'editarProducto')->name('editarProducto');
+    route::get('/verProducto/{id}', 'verProducto')->name('verProducto');
     route::post('/updateProducto', 'updateProducto')->name('updateProducto');
 });
 route::controller(VeterinarioController::class)->group(function(){

@@ -1,6 +1,6 @@
 @extends("layouts.plantillaRow")
 @section("contenidoPrincipal")
-<link rel="stylesheet" href="{{asset('css/styleCrudProductos.css?v=1.1')}}">
+<link rel="stylesheet" href="{{asset('css/styleCrudProductos.css?v=1.13')}}">
 <div class="titulo-container">
 <div class="put-variants">
     <section class="put-input">
@@ -33,7 +33,7 @@
     <div class="name-dueño">{{$listas->marca}}</div>
     <div class="name-dueño">{{$listas->stock}}</div>
     <div class="name-dueño">{{$listas->precio}}</div>
-    <div class="botones"><a class="put-icon" href="#"><i class="bi bi-eye"></i></a></div>
+    <div class="botones"><a class="put-icon" href="{{route('verProducto', ['id' => $listas->id])}}"><i class="bi bi-eye"></i></a></div>
     <div class="botones"><a class="put-icon" href="{{route('editarProducto', ['id' => $listas->id])}}"><i class="bi bi-pen-fill"></i></a></div>
     <div class="botones-1">
         <a class="put-icon delete-button" data-id="{{$listas->id}}"><i class="bi bi-journal-x"></i></a>
@@ -57,6 +57,7 @@
   
                       </div>
                       </div>
+                      <a class="add-button" href="{{route('registroStock')}}"> <i class="bi bi-plus-lg"></i></a>
 </div>
 <script src="{{asset('js/crud_productos_script.js')}}"></script>
 

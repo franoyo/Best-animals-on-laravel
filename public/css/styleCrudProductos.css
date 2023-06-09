@@ -1,3 +1,9 @@
+:root {
+    --colorBordes: black;
+    --colorRows:beige;
+    --colorTetxo:black;
+    
+  }
 .cont3 .titulo-container{
 width: 100%;
 height: 15%;
@@ -73,7 +79,7 @@ width: 95%;
 height: 90%;
 display: flex;
 flex-direction: column;
-background-color: blanchedalmond;
+background-color: #a9b2c4;
 border: solid 0.25vh black;
 overflow:hidden;
 
@@ -82,7 +88,8 @@ overflow:hidden;
     width: 100%;
     height: 10%;
     display: flex;
-    background-color: rgb(200, 248, 145);
+    background-color: #313E54;
+    color: white;
 
 }
 
@@ -90,8 +97,8 @@ overflow:hidden;
     width: 6%;
     height: 100%;
     display: flex;
-    border-bottom: solid 0.2vw gray;
-    border-right: solid 0.2vw gray;
+    border-bottom: solid 0.2vw var(--colorBordes);
+    border-right: solid 0.2vw var(--colorBordes);
     justify-content: center;
     align-items: center;
     font-size: 2vh;
@@ -105,8 +112,8 @@ overflow:hidden;
     height: 100%;
     display: flex;
     justify-content: center;
-    border-bottom: solid 0.2vw gray;
-    border-right: solid 0.2vw gray;
+    border-bottom: solid 0.2vw var(--colorBordes);
+    border-right: solid 0.2vw var(--colorBordes);
     align-items: center;
     font-size: 1.2vw;
     font-family: hatton;
@@ -120,8 +127,8 @@ overflow:hidden;
     height: 100%;
     display: flex;
     justify-content: center;
-    border-bottom: solid 0.2vw gray;
-    border-right: solid 0.2vw gray;
+    border-bottom: solid 0.2vw var(--colorBordes);
+    border-right: solid 0.2vw var(--colorBordes);
     align-items: center;
     font-size: 1.2vw;
     font-family: hatton;
@@ -136,8 +143,8 @@ overflow:hidden;
     display: flex;
     justify-content: center;
     align-items: center;
-    border-bottom: solid 0.2vw gray;
-    border-right: solid 0.2vw gray;
+    border-bottom: solid 0.2vw var(--colorBordes);
+    border-right: solid 0.2vw var(--colorBordes);
     font-size: 1.2vw;
     font-family: hatton;
     text-align: center;
@@ -150,7 +157,7 @@ overflow:hidden;
     display: flex;
     justify-content: center;
     align-items: center;
-    border-bottom: solid 0.2vw gray;
+    border-bottom: solid 0.2vw var(--colorBordes);
 
     font-size: 1.2vw;
     font-family: hatton;
@@ -211,20 +218,22 @@ color: #268ECD;
     width: 100%;
     height: 10%;
     display: flex;
-    background-color: rgb(233, 241, 224);
+    background-color: var(--colorRows);
+    color: var(--colorTetxo);
 }
 
 .row-info .put-id {
     width: 6%;
     height: 100%;
     display: flex;
-    border-top: solid 0.2vw gray;
-    border-right: solid 0.2vw gray;
-    border-bottom: solid 0.2vw gray;
+    border-top: solid 0.2vw var(--colorBordes);
+    border-right: solid 0.2vw var(--colorBordes);
+    border-bottom: solid 0.2vw var(--colorBordes);
     justify-content: center;
     align-items: center;
     font-size: 2vh;
     font-family: hatton;
+    background-color: var(--colorRows);
 
 
 }
@@ -234,15 +243,15 @@ color: #268ECD;
     height: 100%;
     display: flex;
     justify-content: center;
-    border-top: solid 0.2vw gray;
-    border-right: solid 0.2vw gray;
-    border-bottom: solid 0.2vw gray;
+    border-top: solid 0.2vw var(--colorBordes);
+    border-right: solid 0.2vw var(--colorBordes);
+    border-bottom: solid 0.2vw var(--colorBordes);;
     align-items: center;
     font-size: 1.2vw;
     font-family: hatton;
     text-align: center;
     overflow: hidden;
-
+    background-color: var(--colorRows);
 
 }
 .name-mascota .mage{
@@ -256,15 +265,15 @@ height: 90%;
     height: 100%;
     display: flex;
     justify-content: center;
-    border-top: solid 0.2vw gray;
-    border-right: solid 0.2vw gray;
-    border-bottom: solid 0.2vw gray;
+    border-top: solid 0.2vw var(--colorBordes);
+    border-right: solid 0.2vw var(--colorBordes);
+    border-bottom: solid 0.2vw var(--colorBordes);
     align-items: center;
     font-size: 1.2vw;
     font-family: hatton;
     text-align: center;
     overflow: hidden;
-
+    background-color: var(--colorRows);
 
 }
 
@@ -274,13 +283,13 @@ height: 90%;
     display: flex;
     justify-content: center;
     align-items: center;
-    border-top: solid 0.2vw gray;
-    border-right: solid 0.2vw gray;
-    border-bottom: solid 0.2vw gray;
+    border-top: solid 0.2vw var(--colorBordes);
+    border-right: solid 0.2vw var(--colorBordes);
+    border-bottom: solid 0.2vw var(--colorBordes);;
     font-size: 1.2vw;
     font-family: hatton;
     text-align: center;
-
+    background-color: var(--colorRows);
 }
 
 .row-info .botones-1 {
@@ -289,12 +298,12 @@ height: 90%;
     display: flex;
     justify-content: center;
     align-items: center;
-    border-top: solid 0.2vw gray;
-    border-bottom: solid 0.2vw gray;
+    border-top: solid 0.2vw var(--colorBordes);
+    border-bottom: solid 0.2vw var(--colorBordes);
     font-size: 1.2vw;
     font-family: hatton;
     text-align: center;
-
+    background-color: var(--colorRows);
 }
 
 .botones .put-icon {
@@ -325,4 +334,18 @@ height: 90%;
 .put-icon:hover {
     color: #860069;
 
+}
+.add-button{
+position: fixed;
+display: flex;
+justify-content: center;
+align-items: center;
+width: 4.8%;
+height: 8%;
+right: 1%;
+bottom: 0.5%;
+color: white;
+font-size: 6vh;
+border-radius: 50%;
+background-color: #860069;
 }

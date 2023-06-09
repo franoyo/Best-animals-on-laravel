@@ -32,7 +32,7 @@
         
         </header>
         <div class="dash">
-          <a class="ins" href="{{route('caja')}}"><p class="t1">CAJA</p></a>
+          <a class="ins" href="{{route('admin')}}"><p class="t1"><i class="bi bi-arrow-left"></i>ATRAS</p></a>
           <div class="linea"></div>
         
         @yield("menuButtons")

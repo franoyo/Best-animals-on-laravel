@@ -92,6 +92,14 @@ if ($request->hasFile('imagen_producto')) {
     
         // Guardar los cambios en la base de datos
         $producto->save();
+        return redirect()->route('listaProductos')->withSuccess('Datos modificados correctamente!');
     
+}
+public function verProducto($id){
+    $producto= Producto::find($id);
+    if (!$producto) {
+        return redirect()->back()->withErrors("El producto no existe");
+    }  
+    return view('Admin_views.ver_producto',['producto' => $producto]);
 }
 }
