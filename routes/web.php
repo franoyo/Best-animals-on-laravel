@@ -76,6 +76,12 @@ route::controller(AdminController::class)->group(function () {
     route::get('/editarProducto/{id}', 'editarProducto')->name('editarProducto');
     route::get('/verProducto/{id}', 'verProducto')->name('verProducto');
     route::post('/updateProducto', 'updateProducto')->name('updateProducto');
+    route::get('/historiasClinicasFormulario', 'formularioHistorias')->name('historiasClinicasFormulario');
+    route::post('/storeHistoria', 'storeHistoriaClinica')->name('storeHistoria');
+    route::get('/listaHistorias', 'crudHistorias')->name('listaHistorias');
+    route::post('/eliminaHistoria', 'deleteHistoria')->name('deleteHistoria');
+    route::get('/editarHistoria/{id}', 'editarHistoria')->name('editarHistoria');
+    route::post('/updateHistoria', 'updateHistoria')->name('updateHistoria');
 });
 route::controller(VeterinarioController::class)->group(function(){
 route::get('/veterinario','veterinarioDashboard')->name('veterinario');

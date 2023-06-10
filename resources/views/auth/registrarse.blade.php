@@ -24,7 +24,6 @@ setTimeout(() => {
 </a>
 </header>
 <img class="gato" src="img/pussy.PNG" alt="gato">
-
 </div>
 <div class="contenido2">
 <h1 class="register">REGISTRARSE</h1>
@@ -35,33 +34,17 @@ setTimeout(() => {
 <input class="reg" name="documento" type="number" placeholder="Documento:" value="{{ old('documento') }}" required>
 <input class="reg" name="direccion" type="text" placeholder="Direccion:" value="{{ old('direccion') }}" required>
 <input class="reg" name="celular" type="number" placeholder="Celular:" value="{{ old('celular') }}" required>
-
-
 <input class="reg" name="email" type="email" value="{{ old('email') }}" placeholder="Email:" required>
-
 <input class="reg" name="password" type="password" value="{{ old('password') }}" placeholder="Contraseña:" required>
-
 <input class="reg" name="password_confirmation" type="text" placeholder="confirmar contraseña" required>
-
 <input class="reg1"  type="submit" value="FINALIZADO">
 </form>
 </div>
-
-        
     </div>
     <footer class="fnn">
 <div class="finn">
     <p class="vet">2022 Clínica Veterinaria Best Animals, todos los derechos reservados </p>
-
-
-
 </div>
-
-
     </footer>
-   
-   
-    
-    
 </body>
 </html>

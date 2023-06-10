@@ -1,6 +1,7 @@
 @extends("layouts.plantillaRow")
 @section("contenidoPrincipal")
-<link rel="stylesheet" href="{{asset('css/styleCrudProductos.css?v=1.13')}}">
+@include("alerts.alert_eliminar")
+<link rel="stylesheet" href="{{asset('css/styleCrudProductos.css?v=1.14')}}">
 <div class="titulo-container">
 <div class="put-variants">
     <section class="put-input">

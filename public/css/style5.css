@@ -1,0 +1,1132 @@
+.cont3 .menumin{
+    display: flex;
+    flex-direction: column;
+width: 10%;
+height: 100%;
+background-color: darkgray;
+
+
+   }
+   .modify-buttons .create{
+    width: 90%;
+    height: 20%;
+    font-family:hatton;
+    margin-top: 64%;
+   margin-bottom: 15%;
+    border: none;
+    background-color: #313e54;
+    color: white;
+    font-size: 2vh;
+    transition: 0.5s;
+    
+    
+       }
+       .create:hover{
+      
+    
+      background-color: rgb(13, 105, 117);
+      padding: 30%;
+     
+       }
+       .modify-buttons .search{
+       
+        width: 90%;
+        height: 20%;
+        font-family:hatton;
+       font-size: 2vh;
+        border: none;
+        background-color: #313e54;
+        color: white;
+        transition: 0.5s;
+        
+        
+           }
+           .search:hover{
+           
+    
+      background-color: rgb(13, 105, 117);
+      padding: 30%;
+           }
+           .modify-buttons .resetear{
+            width: 90%;
+            height: 20%;
+             font-family:hatton;
+           margin-top: 100%;
+            border: none;
+            background-color: #313e54;
+            color: white;
+font-size: 2vh;
+transition: 0.5s;
+           }
+           .resetear:hover{
+           
+            background-color: rgb(13, 105, 117);
+            padding: 30%;
+
+           }
+   .cont3 .subconter{
+    display: flex;
+    justify-content: center;
+width: 100%;
+height: 100%;
+background-color: #f6f6f6;
+
+   }
+   .subconter .contpertable{
+    display: flex;
+    flex-direction: column;
+width: 80%;
+height: 99.3%;
+border: solid;
+border-color: #278fce;
+background-color: white;
+
+
+   }
+   .contpertable .contform{
+    display: flex;
+    width: 100%;
+    height: 15%;
+  
+
+    
+
+   }
+   .contform .photob{
+width: 30%;
+height: 100%;
+
+
+
+   }
+   .contform .title{
+
+width: 40%;
+height: 40%;
+text-align: center;
+font-size: 1.9vh;
+font-family: hatton;
+
+   }
+   .contpertable .conttable{
+    display: flex;
+    flex-direction: column;
+width: 100%;
+height: 22%;
+
+
+   }
+   .conttable .output{
+width: 100%;
+height: 100%;
+font-size: 2vh;
+font-family: hatton;
+
+   }
+   
+   .conttable .fom1{
+display: flex;
+
+width: 100%;
+height: 33.33%;
+
+
+   }
+   .fom1 .zte{
+    display: flex;
+    margin: 5px;
+    width: 35%;
+    height: 70%;
+  
+  
+    
+    
+       }
+       
+        
+           
+   .conttable .fom2{
+    display: flex;
+    width: 100%;
+    height: 33.33%;
+    background-color: rgb(194, 191, 170);
+    
+       }
+       
+   
+   .contpertable .subti{
+    display: flex;
+  
+    
+    
+width: 100%;
+height: 3%;
+
+justify-content: center;
+border-top: solid;
+border-bottom: solid;
+border-color: #278fce;
+
+
+
+   }
+   .subti .dates{
+font-size: 1.5vh;
+font-family: hatton;
+
+
+
+   }
+   .contpertable .tableaftersubti{
+    width: 100%;
+    height: 8%;
+   
+
+
+
+
+   }
+   .tableaftersubti .put{
+width: 100%;
+font-size: 2vh;
+font-family: hatton;
+
+   }
+   .tableaftersubti .fami{
+    display: flex;
+    align-items: center;
+   
+   width: 100%;
+   height: 100%;
+   
+   }
+   .fami .zti{
+    display: flex;
+    margin: 5px;
+    width: 35%;
+    height: 70%;
+    
+
+  
+    
+
+
+   }
+   .contpertable .subti2{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    width: 100%;
+    height: 3%;
+    font-size: 1.5vh;
+    font-family: hatton;
+    
+    border-top: solid #278fce;
+    border-bottom: solid  #278fce;
+
+   }
+   .contpertable .contdobletable{
+display: flex;
+flex-direction: column;
+width: 100%;
+height: 29%;
+
+
+   }
+   .contdobletable .conthead{
+display: flex;
+width: 100%;
+height: 30%;
+
+
+
+
+   }
+   .conthead .opa{
+    display: flex;
+    width: 40%;
+    height: 100%;
+   font-size: 1.7vh;
+   font-family: hatton;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+   
+
+
+
+   }
+   .conthead .dir{
+    display: flex;
+    width: 7%;
+    height: 100%;
+    
+   border-right: solid #278fce;
+   border-left: solid #278fce;
+
+
+   }
+   .conthead .row1{
+display: flex;
+text-align: center;
+align-items: center;
+justify-content: center;
+font-size: 1.7vh;
+font-family: hatton;
+width: 26.5%;
+height: 100%;
+
+border-right: solid #278fce;
+
+
+   }
+   .conthead  .row2{
+display: flex;
+justify-content: center;
+align-items: center;
+text-align: center;
+font-size: 1.7vh;
+font-family: hatton;
+width: 26.5%;
+height: 100%;
+
+
+   }
+   .contdobletable .registros{
+    display: flex;
+width: 100%;
+height: 70%;
+
+
+
+   }
+   .registros .mn1{
+    display: flex;
+    flex-direction: column;
+width: 40%;
+height:100% ;
+
+border-top: solid #278fce;
+   }
+   .registros .fc{
+    display: flex;
+width: 100%;
+height: 20%;
+
+
+
+   }
+   .registros .fi{
+    display: flex;
+    width: 50%;
+    height: 100%;
+    
+    border-right: solid #278fce  
+    ;
+
+   
+
+   }
+   .registros .fu{
+    display: flex;
+    width: 50%;
+    height: 100%;
+   
+
+
+   }
+   .registros .tex{
+    display: flex;
+    
+    font-size: 2vh;
+    font-family: hatton;
+    border: none;
+width: 100%;
+border-bottom: solid #278fce;
+
+
+   }
+   .registros .mg{
+    display: flex;
+    
+    font-size: 1.5vh;
+    font-family: hatton;
+    
+width: 100%;
+border-bottom: solid #278fce;
+
+
+   }
+   
+   
+   .registros .mn2{
+    display: flex;
+    width: 7%;
+    height: 100%;
+ justify-content: center;
+ align-items: center;
+    text-align: center;
+    border-top:  solid #278fce;
+   border-left: solid #278fce;
+   border-right: solid #278fce;
+   border-bottom: solid #278fce;
+   
+   }
+   .mn2 .ana{
+     
+    
+    writing-mode: vertical-lr;
+    transform: rotate(180deg);
+    font-size: 1.5vh;
+    font-family: hatton;
+   
+   }
+   .registros .mn3{
+    display: flex;
+    width: 26.5%;
+    height: 100%;
+   
+    border-top: solid #278fce;
+    border-bottom:solid #268ecd;
+    border-right: solid #278fce;
+   }
+   .registros .mn4{
+    display: flex;
+    width: 26.5%;
+    height: 100%;
+    border-bottom:solid #268ecd;
+    border-top: solid #278fce;
+   }
+   .registros .ugu{
+ display: flex;
+width: 100%;
+height:100%;
+font-size: 2vh;
+font-family: hatton;
+
+
+
+   }
+   .contpertable .contlast{
+   
+    display: flex;
+width: 100%;
+height: 20%;
+justify-content: center;
+align-items: center;
+
+
+
+
+
+
+   }
+   .contlast .first{
+    display: flex;
+   
+    justify-content: center;
+    align-items: center;
+width: 40%;
+height: 100%;
+
+
+   }
+   .first .pruebascontainer{
+    display: flex;
+    flex-direction: column;
+width: 50%;
+height: 90%;
+
+border: solid #278fce;
+
+   }
+   .pruebascontainer .laboratorio{
+    display: flex;
+
+font-size: 1.7vh;
+font-family: hatton;
+justify-content: start;
+text-align: center;
+
+width: 100%;
+height: 20%;
+
+border-bottom: solid #278fce;
+
+
+   }
+   .pruebascontainer .caja{
+    display: flex;
+width: 100%;
+height:100%;
+font-size: 2vh;
+font-family: hatton;
+
+
+   }
+   .contlast .second{
+    display: flex;
+    align-items: center;
+    width: 34%;
+    height: 100%;
+    
+   }
+   .second .tratamiento{
+display: flex;
+flex-direction: column;
+
+width: 100%;
+height: 90%;
+
+border: solid #278fce;
+
+
+   }
+   .tratamiento .tara{
+display: flex;
+justify-content: start;
+text-align: center;
+font-size: 1.7vh;
+font-family: hatton;
+width: 100%;
+height: 20%;
+
+border-bottom: solid #278fce;
+
+   }
+   .tratamiento .loop{
+    display: flex;
+    width: 100%;
+height:100%;
+font-size: 2vh;
+font-family: hatton;
+   }
+   .contlast .fecha{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 27%;
+    height: 100%;
+  
+    
+   }
+   
+   .fecha .historia{
+    display: flex;
+    flex-direction: row-reverse;
+  
+width: 100%;
+height: 50%;
+
+
+   }
+   .historia .nm{
+    display: flex;
+width: 90%;
+height: 50%;
+
+margin-top: 38px;
+
+
+
+   }
+   .nm .hist{
+    display: flex;
+width: 70%;
+height: 100%;
+font-size: 1.5vh;
+
+
+
+border: solid #278fce;
+
+   }
+   .nm .ponernum{
+display: flex;
+justify-content: center;
+align-items: center;
+text-align: center;
+width: 30%;
+height: 100%;
+font-family: hatton;
+border-top: solid #278fce;
+border-bottom: solid #278fce;
+font-size: 2vh;
+
+   }
+   @media(orientation:portrait){
+    .cont3 .menumin{
+        display: flex;
+        flex-direction: column;
+    width: 10%;
+    height: 100%;
+    background-color: darkgray;
+    
+    
+       }
+       .modify-buttons{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: start;
+        
+    width: 100%;
+    height: 100%;
+    
+    
+       }
+       .modify-buttons .create{
+        width: 100%;
+        height: 3%;
+        
+      
+        font-family:hatton;
+        margin-top: 64%;
+       margin-bottom: 15%;
+        border: none;
+        background-color: #313e54;
+        color: white;
+        font-size: 1vh;
+        
+        
+        
+           }
+           .create:hover{
+          transition: 0.5s;
+        
+          background-color: rgb(13, 105, 117);
+          padding: 30%;
+         
+           }
+           .modify-buttons .search{
+           
+            width: 100%;
+            height: 3%;
+            font-family:hatton;
+           font-size: 1vh;
+            border: none;
+            background-color: #313e54;
+            color: white;
+            
+            
+            
+               }
+               .search:hover{
+                transition: 0.5s;
+        
+          background-color: rgb(13, 105, 117);
+          padding: 30%;
+               }
+               .modify-buttons .resetear{
+                width: 100%;
+                height: 3%;
+                 font-family:hatton;
+               margin-top: 100%;
+                border: none;
+                background-color: #313e54;
+                color: white;
+    font-size: 1vh;
+    
+               }
+               .resetear:hover{
+                transition: 0.5s;
+                background-color: rgb(13, 105, 117);
+                padding: 30%;
+    
+               }
+       .cont3 .subconter{
+        display: flex;
+        
+        justify-content: center;
+    width: 100%;
+    height: 100%;
+    
+    
+       }
+       .subconter .contpertable{
+        display: flex;
+        flex-direction: column;
+    width: 100%;
+    height: 100%;
+    border: solid;
+    border-color: #278fce;
+    background-color: white;
+    
+    
+       }
+       .contpertable .contform{
+        display: flex;
+        width: 100%;
+        height: 15%;
+        align-items: center;
+      
+    
+        
+    
+       }
+       .contform .photob{
+    width: 30%;
+    height: 60%;
+    
+    
+    
+       }
+       .contform .title{
+    
+    width: 40%;
+    height: 40%;
+    text-align: center;
+    font-size: 1.32vh;
+    font-family: hatton;
+    
+       }
+       .contpertable .conttable{
+        display: flex;
+        flex-direction: column;
+    width: 100%;
+    height: 22%;
+    
+    
+       }
+       .conttable .output{
+    width: 100%;
+    height: 100%;
+    font-size: 1.3vh;
+        font-family: hatton;
+    
+       }
+       
+       .conttable .fom1{
+    display: flex;
+    
+    width: 100%;
+    height: 33.33%;
+    
+    
+       }
+       .fom1 .zte{
+        display: flex;
+        margin: 5px;
+        width: 35%;
+        height: 70%;
+     
+      
+        
+        
+           }
+           
+            
+               
+       .conttable .fom2{
+        display: flex;
+        width: 100%;
+        height: 33.33%;
+       
+        
+           }
+           
+       
+       .contpertable .subti{
+        display: flex;
+      
+        
+        
+    width: 100%;
+    height: 3%;
+    
+    justify-content: center;
+    border-top: solid;
+    border-bottom: solid;
+    border-color: #278fce;
+    
+    
+    
+       }
+       .subti .dates{
+        font-size: 1.3vh;
+        font-family: hatton;
+    
+    
+    
+       }
+       .contpertable .tableaftersubti{
+        width: 100%;
+        height: 8%;
+       
+    
+    
+    
+    
+       }
+       .tableaftersubti .put{
+    width: 100%;
+    font-size: 1.2vh;
+        font-family: hatton;
+    
+       }
+       .tableaftersubti .fami{
+        display: flex;
+        align-items: center;
+       
+       width: 100%;
+       height: 100%;
+       
+       }
+       .fami .zti{
+        display: flex;
+        margin: 5px;
+        width: 35%;
+        height: 70%;
+        
+    
+      
+        
+    
+    
+       }
+       .contpertable .subti2{
+        display: flex;
+        justify-content: center;
+        text-align: center;
+        width: 100%;
+        height: 3%;
+        font-size: 1.4vh;
+        font-family: hatton;
+        
+        border-top: solid #278fce;
+        border-bottom: solid  #278fce;
+    
+       }
+       .contpertable .contdobletable{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 29%;
+    
+    
+       }
+       .contdobletable .conthead{
+    display: flex;
+    width: 100%;
+    height: 30%;
+    
+    
+    
+    
+       }
+       .conthead .opa{
+        display: flex;
+        width: 40%;
+        height: 100%;
+        font-size: 1.4vh;
+        font-family: hatton;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+       
+    
+    
+    
+       }
+       .conthead .dir{
+        display: flex;
+        width: 7%;
+        height: 100%;
+        
+       border-right: solid #278fce;
+       border-left: solid #278fce;
+    
+    
+       }
+       .conthead .row1{
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.4vh;
+        font-family: hatton;
+    width: 26.5%;
+    height: 100%;
+    
+    border-right: solid #278fce;
+    
+    
+       }
+       .conthead  .row2{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-size: 1.4vh;
+        font-family: hatton;
+    width: 26.5%;
+    height: 100%;
+    
+    
+       }
+       .contdobletable .registros{
+        display: flex;
+    width: 100%;
+    height: 70%;
+    
+    
+    
+       }
+       .registros .mn1{
+        display: flex;
+        flex-direction: column;
+    width: 40%;
+    height:100% ;
+    
+    border-top: solid #278fce;
+       }
+       .registros .fc{
+        display: flex;
+    width: 100%;
+    height: 20%;
+    
+    
+    
+       }
+       .registros .fi{
+        display: flex;
+        width: 50%;
+        height: 100%;
+        
+        border-right: solid #278fce  
+        ;
+    
+       
+    
+       }
+       .registros .fu{
+        display: flex;
+        width: 50%;
+        height: 100%;
+       
+    
+    
+       }
+       .registros .tex{
+        display: flex;
+        
+        font-size: 1.2vh;
+        font-family: hatton;
+        border: none;
+    width: 100%;
+    border-bottom: solid #278fce;
+    
+    
+       }
+       .registros .mg{
+        display: flex;
+        
+        font-size: 1vh;
+        font-family: hatton;
+        
+    width: 100%;
+    border-bottom: solid #278fce;
+    
+    
+       }
+       
+       
+       .registros .mn2{
+        display: flex;
+        width: 7%;
+        height: 100%;
+     justify-content: center;
+     align-items: center;
+        text-align: center;
+        border-top:  solid #278fce;
+       border-left: solid #278fce;
+       border-right: solid #278fce;
+       border-bottom: solid #278fce;
+       
+       }
+       .mn2 .ana{
+         
+        
+        writing-mode: vertical-lr;
+        transform: rotate(180deg);
+        font-size: 1vh;
+        font-family: hatton;
+       
+       }
+       .registros .mn3{
+        display: flex;
+        width: 26.5%;
+        height: 100%;
+       
+        border-top: solid #278fce;
+        border-bottom:solid #268ecd;
+        border-right: solid #278fce;
+       }
+       .registros .mn4{
+        display: flex;
+        width: 26.5%;
+        height: 100%;
+        border-bottom:solid #268ecd;
+        border-top: solid #278fce;
+       }
+       .registros .ugu{
+     display: flex;
+    width: 100%;
+    height:100%;
+    font-size: 1.2vh;
+        font-family: hatton;
+    
+    
+    
+       }
+       .contpertable .contlast{
+       
+        display: flex;
+    width: 100%;
+    height: 20%;
+    justify-content: center;
+    align-items: center;
+    
+    
+    
+    
+    
+    
+       }
+       .contlast .first{
+        display: flex;
+       
+        justify-content: center;
+        align-items: center;
+    width: 40%;
+    height: 100%;
+    
+    
+       }
+       .first .pruebascontainer{
+        display: flex;
+        flex-direction: column;
+    width: 50%;
+    height: 90%;
+    
+    border: solid #278fce;
+    
+       }
+       .pruebascontainer .laboratorio{
+        display: flex;
+    
+        font-size: 1vh;
+        font-family: hatton;
+    justify-content: start;
+    text-align: center;
+    
+    width: 100%;
+    height: 20%;
+    
+    border-bottom: solid #278fce;
+    
+    
+       }
+       .pruebascontainer .caja{
+        display: flex;
+    width: 100%;
+    height:100%;
+    font-size: 1.2vh;
+        font-family: hatton;
+    
+    
+       }
+       .contlast .second{
+        display: flex;
+        align-items: center;
+        width: 34%;
+        height: 100%;
+        
+       }
+       .second .tratamiento{
+    display: flex;
+    flex-direction: column;
+    
+    width: 100%;
+    height: 90%;
+    
+    border: solid #278fce;
+    
+    
+       }
+       .tratamiento .tara{
+    display: flex;
+    justify-content: start;
+    text-align: center;
+    font-size: 1.5vh;
+        font-family: hatton;
+    width: 100%;
+    height: 20%;
+    
+    border-bottom: solid #278fce;
+    
+       }
+       .tratamiento .loop{
+        display: flex;
+        width: 100%;
+    height:100%;
+    font-size: 1.2vh;
+        font-family: hatton;
+       }
+       .contlast .fecha{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 27%;
+        height: 100%;
+      
+        
+       }
+       
+       .fecha .historia{
+        display: flex;
+        flex-direction: row-reverse;
+      
+    width: 100%;
+    height: 50%;
+    
+    
+       }
+       .historia .nm{
+        display: flex;
+    width: 90%;
+    height: 50%;
+    
+    margin-top: 38px;
+    
+    
+    
+       }
+       .nm .hist{
+        display: flex;
+    width: 70%;
+    height: 100%;
+    font-size: 1.2vh;
+        font-family: hatton;
+    
+    
+    
+    border: solid #278fce;
+    
+       }
+       .nm .ponernum{
+    display: flex;
+    width: 30%;
+    height: 100%;
+    
+    border-top: solid #278fce;
+    border-bottom: solid #278fce;
+    
+       }
+    
+    
+    
+       }
+
+
+   

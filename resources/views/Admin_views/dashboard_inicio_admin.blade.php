@@ -37,7 +37,7 @@
     <div class="linea"></div>
 </div>
 <div class="dash">
-    <a class="ins" href="dashboar_caja_registro.php">
+    <a class="ins" href="{{route('historiasClinicasFormulario')}}">
         <p class="t1">HISTORIAS CLINICAS</p>
     </a>
     <div class="linea"></div>
