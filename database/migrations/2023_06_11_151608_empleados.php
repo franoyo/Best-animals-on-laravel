@@ -18,7 +18,7 @@ return new class extends Migration
             $table->string('direccion');
             $table->string('celular');
             $table->string('documento');
-            $table->string('rol')->default("cliente");
+            $table->string('rol');
             $table->string('email')->unique();
             $table->timestamp('email_verified_at')->nullable();
             $table->string('password');

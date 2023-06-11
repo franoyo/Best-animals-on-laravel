@@ -130,7 +130,7 @@ window.location.href="{{route('listaHistorias')}}";
   <div class="second"> <div class="tratamiento"><header class="tara"><p>TRATAMIENTO:</p></header>
   <textarea class="form-control loop" name="tratamiento" id="" cols="5" rows="5"></textarea></div></div>
   <div class="fecha"><div class="historia"> <div class="nm"><div class="hist"><p>No.Historia:</p></div> <div class="ponernum">
-  
+  {{"$id"}}
 </div></div></div> </div>                                     </div>
 
 

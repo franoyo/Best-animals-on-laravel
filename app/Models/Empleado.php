@@ -23,6 +23,7 @@ class Empleado extends Authenticatable
        'celular',
         'email',
         'password',
+        'rol',
     ];
      /**
      * The attributes that should be hidden for serialization.

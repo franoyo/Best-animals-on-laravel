@@ -26,7 +26,8 @@
     <div class="row1">
         <div class="mitad-1">
             <div class="subtitle" >ID EMPLEADO:</div>
-            <div class="container-input" id="cont-op">      
+            <div class="container-input" id="cont-op"> 
+                {{$mostrar}}     
             </div> 
         </div>
         <div class="mitad-2"><div class="subtitle-2">NOMBRE:</div>

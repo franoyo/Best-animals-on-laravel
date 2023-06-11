@@ -22,7 +22,7 @@ class DatabaseSeeder extends Seeder
              'celular'=>'3026541236',
              'email' => 'test@example.com',
              'password'=> bcrypt("admin2003"),
-             'rol'=>'administrador',
+             'rol'=>'cliente',
          ]);
     }
 }

@@ -109,7 +109,7 @@ public function verProducto($id){
 public function formularioHistorias(){
     $ultimoId = historiaClinica::latest('id')->value('id');
     $idFinal=$ultimoId+1;
-    return view("Admin_views.Form_historia_clinica");
+    return view("Admin_views.Form_historia_clinica",['id'=>$idFinal]);
 }
 public function storeHistoriaClinica(Request $request){
     $request->validate([
@@ -213,8 +213,9 @@ public function updateHistoria(request $request){
     ;
 }
 public function crudEmpleados(){
-
-return view('Admin_views.crud_gestion_empleados');
+    $ultimoId = Empleado::latest('id')->value('id');
+    $idFinal=$ultimoId+1;
+return view('Admin_views.crud_gestion_empleados',['empleado'=>Empleado::all(),'mostrar'=>$idFinal]);
 
 }
 public function ingresarEmpleado(Request $request){
@@ -224,7 +225,7 @@ public function ingresarEmpleado(Request $request){
         'documento' => 'required|string|max:250',
         'celular' => 'required|string|max:250',
         'direccion' => 'required|string|max:250',
-        'email' => 'required|email|max:250|unique:users',
+        'email' => 'required|email|max:250|unique:empleados',
         'password' => 'required|min:8|confirmed'
     ]);
 
@@ -235,9 +236,21 @@ public function ingresarEmpleado(Request $request){
         'celular' => $request->celular,
         'direccion' => $request->direccion,
         'email' => $request->email,
+        'rol'=>$request->rol,
         'password' => Hash::make($request->password)
     ]);
-
-
+    return redirect()->route('listaEmpleados')->withSuccess('Empleado agregado correctamente!');
+}
+public function eliminarEmpleado(Request $request){
+    $request->validate([
+        'id' => 'required|integer|max:100',
+    ]);
+    $id = $request->input('id');
+    
+    $empleado = Empleado::find($id);
+    
+    $empleado->delete();
+    return redirect()->route('listaEmpleados')->withSuccess('Empleado eliminado correctamente!');
+    
 }
 }
