@@ -108,7 +108,7 @@ overflow:hidden;
 }
 
 .row-title .name-mascota {
-    width: 14%;
+    width: 20%;
     height: 100%;
     display: flex;
     justify-content: center;
@@ -119,6 +119,19 @@ overflow:hidden;
     font-family: hatton;
     text-align: center;
 
+
+}
+.row-title .name-img{
+    width: 8%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    border-bottom: solid 0.2vw var(--colorBordes);
+    border-right: solid 0.2vw var(--colorBordes);
+    align-items: center;
+    font-size: 1.2vw;
+    font-family: hatton;
+    text-align: center;
 
 }
 
@@ -239,7 +252,7 @@ color: #268ECD;
 }
 
 .row-info .name-mascota {
-    width: 14%;
+    width: 20%;
     height: 100%;
     display: flex;
     justify-content: center;
@@ -254,8 +267,24 @@ color: #268ECD;
     background-color: var(--colorRows);
 
 }
-.name-mascota .mage{
-width: 50%;
+.row-info .name-img{
+    width: 8%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    border-top: solid 0.2vw var(--colorBordes);
+    border-right: solid 0.2vw var(--colorBordes);
+    border-bottom: solid 0.2vw var(--colorBordes);;
+    align-items: center;
+    font-size: 1.2vw;
+    font-family: hatton;
+    text-align: center;
+    overflow: hidden;
+    background-color: var(--colorRows);
+
+}
+.name-img .mage{
+width: 70%;
 height: 90%;
 
 }

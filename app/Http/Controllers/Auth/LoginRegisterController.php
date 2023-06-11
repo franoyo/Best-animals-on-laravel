@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Auth;
 
 use App\Models\User;
+use App\Models\Empleado;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Auth;
@@ -57,7 +58,7 @@ class LoginRegisterController extends Controller
     {
         if (Auth::check() and auth()->user()->rol=="cliente") {     
     return view('auth.dashboard'); 
-        }elseif (Auth::check() and auth()->user()->rol!=="cliente") {
+        }elseif (Auth::check() and auth()->user()->rol!=="cliente" or Auth::guard('empleado')->user()->rol!=="cliente") {
             $this->logout($request);
         }
        
@@ -73,23 +74,38 @@ class LoginRegisterController extends Controller
             'password' => 'required'
         ]);
 
-        if (Auth::attempt($credentials)) {
-            if (auth()->user()->rol=='administrador') {
-                $request->session()->regenerate();
-                return redirect()->route('admin')->withSuccess('Te has logueado correctamente!');
-            }elseif (auth()->user()->rol=='veterinario') {
-                $request->session()->regenerate();
-                return redirect()->route('veterinario')->withSuccess('Te has logueado correctamente!');
-            }
-            elseif(auth()->user()->rol=='cliente'){
-                $request->session()->regenerate();
-                return redirect()->route('dashboard')
-                ->withSuccess('Te has logueado correctamente!');
-            } 
+        // Intentar autenticar el usuario desde la tabla "users"
+    if (Auth::attempt($credentials)) {
+        $user = auth()->user();
+        if ($user->rol == 'cliente') {
+            $request->session()->regenerate();
+            return redirect()->route('dashboard')->withSuccess('Te has logueado correctamente como cliente!');
         }
-        return back()->withErrors([
-            'email' => 'Sus credenciales proporcionadas no coinciden en nuestros registros.',
-        ])->onlyInput('email');
+    }
+    // Intentar autenticar el usuario desde la tabla "empleados"
+    if (Empleado::where('email', $request->email)->first()) {
+        $empleadoCredentials = [
+            'email' => $request->email,
+            'password' => $request->password
+        ];
+
+        if (Auth::guard('empleado')->attempt($empleadoCredentials)) {
+            $empleado = auth()->guard('empleado')->user();
+            if ($empleado->rol == 'veterinario') {
+                $request->session()->regenerate();
+                return redirect()->route('veterinario')->withSuccess('Te has logueado correctamente como veterinario!');
+            } elseif ($empleado->rol == 'administrador') {
+                $request->session()->regenerate();
+                return redirect()->route('admin')->withSuccess('Te has logueado correctamente como administrador!');
+            } elseif ($empleado->rol == 'cliente') {
+                $request->session()->regenerate();
+                return redirect()->route('dashboard')->withSuccess('Te has logueado correctamente como cliente!');
+            }
+        }
+    }
+    return back()->withErrors([
+        'email' => 'Sus credenciales proporcionadas no coinciden en nuestros registros.',
+    ])->onlyInput('email');
     }
 
     function login()

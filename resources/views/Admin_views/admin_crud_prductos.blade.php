@@ -1,7 +1,7 @@
 @extends("layouts.plantillaRow")
 @section("contenidoPrincipal")
 @include("alerts.alert_eliminar")
-<link rel="stylesheet" href="{{asset('css/styleCrudProductos.css?v=1.14')}}">
+<link rel="stylesheet" href="{{asset('css/styleCrudProductos.css?v=1.18')}}">
 <div class="titulo-container">
 <div class="put-variants">
     <section class="put-input">
@@ -17,7 +17,7 @@
     <div class="tabla-container">
     <div class="row-title">
     <div class="put-id">ID</div>
-    <div class="name-mascota">IMAGEN DEL PRODUCTO</div>
+    <div class="name-img">IMAGEN</div>
     <div class="name-mascota">DESCRIPCION</div>
     <div class="name-dueño">MARCA</div>
     <div class="name-dueño">STOCK</div>
@@ -29,7 +29,7 @@
 @foreach ($Lista as $listas )
 <div class="row-info">
     <div class="put-id">{{$listas->id}}</div>
-    <div class="name-mascota"><img class="mage" src="{{asset($listas->imagen)}}" alt=""></div>
+    <div class="name-img"><img class="mage" src="{{asset($listas->imagen)}}" alt=""></div>
     <div class="name-mascota">{{$listas->descripcion}}</div>
     <div class="name-dueño">{{$listas->marca}}</div>
     <div class="name-dueño">{{$listas->stock}}</div>

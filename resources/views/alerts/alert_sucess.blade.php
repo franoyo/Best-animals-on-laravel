@@ -16,6 +16,7 @@
           <img class="perro-alertaz" src="img/perro-imagen-animada-0391.gif" alt="wuju">
         </div>
         <div class="text-alertz">
+       
         {{session('success')}}
         </div>
         

@@ -21,7 +21,15 @@
       }, 2200);
     </script>
 @endif
-
+@unless($errors->isEmpty())
+@include('alerts.alert_register')
+<script>
+const alerta=document.getElementById("main-container");
+setTimeout(() => {
+    alerta.classList.add("mostrar")
+}, 500);
+</script>
+@endunless
     <div class="maincontainer">
     
         <div class="cont1">
@@ -46,7 +54,7 @@
                   <a href=""><img class="user" src="img/buttton.png" alt=""></a>
                   
                       </nav> 
-                      <p class="admn">{{Auth::user()->name }} {{Auth::user()->apellido }}</p>                </div>
+                      <p class="admn">{{ auth()->guard('empleado')->user()->name }} {{ auth()->guard('empleado')->user()->apellido }}</p>                </div>
                 
                 
                

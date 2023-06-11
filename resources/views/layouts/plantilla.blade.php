@@ -56,7 +56,7 @@
                         <a href=""><img class="user" src="img/buttton.png" alt=""></a>
                         
                             </nav> 
-                            <p class="admn">{{ Auth::user()->name }} {{ Auth::user()->apellido }}</p>                </div>
+                            <p class="admn">{{ auth()->guard('empleado')->user()->name }} {{ auth()->guard('empleado')->user()->apellido }}</p>                </div>
                   <div class="mitad2">
                     <a class="button" href="{{route('logout')}}" onclick="event.preventDefault();
                             document.getElementById('logout-form').submit();">SALIR</a> 

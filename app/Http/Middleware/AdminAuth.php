@@ -15,9 +15,13 @@ class AdminAuth
      */
     public function handle(Request $request, Closure $next): Response
     {
-        if (auth()->check() and auth()->user()->rol=='administrador') {
+       
+        $empleado = auth()->guard('empleado')->user();
+
+        if ($empleado and $empleado->rol === 'administrador') {
             return $next($request);
         }
-       return redirect()->route('login') ->withSuccess('Usted no es administrador Sea serio :v');
+
+        return redirect()->route('login')->withSuccess('Usted no es administrador. Sea serio :v');
     }
 }

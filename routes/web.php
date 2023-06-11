@@ -82,6 +82,8 @@ route::controller(AdminController::class)->group(function () {
     route::post('/eliminaHistoria', 'deleteHistoria')->name('deleteHistoria');
     route::get('/editarHistoria/{id}', 'editarHistoria')->name('editarHistoria');
     route::post('/updateHistoria', 'updateHistoria')->name('updateHistoria');
+    route::get('/listaEmpleados', 'crudEmpleados')->name('listaEmpleados');
+    route::post('/ingresarEmpleado', 'ingresarEmpleado')->name('ingresarEmpleado');
 });
 route::controller(VeterinarioController::class)->group(function(){
 route::get('/veterinario','veterinarioDashboard')->name('veterinario');

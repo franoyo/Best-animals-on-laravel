@@ -1,0 +1,277 @@
+body{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    
+    
+    }
+    @font-face {
+        font-family: hatton;
+        src: url(../fonts/PP\ Hatton\ Medium\ 500.otf);
+    }
+    .container-general{
+    display: flex;
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(110, 142, 146, 0.3);
+    opacity: 0;
+    pointer-events: none;
+    transition: 0.5s;
+    top: 0;
+    left: 0;
+    
+    
+    }
+    .container-general .container-modal{
+    display: flex;
+    flex-direction: column;
+    width: 0.2vw;
+    height: 0.2vh;
+    background-color: white;
+    border: 0.5vw solid #268ecd;
+    align-items: center;
+    border-radius: 2vw;
+    transition: 0.5s;
+    
+    
+    }
+    .container-modal .container-logo{
+        display: flex;
+        justify-content: space-between;
+        font-size: 2.5vw;
+        font-family: hatton;
+        color: #268ecd;
+    width: 100%;
+    height: 20%;
+    
+    
+    
+    }
+    .container-logo .put-logo{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    width: 25%;
+    height: 100%;
+    
+    
+    
+    }
+    .put-logo .logo{
+    width: 100%;
+    height: 70%;
+    
+    }
+    p{
+    align-self: center;
+    
+    }
+    .container-logo .put-close{
+        display: flex;
+    
+     justify-content: center;
+     align-items: center;
+     font-size: 3vw;
+     color: red;
+     background: none;
+     border: none;
+    cursor: pointer;
+    width: 7%;
+    height: 45%;
+    transition: 0.5s;
+    }
+    .put-close:hover{
+    background-color: #268ecd;
+    border-radius: 50%;
+    
+    
+    }
+    .container-modal .container-form{
+        display: flex;
+        flex-direction: column;
+    width: 90%;
+    height: 70%;
+    
+    
+    }
+    .container-form .row1{
+        display: flex;
+        width: 100%;
+        height: 20%;
+    
+    }
+    .row1 .mitad-1{
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        font-family: hatton;
+        font-size: 1.3vw;
+        text-align: center;
+    width: 50%;
+    height: 100%;
+    
+    
+    
+    }
+    .mitad-1 .subtitle{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: 40%;
+    height: 100%;
+    
+    
+    }
+    .mitad-1 .container-input{
+    display: flex;
+    width: 53%;
+    height: 55%;
+    align-items: center;
+    
+    border-radius: 1vw;
+    }
+    #cont-op{
+        border: 0.222vw solid #268ecd;
+    
+    }
+    .container-input .input-1{
+       
+        display: flex;
+        width: 100%;
+        height: 90%;
+        font-size: 1.8vh;
+        font-family: hatton;
+        border: 0.222vw solid #268ecd;
+        border-radius: 0.5vw;
+        outline-offset: 0.25vh;
+        outline-color:rgba(194, 219, 254, 1);
+        
+        
+        
+        transition: all 0.2s ease-in-out;
+         
+        
+        
+                       }
+                       .input-1:focus{
+                        outline-offset: 0.4vh;
+                     
+                        outline-color:rgba(194, 219, 254, 1);
+                        border:0.2vh solid #86B7FE;
+                        transition: all 0.2s ease-in-out;
+        
+        
+                       }
+    
+    
+    .row1 .mitad-2{
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        font-family: hatton;
+        font-size: 1.3vw;
+        width: 50%;
+        height: 100%;
+    
+        
+        
+        }
+        .mitad-2 .subtitle-2{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            width: 40%;
+            height: 100%;
+           
+    
+        }
+        .mitad-2 .container-input-2{
+            display: flex;
+            width: 53%;
+            height: 55%;
+            
+            
+            border-radius: 1vw;
+    
+    
+        }
+        .container-input-2 .input-2{
+       
+            display: flex;
+            width: 100%;
+            height: 90%;
+            font-size: 1.8vh;
+            font-family: hatton;
+            border: 0.222vw solid #268ecd;
+            border-radius: 0.5vw;
+            outline-offset: 0.25vh;
+            outline-color:rgba(194, 219, 254, 1);
+            
+            
+            
+            transition: all 0.2s ease-in-out;
+             
+            
+            
+                           }
+                           .input-2:focus{
+                            outline-offset: 0.4vh;
+                         
+                            outline-color:rgba(194, 219, 254, 1);
+                            border:0.2vh solid #86B7FE;
+                            transition: all 0.2s ease-in-out;
+            
+            
+                           }
+        .container-modal .container-boton{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+    width: 100%;
+    height: 10%;
+    
+    
+    
+        }
+        .container-boton .register-button{
+    display: flex;
+    font-family: hatton;
+    border: solid orange;
+    border-radius: 1.5vw;
+    color: white;
+    font-size: 1vw;
+    background-color: #268ecd;
+    justify-content: center;
+    align-items: center;
+    width: 25%;
+    height: 80%;
+    transition: 0.5s;
+    cursor: pointer;
+        }
+        .register-button:hover{
+    background-color: orange;
+    border-radius: 50%;
+    color: #268ecd;
+        }
+        .aparecer{
+    opacity: 1;
+    pointer-events: auto;
+    
+        }
+        .aparecer .container-modal{
+            transition: 0.5s;
+            width: 60vw;
+            height: 80vh;
+        }
+        .boton-desaparecer{
+            transition: 0.5s;
+    opacity: 0;
+    pointer-events: none;
+    
+        }
+        

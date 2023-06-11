@@ -43,7 +43,7 @@
     <div class="linea"></div>
 </div>
 <div class="dash">
-    <a class="ins" href="dashboar_caja_registro.php">
+    <a class="ins" href="{{route('listaEmpleados')}}">
         <p class="t1">GESTION DE OPERARIOS</p>
     </a>
     <div class="linea"></div>
@@ -54,7 +54,7 @@
                           <p>BIENVENIDO!</p>
                       </div>
                       <div class="administrador">
-                          <p class="auth">{{ Auth::user()->name }} {{ Auth::user()->apellido }}</p>Es un gusto tenerte de vuelta!
+                          <p class="auth">{{ auth()->guard('empleado')->user()->name }} {{ auth()->guard('empleado')->user()->apellido }}</p>Es un gusto tenerte de vuelta!
                       </div>
                       <div class="cont-image">
                           <div class="put-gift">

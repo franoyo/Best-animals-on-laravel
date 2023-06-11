@@ -3,10 +3,12 @@
 namespace App\Http\Controllers\admin;
 use App\Models\User;
 use App\Models\Producto;
+use App\Models\Empleado;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Storage;
 use App\Models\historiaClinica;
+use Illuminate\Support\Facades\Hash;
 
 class AdminController extends Controller
 {
@@ -209,6 +211,32 @@ public function updateHistoria(request $request){
     $historia->save();
     return redirect()->route('listaHistorias')->withSuccess("Los datos se han modificado correctamente!");
     ;
+}
+public function crudEmpleados(){
+
+return view('Admin_views.crud_gestion_empleados');
+
+}
+public function ingresarEmpleado(Request $request){
+    $request->validate([
+        'name' => 'required|string|max:250',
+        'apellido' => 'required|string|max:250',
+        'documento' => 'required|string|max:250',
+        'celular' => 'required|string|max:250',
+        'direccion' => 'required|string|max:250',
+        'email' => 'required|email|max:250|unique:users',
+        'password' => 'required|min:8|confirmed'
+    ]);
+
+    empleado::create([
+        'name' => $request->name,
+        'apellido' => $request->apellido,
+        'documento' => $request->documento,
+        'celular' => $request->celular,
+        'direccion' => $request->direccion,
+        'email' => $request->email,
+        'password' => Hash::make($request->password)
+    ]);
 
 
 }
