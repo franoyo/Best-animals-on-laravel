@@ -9,16 +9,16 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.4/font/bootstrap-icons.css">
 </head>
 <body>
-<div class="container-general" id="modal">
-<form class="container-modal" action="{{route('ingresarEmpleado')}}" method="post">
+<div class="container-general" id="modal-editar{{$empleados->id}}">
+<form class="container-modal" action="{{route('editarEmpleado')}}" method="post">
     @csrf
 <div class="container-logo">
     <div class="put-logo">
 <img class="logo" src="img/best animal2-01 (1).png" alt="logo">
 
     </div>
-    <p>REGISTRO DE EMPLEADOS</p>
-<input class="put-close" type="button" id="boton-cerrar" value="X">
+    <p>EDITAR EMPLEADOS</p>
+<input class="put-close" type="button" id="boton-x" value="X">
  
 
 </div>
@@ -27,12 +27,12 @@
         <div class="mitad-1">
             <div class="subtitle" >ID EMPLEADO:</div>
             <div class="container-input" id="cont-op"> 
-                {{$mostrar}}     
+            {{$empleados->id}}   <input type="text" name="id" value="{{$empleados->id}}" hidden>  
             </div> 
         </div>
         <div class="mitad-2"><div class="subtitle-2">NOMBRE:</div>
         <div class="container-input-2">
-            <input class="input-2" type="text" name="name" value="{{ old('name') }}" required>
+            <input class="input-2" type="text" name="name" value="{{$empleados->name}}" required>
 
         </div> 
     </div>
@@ -40,49 +40,49 @@
     <div class="row1">  <div class="mitad-1">
         <div class="subtitle">APELLIDOS:</div> 
         <div class="container-input">
-<input class="input-1" type="text" name="apellido" value="{{ old('apellido') }}" required>
+<input class="input-1" type="text" name="apellido" value="{{$empleados->apellido}}" required>
 
         </div> 
     </div>
     <div class="mitad-2"><div class="subtitle-2">DOCUMENTO:</div>
     <div class="container-input-2">
-        <input class="input-2" type="text" name="documento" value="{{ old('documento') }}" required>
+        <input class="input-2" type="text" name="documento" value="{{$empleados->documento}}" required>
 
     </div> </div></div>
     <div class="row1">  <div class="mitad-1">
         <div class="subtitle">CELULAR:</div>
         <div class="container-input">
-            <input class="input-1" type="number" name="celular" value="{{ old('celular') }}" maxlength="10" required>
+            <input class="input-1" type="number" name="celular" value="{{$empleados->celular}}" maxlength="10" required>
 
         </div>  
     </div>
     <div class="mitad-2"><div class="subtitle-2">DIRECCION:</div>
     <div class="container-input-2">
-        <input class="input-2" type="text" name="direccion" value="{{ old('direccion') }}" required>
+        <input class="input-2" type="text" name="direccion" value="{{$empleados->direccion}}" required>
 
     </div> 
 </div></div>
     <div class="row1">  <div class="mitad-1">
         <div class="subtitle">CLAVE:</div> 
         <div class="container-input">
-            <input class="input-1" type="password" name="password" required>
+            <input class="input-1" type="text" name="password" required>
         </div> 
     </div>
     <div class="mitad-2"><div class="subtitle-2">EMAIL:</div>
     <div class="container-input-2">
-        <input class="input-2" type="email" name="email" value="{{ old('email') }}" required>
+        <input class="input-2" type="email" name="email" value="{{$empleados->email}}" required>
     </div> 
 </div></div>
     <div class="row1">  <div class="mitad-1">
         <div class="subtitle">CONFIRMAR CONTRASEÑA:</div>
         <div class="container-input">
-            <input class="input-1" type="password" name="password_confirmation" required>
+            <input class="input-1" type="text" name="password_confirmation" required>
         </div>  
     </div>
     <div class="mitad-2"><div class="subtitle-2">ROL ID:</div>
     <div class="container-input-2">
         <select class="input-2" name="rol" required>
-
+        <option value="{{$empleados->rol}}" selected>Su rol es:{{$empleados->rol}}</option>
             <option value="administrador">1.ADMINISTRADOR</option>
             
             <option value="usuario">2.USUARIO</option>
@@ -99,7 +99,7 @@
 </div></div>
 </div>
 <div class="container-boton">
-<input class="register-button" type="submit" value="REGISTRAR EMPLEADO">
+<input class="register-button" type="submit" value="EDITAR EMPLEADO">
 
 </div>
 
@@ -109,6 +109,6 @@
 </div>
 
 
-    
+   
 </body>
 </html>

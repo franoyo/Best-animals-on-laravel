@@ -85,6 +85,8 @@ route::controller(AdminController::class)->group(function () {
     route::get('/listaEmpleados', 'crudEmpleados')->name('listaEmpleados');
     route::post('/ingresarEmpleado', 'ingresarEmpleado')->name('ingresarEmpleado');
     route::post('/eliminarEmpleado', 'eliminarEmpleado')->name('eliminarEmpleado');
+    route::post('/editarEmpleado', 'updateEmpleado')->name('editarEmpleado');
+
 });
 route::controller(VeterinarioController::class)->group(function(){
 route::get('/veterinario','veterinarioDashboard')->name('veterinario');

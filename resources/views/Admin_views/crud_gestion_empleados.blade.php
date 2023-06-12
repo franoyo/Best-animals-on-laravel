@@ -2,7 +2,8 @@
 @section("contenidoPrincipal")
 @include('alerts.eliminar_empleado')
 @include("Admin_views.modals_registro.registrar_empleado")
-<link rel="stylesheet" href="{{asset('css/style21.css')}}">
+<link rel="stylesheet" href="{{asset('css/style21.css?V=1.0')}}">
+
 
                 <div class="insert-title">
                 <div class="container-buscador">
@@ -34,7 +35,7 @@
 </div>
 @foreach ($empleado as $empleados)
   
-
+@include("Admin_views.modals_registro.editar_empleado")
   <div class="row-empleados">
     <div class="put-id" id="id_empleado">{{$empleados->id}}</div>
     <div class="name-dueño">{{$empleados->name}}</div>
@@ -44,7 +45,8 @@
     <div style="text-transform: uppercase;" class="apellido-dueño">{{$empleados->rol}}
     </div>
 <div class="subtitle"><a class="edit-button" href=""><i class="bi bi-eye"></i></a></div>
-    <div class="subtitle"><a id="pelo" class="edit-button" href=""  ><i class="bi bi-pencil-square"></i></a></div>
+
+    <div class="subtitle"><a id="pelo" class="edit-button update-button" data-id="{{$empleados->id}}"><i class="bi bi-pencil-square"></i></a></div>
     <div class="subtitle-1">  <a class="edit-button delete-button" href="#" data-id="{{$empleados->id}}">
     <i class="bi bi-person-x"></i>
   </a></div>
@@ -67,5 +69,6 @@
                     </div>
                     
                     </div>
-                 <script src="{{asset('js/script_gestion_usuario.js?v=1.0')}}"></script>
+                 <script src="{{asset('js/script_gestion_usuario.js?v=1.15')}}"></script>
+               
 @endsection

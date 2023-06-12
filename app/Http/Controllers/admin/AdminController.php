@@ -250,7 +250,30 @@ public function eliminarEmpleado(Request $request){
     $empleado = Empleado::find($id);
     
     $empleado->delete();
-    return redirect()->route('listaEmpleados')->withSuccess('Empleado eliminado correctamente!');
-    
+    return redirect()->route('listaEmpleados')->withSuccess('Empleado eliminado correctamente!');  
+}
+public function updateEmpleado(Request $request){
+    $request->validate([
+        'name' => 'required|string|max:250',
+            'apellido' => 'required|string|max:250',
+            'documento' => 'required|string|max:250',
+            'celular' => 'required|string|max:250',
+            'direccion' => 'required|string|max:250',
+            'email' => 'required|email|max:250|unique:empleados',
+            'password' => 'required|min:8|confirmed'
+    ]);
+    $id = $request->input('id');
+$empleado=Empleado::find($id);
+$empleado->name = $request->input('name');
+$empleado->apellido = $request->input('apellido');
+$empleado->documento=$request->input("documento");
+$empleado->celular=$request->input("celular");
+$empleado->direccion=$request->input("direccion");
+$empleado->email=$request->input("email");
+$empleado->rol=$request->input("rol");
+$empleado->password=hash::make($request->input("password"));
+$empleado->save();
+return redirect()->route("listaEmpleados")->withSuccess("Empleado Modificado Correctamente");
+
 }
 }

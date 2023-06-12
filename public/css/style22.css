@@ -125,6 +125,7 @@ body{
     height: 100%;
     
     
+    
     }
     .mitad-1 .container-input{
     display: flex;
@@ -273,5 +274,9 @@ body{
     opacity: 0;
     pointer-events: none;
     
+        }
+        .tif{
+opacity: 1;
+
         }
         
