@@ -12,18 +12,20 @@ use Illuminate\Support\Facades\Hash;
 
 class LoginRegisterController extends Controller
 {
-
+//aqui se usa un constructor con un middleware que ya viene por defecto en laravel que es guest
     public function __construct()
     {
         $this->middleware('guest')->except([
             'logout', 'dashboard'
         ]);
     }
-
+//retorna la vista para registrarse en este caso el usuario
     function register()
     {
         return view('auth.registrarse');
     }
+    //guarda los datos enviados por el formulario que son enviados por el metodo post en la tabla creada por defecto
+    //con las migraciones "users".
     public function store(Request $request)
     {
         $request->validate([
@@ -53,13 +55,15 @@ class LoginRegisterController extends Controller
     {
         return view('auth.registro_alert');
     }
-
+//como yo uso dos tablas para hacer login una de users y una de empleados en esta funcion de dashboard verifico la sesion
+//y ademas de eso verifica el rol del cliente que sea "cliente"por lo cual en la base de datos en el campo de rol tiene que
+//por defecto siempre el rol sea cliente,
+//la seguridad de la aplicacion para que por ejemplo un cliente no pueda acceder al perfil del admin o algun perfil sensible de 
+//algun empleado para eso tambien es el Auth::guard('empleado')
     public function dashboard(Request $request)
     {
         if (Auth::check() and auth()->user()->rol=="cliente") {     
     return view('auth.dashboard'); 
-        }elseif (Auth::check() and auth()->user()->rol!=="cliente" or Auth::guard('empleado')->user()->rol!=="cliente") {
-            $this->logout($request);
         }
        
         return  redirect()->route('login')
@@ -67,6 +71,8 @@ class LoginRegisterController extends Controller
                 'email' => 'Porfavor inicie sesion para acceder al dashboard.',
             ])->onlyInput('email');
     }
+
+    //primero intenta auntenticar en la tabla de users y despues en la de empleados
     public function authenticate(Request $request)
     {
         $credentials = $request->validate([
@@ -88,7 +94,9 @@ class LoginRegisterController extends Controller
             'email' => $request->email,
             'password' => $request->password
         ];
-
+//aqui es donde se gesta el login por roles con su respectivo middleware para que por ejemplo un veterinario no pueda acceder
+//al dashboard del admin para eso tambien cada uno tiene creado su controlador, el auth:guard es lo mas escensial hay que ir
+//config/auth para que funcione en este caso auth::guard("empleado")
         if (Auth::guard('empleado')->attempt($empleadoCredentials)) {
             $empleado = auth()->guard('empleado')->user();
             if ($empleado->rol == 'veterinario') {
@@ -110,8 +118,16 @@ class LoginRegisterController extends Controller
 
     function login()
     {
+        if (Auth::guard('empleado')->check()) {
+            $empleado = auth()->guard('empleado')->user();
+            if ($empleado->rol == 'veterinario') {
+                return redirect()->route('veterinario');
+            } elseif ($empleado->rol == 'administrador') {
+                return redirect()->route('admin');
+            }}
         return view('auth.login');
     }
+    //sirve para cerrar sesion
     public function logout(Request $request)
     {
         Auth::logout();

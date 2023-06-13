@@ -12,28 +12,50 @@ use Illuminate\Support\Facades\Hash;
 
 class AdminController extends Controller
 {
+    //se usa un connstructor para definir el middleware en este caso es auth.admin ya que por cada rol toca crear uno
+    //una vez creado toca agragarlo en el archivo kernel.php
     public function __construct()
     {
         $this->middleware('auth.admin');
     }
+
+    //redirije a la vista de inicio en este caso de administrador
     public function index(){
 
         return view("Admin_views.dashboard_inicio_admin");
     }
+
+    //redirije a la vista seleccionada
     public function caja(){
         return view("Admin_views.dashboardCaja");
     }
+
+    //redirije a una vista en este caso un formulario en el cual uso una variable para capturar la ultima de id de la tabla productos
+    //usando la funcion correspondiente del modelo producto
+    //(este modelo tambien toca crearlo con el comando "php artisan make:model NombreDelModelo")
+    //este retorna una vista la cual usa una especie de arreglo la cual se le asigna el valor de $idfinal
+    //a captar que se convierte en variable en la vista para despues en la vista {{$captar}} poder mostrar los datos de la consulta esta forma de hacerlo es con eloquent la cual
+    //simplifica algunas cosas tambien se puede hacer con lenguaje sql.
     public function stock(){
         $ultimoId = Producto::latest('id')->value('id');
         $idFinal=$ultimoId+1;
         return view('Admin_views.admin_stock', ['captar' => $idFinal]);
     }
+
+    //retorna una vista en este caso un crud, a su vez tambien se hace una consulta para capturar todos los datos de la tabla
+    //Productos por lo cual se usa el modelo Producto con su respectiva funcion que es all() que sirve para capturar todos
+    //datos.
     public function crudProductos(){
 return view("Admin_views.admin_crud_prductos",["Lista"=>Producto::all()]);
 
     }
-    public function storeStock(Request $request){
 
+    //esta funcion sirve para guardar las datos que vienen del formulario stock que vienen en metodo post por lo cual se usan los
+    //parametros (request $request) que  digamos que para lo que nos sirve estos parametros es para que podamos acceder a los datos
+    //enviados por los inputs a su vez se usa Producto::create para crear una nueva instancia y asi crear un nuevo producto en la
+    //base de datos, ah! y ademas redirige de nuevo a registro stock con un withsucess que despues esto nos sirve para desplegar
+    //una alerta.
+    public function storeStock(Request $request){
 if ($request->hasFile('imagen_producto')) {
     $imagen = $request->file('imagen_producto');
     $rutaImagen = $imagen->store('public/images');
@@ -51,6 +73,9 @@ if ($request->hasFile('imagen_producto')) {
     ]);
 }return redirect()->route('registroStock')->withSuccess('Datos almacenados correctamente!');
 
+//esta funcion la usamos para eliminar un producto por lo cual recibimos la id enviada por metodo post
+//creamos un objeto y usamos la funcion del modelo Producto::find() para eliminar el producto en base  a la id
+//despues redirije y tambien depsliega una alerta
     }
     public function eliminarProducto(Request $request){
         
@@ -64,6 +89,9 @@ if ($request->hasFile('imagen_producto')) {
         $producto->delete();
         return redirect()->route('listaProductos')->withSuccess('Usuario eliminado correctamente!');
     }
+    //en este caso recibimos la id por metodo get por lo que el parametro cambia a $id por el cual se hace un cambio en las rutas
+    // para que por la url acepte y tenga el parametro e id esto se realiza en web.php esto es solo para que muestre los productos en base
+    //a las id por lo que toca ponerle sus respectivos valores a los values de la vista
     public function editarProducto($id){
         $producto= Producto::find($id);
         if (!$producto) {
@@ -71,6 +99,10 @@ if ($request->hasFile('imagen_producto')) {
         }      
         return view('Admin_views.editar_producto',['producto' => $producto]);
     }
+    //hasta aqui una breve explicacion de la funciones, como me da pereza comentar todas las funciones se tiene que basar en las que
+    //ya estan creadas en general la sintaxis de todas funciones es muy similar por lo que solo toca cambiarle algunos valores
+    //para que si necesitan crear nuevas funciones entiendan como se hicieron las funciones en el proyecto de el sistema de 
+    //informacion para la veterinaria best animals :).
     public function updateProducto(Request $request){
         $id = $request->input('id');
         $producto = Producto::find($id);
@@ -259,7 +291,7 @@ public function updateEmpleado(Request $request){
             'documento' => 'required|string|max:250',
             'celular' => 'required|string|max:250',
             'direccion' => 'required|string|max:250',
-            'email' => 'required|email|max:250|unique:empleados',
+            'email' => 'required|email|max:250',
             'password' => 'required|min:8|confirmed'
     ]);
     $id = $request->input('id');

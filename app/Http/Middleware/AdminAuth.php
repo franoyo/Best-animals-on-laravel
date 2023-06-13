@@ -22,6 +22,6 @@ class AdminAuth
             return $next($request);
         }
 
-        return redirect()->route('login')->withSuccess('Usted no es administrador. Sea serio :v');
+        return redirect()->back()->withSuccess('Usted no es administrador. Sea serio :v');
     }
 }

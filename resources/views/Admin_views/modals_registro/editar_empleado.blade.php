@@ -18,7 +18,7 @@
 
     </div>
     <p>EDITAR EMPLEADOS</p>
-<input class="put-close" type="button" id="boton-x" value="X">
+<input class="put-close" type="button" id="boton-x{{$empleados->id}}" value="X">
  
 
 </div>

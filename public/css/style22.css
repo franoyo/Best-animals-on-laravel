@@ -35,7 +35,7 @@ body{
     align-items: center;
     border-radius: 2vw;
     transition: 0.5s;
-    
+   
     
     }
     .container-modal .container-logo{
@@ -56,7 +56,7 @@ body{
         align-items: center;
     width: 25%;
     height: 100%;
-    
+  
     
     
     }
@@ -277,6 +277,18 @@ body{
         }
         .tif{
 opacity: 1;
+        }
+        #put-algo{
+            width: 100%;
+height: 2%;
+position: relative;
+top: 6%;
+
+
+        }
+        #bg{
+background-image:url(../img/Daco_2811629.png);
+background-size: contain;
 
         }
         

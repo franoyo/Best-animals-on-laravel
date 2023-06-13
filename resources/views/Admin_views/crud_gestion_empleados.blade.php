@@ -2,7 +2,7 @@
 @section("contenidoPrincipal")
 @include('alerts.eliminar_empleado')
 @include("Admin_views.modals_registro.registrar_empleado")
-<link rel="stylesheet" href="{{asset('css/style21.css?V=1.0')}}">
+<link rel="stylesheet" href="{{asset('css/style21.css?V=1.1')}}">
 
 
                 <div class="insert-title">
@@ -34,7 +34,7 @@
 <div class="subtitle-1">BORRAR</div>
 </div>
 @foreach ($empleado as $empleados)
-  
+  @include("Admin_views.modals_registro.ver_empleado")
 @include("Admin_views.modals_registro.editar_empleado")
   <div class="row-empleados">
     <div class="put-id" id="id_empleado">{{$empleados->id}}</div>
@@ -44,10 +44,10 @@
     <div id="email_empleado">{{$empleados->email}}</div>
     <div style="text-transform: uppercase;" class="apellido-dueño">{{$empleados->rol}}
     </div>
-<div class="subtitle"><a class="edit-button" href=""><i class="bi bi-eye"></i></a></div>
+<div class="subtitle"><a class="edit-button ver-empleado" data-id="{{$empleados->id}}" ><i class="bi bi-eye"></i></a></div>
 
     <div class="subtitle"><a id="pelo" class="edit-button update-button" data-id="{{$empleados->id}}"><i class="bi bi-pencil-square"></i></a></div>
-    <div class="subtitle-1">  <a class="edit-button delete-button" href="#" data-id="{{$empleados->id}}">
+    <div class="subtitle-1">  <a class="edit-button delete-button"  data-id="{{$empleados->id}}">
     <i class="bi bi-person-x"></i>
   </a></div>
 </div>
