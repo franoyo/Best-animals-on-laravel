@@ -1,14 +1,8 @@
 @extends("layouts.plantillaRow")
-@section("titulo")
-Gestion De Empleados
-@endsection
-
 @section("contenidoPrincipal")
-@include('alerts.eliminar_empleado')
-@include("Admin_views.modals_registro.registrar_empleado")
 <link rel="stylesheet" href="{{asset('css/style21.css?V=1.1')}}">
 
-
+@include("Admin_views.modals_registro_cliente.registrar_cliente")
                 <div class="insert-title">
                 <div class="container-buscador">
 <form class="put-search" method="get" action="buscador_crud_gestion_usuario.php">
@@ -16,7 +10,7 @@ Gestion De Empleados
 </form>
                    </div>
                    <div class="titulo">
-<h2>GESTION EMPLEADOS</h2>
+<h2>GESTION CLIENTES</h2>
                    </div>
                     </div>  
                     <div class="container-tabla">
@@ -37,21 +31,20 @@ Gestion De Empleados
 <div class="subtitle">EDITAR</div>
 <div class="subtitle-1">BORRAR</div>
 </div>
-@foreach ($empleado as $empleados)
-  @include("Admin_views.modals_registro.ver_empleado")
-@include("Admin_views.modals_registro.editar_empleado")
+@foreach ($clientes as $cliente)
+ 
   <div class="row-empleados">
-    <div class="put-id" id="id_empleado">{{$empleados->id}}</div>
-    <div class="name-dueño">{{$empleados->name}}</div>
-    <div class="apellido-dueño">{{$empleados->apellido}}</div>           
-    <div class="apellido-dueño">{{$empleados->celular}}</div>
-    <div id="email_empleado">{{$empleados->email}}</div>
-    <div style="text-transform: uppercase;" class="apellido-dueño">{{$empleados->rol}}
+    <div class="put-id" id="id_empleado">{{$cliente->id}}</div>
+    <div class="name-dueño">{{$cliente->name}}</div>
+    <div class="apellido-dueño">{{$cliente->apellido}}</div>           
+    <div class="apellido-dueño">{{$cliente->celular}}</div>
+    <div id="email_empleado">{{$cliente->email}}</div>
+    <div style="text-transform: uppercase;" class="apellido-dueño">{{$cliente->rol}}
     </div>
-<div class="subtitle"><a class="edit-button ver-empleado" data-id="{{$empleados->id}}" ><i class="bi bi-eye"></i></a></div>
+<div class="subtitle"><a class="edit-button ver-empleado" data-id="{{$cliente->id}}" ><i class="bi bi-eye"></i></a></div>
 
-    <div class="subtitle"><a id="pelo" class="edit-button update-button" data-id="{{$empleados->id}}"><i class="bi bi-pencil-square"></i></a></div>
-    <div class="subtitle-1">  <a class="edit-button delete-button"  data-id="{{$empleados->id}}">
+    <div class="subtitle"><a id="pelo" class="edit-button update-button" data-id="{{$cliente->id}}"><i class="bi bi-pencil-square"></i></a></div>
+    <div class="subtitle-1">  <a class="edit-button delete-button"  data-id="{{$cliente->id}}">
     <i class="bi bi-person-x"></i>
   </a></div>
 </div>
@@ -73,13 +66,5 @@ Gestion De Empleados
                     </div>
                     
                     </div>
-                 <script src="{{asset('js/script_gestion_usuario.js?v=1.15')}}"></script>
-               
-@endsection
-
-@section("menuButtons")
-<div class="dash">
-          <a class="ins" href="{{route('listaClientes')}}"><p class="t1">GESTION USUARIO</p></a>
-          <div class="linea"></div>
-        </div>
+                    <script src="{{asset('js/script_gestion_cliente.js')}}"></script>
 @endsection

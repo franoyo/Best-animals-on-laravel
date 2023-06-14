@@ -308,4 +308,34 @@ $empleado->save();
 return redirect()->route("listaEmpleados")->withSuccess("Empleado Modificado Correctamente");
 
 }
+public function crudClientes(){
+    $ultimoId = User::latest('id')->value('id');
+    $idFinal=$ultimoId+1;
+return view("Admin_views.crud_gestion_usuario",['clientes'=>User::all(),'mostrar'=>$idFinal]);
+
+
+}
+public function storeCliente(Request $request){
+    $request->validate([
+        'name' => 'required|string|max:250',
+        'apellido' => 'required|string|max:250',
+        'documento' => 'required|string|max:250',
+        'celular' => 'required|string|max:250',
+        'direccion' => 'required|string|max:250',
+        'email' => 'required|email|max:250|unique:users',
+        'password' => 'required|min:8|confirmed'
+    ]);
+
+    User::create([
+        'name' => $request->name,
+        'apellido' => $request->apellido,
+        'documento' => $request->documento,
+        'celular' => $request->celular,
+        'direccion' => $request->direccion,
+        'email' => $request->email,
+        'password' => Hash::make($request->password)
+    ]);
+    return redirect()->back()->withSuccess("Cliente añadido correctamente");
+}
+
 }

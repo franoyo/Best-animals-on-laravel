@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="{{asset('CSS/stylePlantilla.css?v=1.02')}}">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
-    <title>Admin_stock</title>
+    <title>@yield("titulo")</title>
 </head>
 <body>
 @if(session('success'))
@@ -39,11 +39,12 @@ setTimeout(() => {
         
         
         </header>
+        @yield("menuButtons")
         <div class="dash">
           <a class="ins" href="{{route('admin')}}"><p class="t1"><i class="bi bi-arrow-left"></i>ATRAS</p></a>
           <div class="linea"></div>
         
-        @yield("menuButtons")
+      
         
         
         </div>
