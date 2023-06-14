@@ -1,5 +1,6 @@
 <?php
 
+use App\Models\Producto;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Auth\LoginRegisterController;
 use App\Http\Controllers\admin\AdminController;
@@ -54,7 +55,7 @@ Route::get("/informacion", function () {
 })->name('info');
 Route::get("/tienda", function () {
 
-    return view("tienda");
+    return view("tienda",['tarjetas'=>Producto::all()]);
 })->name('tienda');
 
 route::controller(LoginRegisterController::class)->group(function () {

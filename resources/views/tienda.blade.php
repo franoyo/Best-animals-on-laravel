@@ -92,9 +92,10 @@
         </div>
         <div class="put-cards">
             <div class="slider">
+                @foreach ($tarjetas as $tarjeta)
                 <form class="cards" action="" method="post">
                     <div class="container-producto">
-                        <a class="poner-producto" href=""><img class="imagen-producto" src="" alt="imagen"></a>
+                        <a class="poner-producto" href=""><img class="imagen-producto" src="{{asset($tarjeta->imagen)}}" alt="imagen"></a>
                     </div>
                     <input type="hidden" name="id-card" value="">
                     <div class="poner-descripcion"></div>
@@ -102,8 +103,8 @@
                         <button class="peso-function">5 lb</button>
                         <button class="peso-function">15 lb</button>
                     </div>
-                    <div class="descuento">$87.900</div>
-                    <div class="precio">12.500 <input type="hidden" name="Precio" value=""></div>
+                    <div class="descuento"></div>
+                    <div class="precio">{{$tarjeta->precio}} <input type="hidden" name="Precio" value=""></div>
                     <div class="precioporkilo">(kilo $38.722)</div>
                     <div class="container-main-buttons">
                         <div class="amound-items">
@@ -118,6 +119,8 @@
                         <button class="purchase-button" onclick="this.parentNode.querySelector('.pibi');"> AÑADIR</button>
                     </div>
                 </form>
+                @endforeach
+                
             </div>
         </div>
         <div class="put-button">
