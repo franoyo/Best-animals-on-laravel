@@ -89,6 +89,9 @@ route::controller(AdminController::class)->group(function () {
     route::post('/editarEmpleado', 'updateEmpleado')->name('editarEmpleado');
     route::get('/listaClientes', 'crudClientes')->name('listaClientes');
     route::post('/storeCliente', 'storeCliente')->name('storeCliente');
+    route::post('/deleteCliente', 'deleteCliente')->name('deleteCliente');
+    route::post('/editCliente', 'editCliente')->name('editCliente');
+    
     
 
 });

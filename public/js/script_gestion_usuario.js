@@ -1,3 +1,19 @@
+const botonDerSimple = document.getElementById("simply-right")
+const deslizador=document.getElementById("tabla")
+const botonIzqSimple = document.getElementById("izquierda")
+
+botonDerSimple.addEventListener('click', () => {
+  const porcentajeDesplazamiento = 100;
+  const desplazamiento = deslizador.offsetWidth * (porcentajeDesplazamiento / 100);
+   deslizador.scrollLeft+=desplazamiento;
+})
+
+
+botonIzqSimple.addEventListener('click', () => {
+  const porcentajeDesplazamiento = 100;
+  const desplazamiento = deslizador.offsetWidth * (porcentajeDesplazamiento / 100);
+    deslizador.scrollLeft-=desplazamiento;
+     })
 const botonAbrir = document.getElementById("create");
 const modal = document.getElementById("modal");
 const botonCerrar = document.querySelector(".put-close");

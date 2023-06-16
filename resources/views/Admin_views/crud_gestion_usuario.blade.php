@@ -1,8 +1,12 @@
 @extends("layouts.plantillaRow")
+@section("titulo")
+Gestion De Clientes
+@endsection
 @section("contenidoPrincipal")
-<link rel="stylesheet" href="{{asset('css/style21.css?V=1.1')}}">
+<link rel="stylesheet" href="{{asset('css/style33.css?V=1.1')}}">
 
 @include("Admin_views.modals_registro_cliente.registrar_cliente")
+@include("Admin_views.modals_registro_cliente.eliminar_cliente")
                 <div class="insert-title">
                 <div class="container-buscador">
 <form class="put-search" method="get" action="buscador_crud_gestion_usuario.php">
@@ -25,21 +29,22 @@
 <div class="apellido-dueño">CELULAR</div>
 <div class="apellido-dueño">EMAIL</div>
 
-<div class="apellido-dueño">ROL</div>
+<div class="apellido-dueño">DOCUMENTO</div>
 
 <div class="subtitle">VER</div>
 <div class="subtitle">EDITAR</div>
 <div class="subtitle-1">BORRAR</div>
 </div>
 @foreach ($clientes as $cliente)
- 
+ @include("Admin_views.modals_registro_cliente.editar_cliente")
+ @include("Admin_views.modals_registro_cliente.ver_cliente")
   <div class="row-empleados">
     <div class="put-id" id="id_empleado">{{$cliente->id}}</div>
     <div class="name-dueño">{{$cliente->name}}</div>
     <div class="apellido-dueño">{{$cliente->apellido}}</div>           
     <div class="apellido-dueño">{{$cliente->celular}}</div>
     <div id="email_empleado">{{$cliente->email}}</div>
-    <div style="text-transform: uppercase;" class="apellido-dueño">{{$cliente->rol}}
+    <div style="text-transform: uppercase;" class="apellido-dueño">{{$cliente->documento}}
     </div>
 <div class="subtitle"><a class="edit-button ver-empleado" data-id="{{$cliente->id}}" ><i class="bi bi-eye"></i></a></div>
 
@@ -66,5 +71,11 @@
                     </div>
                     
                     </div>
-                    <script src="{{asset('js/script_gestion_cliente.js')}}"></script>
+                    <script src="{{asset('js/script_gestion_cliente.js?v=1.16')}}"></script>
+@endsection
+@section("menuButtons")
+<div class="dash">
+          <a class="ins" href="{{route('listaEmpleados')}}"><p class="t1">GESTION EMPLEADOS</p></a>
+          <div class="linea"></div>
+        </div>
 @endsection

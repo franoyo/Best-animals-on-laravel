@@ -6,12 +6,16 @@ const der = document.querySelector(".botoncito-derecho")
 const slider = document.querySelector(".slider")
 izq.addEventListener('click', () => {
 
-    slider.scrollLeft -= 750
+    const porcentajeDesplazamiento = 98; // Porcentaje de desplazamiento deseado
+    const desplazamiento = slider.offsetWidth * (porcentajeDesplazamiento / 100);
+    slider.scrollLeft -= desplazamiento;
 
 })
 der.addEventListener('click', () => {
 
-    slider.scrollLeft += 750
+    const porcentajeDesplazamiento = 98; // Porcentaje de desplazamiento deseado
+    const desplazamiento = slider.offsetWidth * (porcentajeDesplazamiento / 100);
+    slider.scrollLeft += desplazamiento;
 
 })
 //funcion desplegar carrito de compras/

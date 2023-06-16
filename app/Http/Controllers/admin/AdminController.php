@@ -337,5 +337,37 @@ public function storeCliente(Request $request){
     ]);
     return redirect()->back()->withSuccess("Cliente añadido correctamente");
 }
+public function deleteCliente(Request $request){
+    $request->validate([
+        'id' => 'required|integer|max:100',
+    ]);
+    $id = $request->input('id');
+    $cliente=User::find($id);
+    $cliente->delete();
+    return redirect()->route('listaClientes')->withSuccess("Cliente eliminado correctamente");
+}
+public function editCliente(Request $request){
+$id=$request->input('id');
+$request->validate([
+    'name' => 'required|string|max:250',
+        'apellido' => 'required|string|max:250',
+        'documento' => 'required|string|max:250',
+        'celular' => 'required|string|max:250',
+        'direccion' => 'required|string|max:250',
+        'email' => 'required|email|max:250',
+        'password' => 'confirmed'
+]);
+$cliente=User::find($id);
+$cliente->name = $request->input('name');
+$cliente->apellido = $request->input('apellido');
+$cliente->documento=$request->input("documento");
+$cliente->celular=$request->input("celular");
+$cliente->direccion=$request->input("direccion");
+$cliente->email=$request->input("email");
+$cliente->password=hash::make($request->input("password"));
+$cliente->save();
+return redirect()->route("listaClientes")->withSuccess("Cliente Modificado Correctamente");
+
+}
 
 }

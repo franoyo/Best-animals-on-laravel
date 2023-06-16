@@ -1,0 +1,394 @@
+
+:root{
+--ColorTitulosTabla:#84ECF8;
+--ColorCamposTabla:#CEF4F9;
+--CuerpoTabla:#6FC7D1;
+
+}
+.cont3 .insert-title{
+    display: flex;
+    width: 100%;
+    height: 15%;
+                   }
+                   .insert-title .container-buscador {
+                    width: 25%;
+                    height: 100%;
+                    display: flex;
+                    align-items: end;
+                    justify-content: center;
+             
+             }
+             
+             .container-buscador .put-search {
+                    width: 80%;
+                    height: 40%;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+             
+             
+             }
+             
+             .put-search .buscador {
+                    display: flex;
+                    width: 100%;
+                    height: 90%;
+                    font-size: 2vh;
+                    font-family: hatton;
+                    border: 0.222vw solid #268ecd;
+                    border-radius: 0.5vw;
+                    outline-offset: 0.25vh;
+                    outline-color: rgba(194, 219, 254, 1);
+             
+             
+             
+                    transition: all 0.2s ease-in-out;
+             
+             
+             
+             }
+             
+             .buscador:focus {
+                    outline-offset: 0.4vh;
+             
+                    outline-color: rgba(194, 219, 254, 1);
+                    border: 0.2vh solid #86B7FE;
+                    transition: all 0.2s ease-in-out;
+             
+             
+             }
+             .insert-title .titulo {
+                width: 50%;
+                height: 100%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                text-align: center;
+                font-family: hatton;
+                font-size: 3vh;
+         
+         }
+           .maincontainer .container-tabla{
+            width: 100%;
+            height: 85%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+
+
+
+           }
+          .crear{
+            display: flex;
+           align-items: center;
+           justify-content: center;
+           margin: 0;
+           padding: 0;
+            color: beige;
+            text-align: center;
+width: 4.5vw;
+height: 4.5vw;
+position: fixed;
+border-radius: 50%;
+background-color: #C4A35E;
+border: none;
+font-size: 5vw;
+cursor: pointer;
+left: 94vw;
+top: 92vh;
+transition: 0.5s;
+
+           }
+           
+           .container-tabla .tabla{
+            width: 95%;
+            height: 90%;
+            display: flex;
+            flex-direction: column;
+            background-color:var(--CuerpoTabla);
+            border-left: solid 0.2vw black;
+            border-bottom: solid 0.2vw black;
+            border-top: solid 0.2vw black;
+            border-right: solid 0.2vw black;
+            overflow: hidden;
+            scroll-behavior: smooth;
+            flex-wrap: wrap;
+
+
+
+
+           }
+           .tabla .row-subtitle{
+            width: 100%;
+   height: 10%;
+   display: flex;
+   background-color: #268CCA;
+
+
+           }
+           .row-subtitle .put-id{
+            width: 6%;
+            height: 100%;
+            display: flex;
+            background-color: var(--ColorTitulosTabla);
+            border-bottom: solid 0.2vw black;
+            border-right: solid 0.2vw black;
+            justify-content: center;
+            align-items: center;
+            font-size: 2vh;
+            font-family: hatton;
+
+           }
+           .row-subtitle .name-dueño{
+            width: 14%;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            background-color: var(--ColorTitulosTabla);
+            border-bottom: solid 0.2vw black;
+            border-right: solid 0.2vw black;
+            align-items: center;
+            font-size: 1.2vw;
+            font-family: hatton;
+            text-align: center;
+
+           }
+           .row-subtitle .apellido-dueño{
+            width: 14%;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            background-color: var(--ColorTitulosTabla);
+            border-bottom: solid 0.2vw black;
+            border-right: solid 0.2vw black;
+            align-items: center;
+            font-size: 1.2vw;
+            font-family: hatton;
+            text-align: center;
+
+
+           }
+          
+           .row-subtitle .subtitle{
+            width: 8%;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: var(--ColorTitulosTabla);
+            border-bottom: solid 0.2vw black;
+            border-right: solid 0.2vw black;
+            font-size: 1.2vw;
+            font-family: hatton;
+            text-align: center;
+
+
+           }
+           .row-subtitle .subtitle-1{
+            width: 8%;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: var(--ColorTitulosTabla);
+            border-bottom: solid 0.2vw black;
+     
+            font-size: 1.2vw;
+            font-family: hatton;
+            text-align: center;
+            overflow: hidden;
+
+
+           }
+           .tabla .row-empleados{
+
+            width: 100%;
+            height: 10%;
+            display: flex;
+            background-color: #FF914D;
+
+           }
+           .row-empleados .put-id{
+            width: 6%;
+            height: 100%;
+            display: flex;
+            background-color: var(--ColorCamposTabla);
+            border-top: solid 0.2vw black;
+            border-bottom: solid 0.2vw black;
+            border-right: solid 0.2vw black;
+            justify-content: center;
+            align-items: center;
+            font-size: 2vh;
+            font-family: hatton;
+
+           }
+           .row-empleados .name-dueño{
+            width: 14%;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            background-color: var(--ColorCamposTabla);
+            border-top: solid 0.2vw black;
+            border-bottom: solid 0.2vw black;
+            border-right: solid 0.2vw black;
+            align-items: center;
+            font-size: 1vw;
+            font-family: hatton;
+            text-align: center;
+            overflow: hidden;
+           }
+           .row-empleados .apellido-dueño{
+            width: 14%;
+            height: 100%;
+            display: flex;
+            background-color: var(--ColorCamposTabla);
+            justify-content: center;
+            border-top: solid 0.2vw black;
+            border-bottom: solid 0.2vw black;
+            border-right: solid 0.2vw black;
+            align-items: center;
+            font-size: 1vw;
+            font-family: hatton;
+            text-align: center;
+            overflow: hidden;
+
+           }
+           #email_empleado{
+            width: 14%;
+            height: 100%;
+            display: flex;
+            background-color: var(--ColorCamposTabla);
+            justify-content: start;
+            border-top: solid 0.2vw black;
+            border-bottom: solid 0.2vw black;
+            border-right: solid 0.2vw black;
+            align-items: center;
+            font-size: 1vw;
+            font-family: hatton;
+            text-align: center;
+            overflow: hidden;
+
+
+           }
+          
+           .row-empleados .subtitle{
+            width: 8%;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            background-color: var(--ColorCamposTabla);
+            align-items: center;
+            border-top: solid 0.2vw black;
+            border-bottom: solid 0.2vw black;
+            border-right: solid 0.2vw black;
+            font-size: 1vw;
+            font-family: hatton;
+            text-align: center;
+overflow: hidden;
+
+           }
+           .row-empleados .subtitle-1{
+            width: 8%;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            background-color: var(--ColorCamposTabla);
+            align-items: center;
+            border-top: solid 0.2vw black;
+            border-bottom: solid 0.2vw black;
+     
+            font-size: 1vw;
+            font-family: hatton;
+            text-align: center;
+            overflow: hidden;
+
+
+           }
+           .subtitle .edit-button{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 50%;
+            font-size: 2vw;
+            text-decoration: none;
+            color: black;
+height: 100%;
+border: none;
+background: none;
+transition: 0.3s;
+cursor: pointer;
+           }
+           .edit-button:hover{
+color: red;
+
+
+           }
+           .subtitle-1 .edit-button{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 50%;
+            font-size: 2vw;
+            text-decoration: none;
+            color: black;
+height: 100%;
+border: none;
+background: none;
+transition: 0.3s;
+cursor: pointer;
+           }
+           .edit-button:hover{
+color: red;
+
+
+           }
+           .container-tabla .container-move-buttons{
+            width: 95%;
+            height: 8%;
+            display: flex;
+            justify-content: center;
+          
+            align-items: center;
+            background-color: #313e54;
+
+
+           }
+           .container-move-buttons .content-buttons{
+display: flex;
+justify-content: space-around;
+            width: 40%;
+            height: 80%;
+            
+           }
+           .content-buttons .division{
+display: flex;
+justify-content: space-around;
+width: 30%;
+height: 100%;
+background-color: goldenrod;
+border-radius: 2vw;
+
+           }
+           .division .arrow-button{
+display: flex;
+background:none;
+color: white;
+
+border: none;
+width: 30%;
+height: 100%;
+font-size:2.4vw;
+justify-content: center;
+align-items: center;
+cursor: pointer;
+transition: 0.5s;
+
+           }
+           .arrow-button:hover{
+color: #268ECD;
+
+
+
+
+           }

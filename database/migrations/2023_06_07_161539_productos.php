@@ -15,9 +15,9 @@ return new class extends Migration
             $table->id();
             $table->string('descripcion');
             $table->string('marca');
-            $table->decimal('peso', 8, 2);
+            $table->decimal('peso', 18, 2);
             $table->string('stock');
-            $table->decimal('precio', 10, 2);
+            $table->decimal('precio', 18, 2);
             $table->string('ubicacion');
             $table->date('vencimiento');
             $table->string('imagen');

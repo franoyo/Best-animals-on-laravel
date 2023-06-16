@@ -9,16 +9,16 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.4/font/bootstrap-icons.css">
 </head>
 <body>
-<div class="container-general" id="modal">
-<form class="container-modal" action="{{route('storeCliente')}}" method="post">
+<div class="container-general" id="modal-editar{{$cliente->id}}">
+<form class="container-modal" action="{{route('editCliente')}}" method="post">
     @csrf
 <div class="container-logo">
     <div class="put-logo">
 <img class="logo" src="img/best animal2-01 (1).png" alt="logo">
 
     </div>
-    <p>REGISTRO DE CLIENTES</p>
-<input class="put-close" type="button" id="boton-cerrar" value="X">
+    <p>EDITAR CLIENTES</p>
+<input class="put-close" type="button" id="boton-x{{$cliente->id}}" value="X">
  
 
 </div>
@@ -27,12 +27,12 @@
         <div class="mitad-1">
             <div class="subtitle" >ID CLIENTE:</div>
             <div class="container-input" id="cont-op"> 
-                {{$mostrar}}     
+            {{$cliente->id}}   <input type="text" name="id" value="{{$cliente->id}}" hidden>  
             </div> 
         </div>
         <div class="mitad-2"><div class="subtitle-2">NOMBRE:</div>
         <div class="container-input-2">
-            <input class="input-2" type="text" name="name" value="{{ old('name') }}" required>
+            <input class="input-2" type="text" name="name" value="{{$cliente->name}}" required>
 
         </div> 
     </div>
@@ -40,49 +40,50 @@
     <div class="row1">  <div class="mitad-1">
         <div class="subtitle">APELLIDOS:</div> 
         <div class="container-input">
-<input class="input-1" type="text" name="apellido" value="{{ old('apellido') }}" required>
+<input class="input-1" type="text" name="apellido" value="{{$cliente->apellido}}" required>
 
         </div> 
     </div>
     <div class="mitad-2"><div class="subtitle-2">DOCUMENTO:</div>
     <div class="container-input-2">
-        <input class="input-2" type="text" name="documento" value="{{ old('documento') }}" required>
+        <input class="input-2" type="text" name="documento" value="{{$cliente->documento}}" required>
 
     </div> </div></div>
     <div class="row1">  <div class="mitad-1">
         <div class="subtitle">CELULAR:</div>
         <div class="container-input">
-            <input class="input-1" type="number" name="celular" value="{{ old('celular') }}" maxlength="10" required>
+            <input class="input-1" type="number" name="celular" value="{{$cliente->celular}}" maxlength="10" required>
 
         </div>  
     </div>
     <div class="mitad-2"><div class="subtitle-2">DIRECCION:</div>
     <div class="container-input-2">
-        <input class="input-2" type="text" name="direccion" value="{{ old('direccion') }}" required>
+        <input class="input-2" type="text" name="direccion" value="{{$cliente->direccion}}" required>
 
     </div> 
 </div></div>
     <div class="row1">  <div class="mitad-1">
         <div class="subtitle">CLAVE:</div> 
         <div class="container-input">
-            <input class="input-1" type="password" name="password" required>
+            <input class="input-1" type="text" name="password">
         </div> 
     </div>
     <div class="mitad-2"><div class="subtitle-2">EMAIL:</div>
     <div class="container-input-2">
-        <input class="input-2" type="email" name="email" value="{{ old('email') }}" required>
+        <input class="input-2" type="email" name="email" value="{{$cliente->email}}" required>
     </div> 
 </div></div>
     <div class="row1">  <div class="mitad-1">
         <div class="subtitle">CONFIRMAR CONTRASEÑA:</div>
         <div class="container-input">
-            <input class="input-1" type="password" name="password_confirmation" required>
+            <input class="input-1" type="text" name="password_confirmation">
         </div>  
     </div>
-    </div>
+    <div class="mitad-2"><div class="subtitle-2"></div>
+</div></div>
 </div>
 <div class="container-boton">
-<input class="register-button" type="submit" value="REGISTRAR CLIENTE">
+<input class="register-button" type="submit" value="EDITAR CLIENTE">
 
 </div>
 
@@ -92,6 +93,6 @@
 </div>
 
 
-    
+   
 </body>
 </html>

@@ -19,6 +19,6 @@ class VeterinarioAuth
         if ($empleado and $empleado->rol === 'veterinario') {
             return $next($request);
         }
-        return redirect()->back()->withSuccess('Usted no es veterinario se le va a inyectar un virus por intentar vulnerar la seguridad :V');
+        return redirect()->route('login')->withSuccess('Usted no tiene permisos de veterinario');
     }
 }

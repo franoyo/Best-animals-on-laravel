@@ -73,7 +73,7 @@ Gestion De Empleados
                     </div>
                     
                     </div>
-                 <script src="{{asset('js/script_gestion_usuario.js?v=1.15')}}"></script>
+                 <script src="{{asset('js/script_gestion_usuario.js?v=1.16')}}"></script>
                
 @endsection
 
