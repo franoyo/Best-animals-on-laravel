@@ -91,6 +91,8 @@ route::controller(AdminController::class)->group(function () {
     route::post('/storeCliente', 'storeCliente')->name('storeCliente');
     route::post('/deleteCliente', 'deleteCliente')->name('deleteCliente');
     route::post('/editCliente', 'editCliente')->name('editCliente');
+    route::get('/pdfClientes', 'pdfClientes')->name('pdfClientes');
+
     
     
 

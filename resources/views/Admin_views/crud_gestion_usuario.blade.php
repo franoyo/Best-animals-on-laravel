@@ -71,6 +71,7 @@ Gestion De Clientes
                     </div>
                     
                     </div>
+<a class="boton-random" href="{{route('pdfClientes')}}">GENERAR REPORTE</a>
                     <script src="{{asset('js/script_gestion_cliente.js?v=1.16')}}"></script>
 @endsection
 @section("menuButtons")
@@ -78,4 +79,5 @@ Gestion De Clientes
           <a class="ins" href="{{route('listaEmpleados')}}"><p class="t1">GESTION EMPLEADOS</p></a>
           <div class="linea"></div>
         </div>
+        
 @endsection

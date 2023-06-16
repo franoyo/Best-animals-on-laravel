@@ -370,4 +370,11 @@ return redirect()->route("listaClientes")->withSuccess("Cliente Modificado Corre
 
 }
 
+public function pdfClientes(){
+
+    return view("pdf.pdf",['clientes'=>User::all()]);
+
+
+
+}
 }

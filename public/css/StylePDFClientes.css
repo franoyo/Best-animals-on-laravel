@@ -1,0 +1,130 @@
+:root{
+    --colorTitulos:rgb(166, 161, 161);
+    
+    }
+    body{
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+    }
+    .container-header{
+    width: 100vw;
+    height: 20vh;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    
+    
+    
+    }
+    .container-header .put-logo{
+    width: 15%;
+    height: 80%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    
+    }
+    .put-logo .imagen{
+    width: 100%;
+    height: 80%;
+    
+    
+    }
+    .container-header .put-titulo{
+    width: 30%;
+    height: 80%;
+    display: flex;
+    
+    justify-content: center;
+    align-items: center;
+    font-size: 3VW;
+    text-align: center;
+    }
+    .linea-container{
+    width: 100%;
+    height: 1vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    }
+    .linea-container .linea{
+    width: 95%;
+    height: 80%;
+    background-color: lightblue;
+    
+    
+    }
+    .container-middle{
+    width: 100%;
+    height: 79vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+   
+    
+    }
+    .container-middle .header-tabla{
+    width:90%;
+    height: 10%;
+    display: flex;
+    background-color: gray;
+    margin-top: 2%;
+    }
+    .header-tabla .id{
+    width: 10%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--colorTitulos);
+    }
+    .header-tabla .nombre{
+    width: 18%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--colorTitulos);
+    
+    
+    }
+    .header-tabla .apellido{
+    width: 18%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--colorTitulos);
+    
+    
+    }
+    .header-tabla .documento{
+        width: 18%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+    align-items: center;
+        background-color: var(--colorTitulos);
+    }
+    .header-tabla .celular{
+    
+        width: 18%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+    align-items: center;
+        background-color: var(--colorTitulos);
+    
+    }
+    .header-tabla .direccion{
+    width: 18%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--colorTitulos);
+    }
