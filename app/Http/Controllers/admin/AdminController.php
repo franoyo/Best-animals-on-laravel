@@ -195,6 +195,7 @@ public function storeHistoriaClinica(Request $request){
 public function crudHistorias(){
 return view("Admin_views.crud_historia",['historia'=>historiaClinica::all()]);
 }
+
 public function deleteHistoria(Request $request){
     $request->validate([
         'id' => 'required|integer|max:100',
@@ -243,6 +244,13 @@ public function updateHistoria(request $request){
     $historia->save();
     return redirect()->route('listaHistorias')->withSuccess("Los datos se han modificado correctamente!");
     ;
+}
+public function verHistoria($id){
+    $historia= historiaClinica::find($id);
+    if (!$historia) {
+        return redirect()->back()->withErrors("La historia no existe");
+    }  return view('Admin_views.ver_historia_clinica',['historia' => $historia]);
+
 }
 public function crudEmpleados(){
     $ultimoId = Empleado::latest('id')->value('id');

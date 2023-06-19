@@ -6,14 +6,14 @@ Formulario Historia Clinica
 
 <link rel="stylesheet" href="{{asset('css/style5.css?v=1.0')}}">
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
-<form class="cont3" action="{{route('storeHistoria')}}" method="post">
+<form class="cont3" action="{{route('storeHistoria.vet')}}" method="post">
   @csrf
   <div class="menumin">
     <nav class="modify-buttons">
     <input class="create" type="submit" value="CREAR">
     <script>
       function redireccionar(){
-window.location.href="{{route('listaHistorias')}}";
+window.location.href="{{route('listaHistorias.vet')}}";
       }
     </script>
     <input class="search" onclick="redireccionar()" type="button" value="BUSCAR">
@@ -142,14 +142,9 @@ window.location.href="{{route('listaHistorias')}}";
 </div>
 </form>
 @endsection
-
 @section("menuButtons")
 <div class="dash">
           <a class="ins" href="{{route('admin')}}"><p class="t1"><i class="bi bi-arrow-left"></i>ATRAS</p></a>
           <div class="linea"></div>
-        
-      
-        
-        
         </div>
 @endsection

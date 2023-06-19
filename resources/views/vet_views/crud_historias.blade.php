@@ -1,8 +1,8 @@
 @extends("layouts.plantillaRow")
 @section("contenidoPrincipal")
-@include("alerts.eliminar_historia")
+@include("alerts.eliminar_historia_vet")
 <link rel="stylesheet" href="{{asset('css/style28.css?v=1.11')}}">
-<a class="new-acta" href="{{route('historiasClinicasFormulario')}}">
+<a class="new-acta" href="{{route('historiasClinicasFormulario.vet')}}">
   <i class="bi bi-plus-lg"></i>
   </a>
                 <div class="put-title">
@@ -39,8 +39,8 @@
     <div class="name-dueño">{{$historias->nombre_dueño}} </div>
     <div class="name-dueño">{{$historias->telefono_dueño}}</div>
     <div class="name-dueño">{{$historias->direccion_dueño}}</div>
-    <div class="botones"><a class="put-icon" href="{{route('verHistoria', ['id' => $historias->id])}}"><i class="bi bi-eye"></i></a></div>
-    <div class="botones"><a class="put-icon" href="{{route('editarHistoria', ['id' => $historias->id])}}"><i class="bi bi-pen-fill"></i></a></div>
+    <div class="botones"><a class="put-icon" href="{{route('verHistoria.vet', ['id' => $historias->id])}}"><i class="bi bi-eye"></i></a></div>
+    <div class="botones"><a class="put-icon" href="{{route('editarHistoria.vet', ['id' => $historias->id])}}"><i class="bi bi-pen-fill"></i></a></div>
     <div class="botones-1">
         <a class="put-icon delete-button" data-id="{{$historias->id}}"><i class="bi bi-journal-x"></i></a>
     </div>
@@ -54,4 +54,7 @@
                 </div>
                 
            <script src="{{asset('js/crud_productos_script.js')}}"></script>
+@endsection
+@section("menuButtons")
+
 @endsection

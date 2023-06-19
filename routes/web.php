@@ -58,7 +58,7 @@ Route::get("/tienda", function () {
     return view("tienda",['tarjetas'=>Producto::all()]);
 })->name('tienda');
 
-route::controller(LoginRegisterController::class)->group(function () {
+Route::controller(LoginRegisterController::class)->group(function () {
     Route::get('/login', 'login')->name('login');
     Route::get('/register', 'register')->name('register');
     Route::get('/sucessfully', 'alert_register')->name('sucessfully');
@@ -67,39 +67,45 @@ route::controller(LoginRegisterController::class)->group(function () {
     Route::get('/dashboard', 'dashboard')->name('dashboard');
     Route::post('/logout', 'logout')->name('logout');
 });
-route::controller(AdminController::class)->group(function () {
-    route::get('/admin', 'index')->name('admin');
-    route::get('/caja', 'caja')->name('caja');
-    route::get('/registroStock', 'stock')->name('registroStock');
-    route::post('/storeStock', 'storeStock')->name('storeStock');
-    route::get("/listaProductos", 'crudProductos')->name("listaProductos");
-    route::post('/eliminarProducto', 'eliminarProducto')->name('eliminarProducto');
-    route::get('/editarProducto/{id}', 'editarProducto')->name('editarProducto');
-    route::get('/verProducto/{id}', 'verProducto')->name('verProducto');
-    route::post('/updateProducto', 'updateProducto')->name('updateProducto');
-    route::get('/historiasClinicasFormulario', 'formularioHistorias')->name('historiasClinicasFormulario');
-    route::post('/storeHistoria', 'storeHistoriaClinica')->name('storeHistoria');
-    route::get('/listaHistorias', 'crudHistorias')->name('listaHistorias');
-    route::post('/eliminaHistoria', 'deleteHistoria')->name('deleteHistoria');
-    route::get('/editarHistoria/{id}', 'editarHistoria')->name('editarHistoria');
-    route::post('/updateHistoria', 'updateHistoria')->name('updateHistoria');
-    route::get('/listaEmpleados', 'crudEmpleados')->name('listaEmpleados');
-    route::post('/ingresarEmpleado', 'ingresarEmpleado')->name('ingresarEmpleado');
-    route::post('/eliminarEmpleado', 'eliminarEmpleado')->name('eliminarEmpleado');
-    route::post('/editarEmpleado', 'updateEmpleado')->name('editarEmpleado');
-    route::get('/listaClientes', 'crudClientes')->name('listaClientes');
-    route::post('/storeCliente', 'storeCliente')->name('storeCliente');
-    route::post('/deleteCliente', 'deleteCliente')->name('deleteCliente');
-    route::post('/editCliente', 'editCliente')->name('editCliente');
-    route::get('/reporteClientes', 'reporteClientes')->name('reporteClientes');
-    route::get('/reporteEmpleados', 'reporteEmpleados')->name('reporteEmpleados');
+Route::controller(AdminController::class)->group(function () {
+    Route::get('/admin', 'index')->name('admin');
+    Route::get('/caja', 'caja')->name('caja');
+    Route::get('/registroStock', 'stock')->name('registroStock');
+    Route::post('/storeStock', 'storeStock')->name('storeStock');
+    Route::get("/listaProductos", 'crudProductos')->name("listaProductos");
+    Route::post('/eliminarProducto', 'eliminarProducto')->name('eliminarProducto');
+    Route::get('/editarProducto/{id}', 'editarProducto')->name('editarProducto');
+    Route::get('/verProducto/{id}', 'verProducto')->name('verProducto');
+    Route::post('/updateProducto', 'updateProducto')->name('updateProducto');
+    Route::get('/historiasClinicasFormulario', 'formularioHistorias')->name('historiasClinicasFormulario');
+    Route::post('/storeHistoria', 'storeHistoriaClinica')->name('storeHistoria');
+    Route::get('/listaHistorias', 'crudHistorias')->name('listaHistorias');
+    Route::post('/eliminaHistoria', 'deleteHistoria')->name('deleteHistoria');
+    Route::get('/editarHistoria/{id}', 'editarHistoria')->name('editarHistoria');
+    Route::post('/updateHistoria', 'updateHistoria')->name('updateHistoria');
+    Route::get('/verHistoria/{id}', 'verHistoria')->name('verHistoria');
+    Route::get('/listaEmpleados', 'crudEmpleados')->name('listaEmpleados');
+    Route::post('/ingresarEmpleado', 'ingresarEmpleado')->name('ingresarEmpleado');
+    Route::post('/eliminarEmpleado', 'eliminarEmpleado')->name('eliminarEmpleado');
+    Route::post('/editarEmpleado', 'updateEmpleado')->name('editarEmpleado');
+    Route::get('/listaClientes', 'crudClientes')->name('listaClientes');
+    Route::post('/storeCliente', 'storeCliente')->name('storeCliente');
+    Route::post('/deleteCliente', 'deleteCliente')->name('deleteCliente');
+    Route::post('/editCliente', 'editCliente')->name('editCliente');
+    Route::get('/reporteClientes', 'reporteClientes')->name('reporteClientes');
+    Route::get('/reporteEmpleados', 'reporteEmpleados')->name('reporteEmpleados');
 
     
     
 
 });
-route::controller(VeterinarioController::class)->group(function(){
-route::get('/veterinario','veterinarioDashboard')->name('veterinario');
-
-
+Route::controller(VeterinarioController::class)->group(function(){
+Route::get('/veterinario','veterinarioDashboard')->name('veterinario');
+Route::get('/historiasClinicasFormulario.veterinario', 'formularioHistoriasVet')->name('historiasClinicasFormulario.vet');
+Route::post('/storeHistoria.vet', 'storeHistoriaClinicaVet')->name('storeHistoria.vet');
+Route::get('/listaHistorias.vet', 'crudHistoriasVet')->name('listaHistorias.vet');
+Route::post('/eliminaHistoria.vet', 'deleteHistoriaVet')->name('deleteHistoria.vet');
+Route::get('/editarHistoria.vet/{id}', 'editarHistoriaVet')->name('editarHistoria.vet');
+Route::post('/updateHistoria.vet', 'updateHistoriaVet')->name('updateHistoria.vet');
+Route::get('/verHistoria.vet/{id}', 'verHistoriaVet')->name('verHistoria.vet');
 });
