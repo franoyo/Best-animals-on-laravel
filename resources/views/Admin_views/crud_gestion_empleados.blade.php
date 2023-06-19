@@ -6,7 +6,7 @@ Gestion De Empleados
 @section("contenidoPrincipal")
 @include('alerts.eliminar_empleado')
 @include("Admin_views.modals_registro.registrar_empleado")
-<link rel="stylesheet" href="{{asset('css/style21.css?V=1.1')}}">
+<link rel="stylesheet" href="{{asset('css/style21.css?V=1.11')}}">
 
 
                 <div class="insert-title">
@@ -17,6 +17,9 @@ Gestion De Empleados
                    </div>
                    <div class="titulo">
 <h2>GESTION EMPLEADOS</h2>
+                   </div>
+                   <div class="insert-botones">
+                   <a class="boton-reporte" href="{{route('reporteEmpleados')}}">GENERAR REPORTE</a>
                    </div>
                     </div>  
                     <div class="container-tabla">

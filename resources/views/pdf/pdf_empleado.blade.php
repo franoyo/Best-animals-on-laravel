@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Informe Clientes {{$fecha}}</title>
+    <title>Informe Empleados {{$fecha}}</title>
     <link rel="stylesheet" href="{{asset('css/stylePDFClientes.css?v=1.32')}}">
 </head>
 <body>
@@ -12,7 +12,7 @@
 <div class="put-logo">
     <img class="imagen" src="{{asset('img/best animal2-01 (1).png')}}" alt="">
 </div>
-<div class="put-titulo">REPORTE DE CLIENTES</div>
+<div class="put-titulo">REPORTE DE EMPLEADOS</div>
 <div class="put-logo-1"><div class="create-at"><div class="subtitle">Creado el:</div><div class="put-fecha">{{$fecha}}</div></div><div class="update-at"><div class="subtitle">Actualizado:</div><div class="put-fecha">{{$fecha}}</div></div></div>
 
     </header>
@@ -26,19 +26,19 @@
 <div class="nombre">NOMBRE</div>
 <div class="apellido">APELLIDO</div>
  <div class="documento">DOCUMENTO</div>
- <div class="celular">CELULAR</div>
+ <div class="celular">ROL</div>
  <div class="direccion">CORREO</div>
         </div>
-        @foreach ($clientes as $cliente )
+        @foreach ($empleados as $empleado )
             
       
         <div class="header-tabla-1">
-        <div class="id">{{$cliente->id}}</div>
-<div class="nombre">{{$cliente->name}}</div>
-<div class="apellido">{{$cliente->apellido}}</div>
- <div class="documento">{{$cliente->documento}}</div>
- <div class="celular">{{$cliente->celular}}</div>
- <div class="direccion">{{$cliente->email}}</div>
+        <div class="id">{{$empleado->id}}</div>
+<div class="nombre">{{$empleado->name}}</div>
+<div class="apellido">{{$empleado->apellido}}</div>
+ <div class="documento">{{$empleado->documento}}</div>
+ <div class="celular">{{$empleado->rol}}</div>
+ <div class="direccion">{{$empleado->email}}</div>
         </div>
         @endforeach
     </main>

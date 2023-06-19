@@ -1,5 +1,6 @@
 :root{
     --colorTitulos:rgb(166, 161, 161);
+    --colorCuerpo:rgb(235, 235, 235);
     
     }
     body{
@@ -8,7 +9,7 @@
         box-sizing: border-box;
     }
     .container-header{
-    width: 100vw;
+    width: 100%;
     height: 20vh;
     display: flex;
     justify-content: space-around;
@@ -18,7 +19,7 @@
     
     }
     .container-header .put-logo{
-    width: 15%;
+    width: 25%;
     height: 80%;
     display: flex;
     justify-content: center;
@@ -27,10 +28,77 @@
     
     }
     .put-logo .imagen{
-    width: 100%;
+    width: 70%;
     height: 80%;
     
     
+    }
+    .container-header .put-logo-1{
+        width: 25%;
+        height: 80%;
+        display: flex;
+        flex-direction: column;
+
+
+    }
+    .put-logo-1 .create-at{
+width: 100%;
+height: 50%;
+display: flex;
+text-align: center;
+
+
+
+    }
+    .create-at .subtitle{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+width:40%;
+height: 100%;
+font-weight: 700;
+font-size: 2vh;
+    }
+    .create-at .put-fecha{
+
+        width: 60%;
+        height: 100%;
+        display: flex;
+   
+        text-align: center;
+        justify-content: center;
+        align-items: center;
+        font-size: 2vh;
+        font-weight: 700;
+    }
+    .put-logo-1 .update-at{
+        width: 100%;
+        height: 50%;
+        display: flex;
+        text-align: center;
+     
+        
+    }
+    .update-at .subtitle{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width:40%;
+        height: 100%;
+        font-weight: 700;
+        font-size: 2vh;
+    }
+    .update-at .put-fecha{
+width: 60%;
+height: 100%;
+display: flex;
+font-weight: 700;
+text-align: center;
+        justify-content: center;
+        align-items: center;
+        font-size: 2vh;
+
+
     }
     .container-header .put-titulo{
     width: 30%;
@@ -39,7 +107,7 @@
     
     justify-content: center;
     align-items: center;
-    font-size: 3VW;
+    font-size:6vh;
     text-align: center;
     }
     .linea-container{
@@ -59,18 +127,19 @@
     }
     .container-middle{
     width: 100%;
-    height: 79vh;
     display: flex;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
-   
+ 
     
     }
     .container-middle .header-tabla{
     width:90%;
-    height: 10%;
+    height: 7vh;
     display: flex;
+    border-left: solid darkgray;
+    border-right: solid darkgray;
+    
     background-color: gray;
     margin-top: 2%;
     }
@@ -124,7 +193,472 @@
     width: 18%;
     height: 100%;
     display: flex;
+    text-align: center;
     justify-content: center;
     align-items: center;
     background-color: var(--colorTitulos);
     }
+    .header-tabla-1{
+        width:90%;
+        height: 5vh;
+        display: flex;
+        border-bottom: solid darkgray;
+        border-left: solid darkgray;
+        border-right: solid darkgray;
+        
+    }
+    .header-tabla-1 .id{
+        width: 10%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: var(--colorCuerpo);
+
+    }
+    .header-tabla-1 .nombre{
+        width: 18%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: var(--colorCuerpo);
+
+
+    }
+    .header-tabla-1 .apellido{
+        width: 18%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: var(--colorCuerpo);
+
+
+    }
+    .header-tabla-1 .documento{
+        width: 18%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+    align-items: center;
+        background-color: var(--colorCuerpo);
+    }
+    .header-tabla-1 .celular{
+        width: 18%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+    align-items: center;
+        background-color: var(--colorCuerpo);
+    }
+    .header-tabla-1 .direccion{
+        width: 18%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        text-align: center;
+        align-items: center;
+        overflow: hidden;
+        background-color: var(--colorCuerpo);
+        font-size:13.5px;
+    }
+    @media(max-width:650px){
+        .container-header .put-logo{
+            width: 25%;
+            height: 80%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            
+            
+            }
+            .put-logo .imagen{
+            width: 70%;
+            height: 55%;
+            }
+            .create-at .subtitle{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+        width:40%;
+        height: 100%;
+        font-weight: 700;
+        font-size: 1.4vh;
+            }
+            .create-at .put-fecha{
+        
+                width: 60%;
+                height: 100%;
+                display: flex;
+           
+                text-align: center;
+                justify-content: center;
+                align-items: center;
+                font-size: 1.4vh;
+                font-weight: 700;
+            }
+            .put-logo-1 .update-at{
+                width: 100%;
+                height: 50%;
+                display: flex;
+                text-align: center;
+             
+                
+            }
+            .update-at .subtitle{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                width:40%;
+                height: 100%;
+                font-weight: 700;
+                font-size: 1.2vh;
+            }
+            .update-at .put-fecha{
+        width: 60%;
+        height: 100%;
+        display: flex;
+        font-weight: 700;
+        text-align: center;
+                justify-content: center;
+                align-items: center;
+                font-size: 1.4vh;
+        
+        
+            }
+            .container-header .put-titulo{
+            width: 30%;
+            height: 80%;
+            display: flex;
+            
+            justify-content: center;
+            align-items: center;
+            font-size:3vh;
+            text-align: center;
+            }
+            .header-tabla .id{
+                width: 10%;
+                height: 100%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                background-color: var(--colorTitulos);
+                font-size: 2vw;
+                }
+                .header-tabla .nombre{
+                width: 18%;
+                height: 100%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                background-color: var(--colorTitulos);
+                font-size: 2vw;
+                
+                }
+                .header-tabla .apellido{
+                width: 18%;
+                height: 100%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                background-color: var(--colorTitulos);
+                font-size: 2vw;
+                
+                }
+                .header-tabla .documento{
+                    width: 18%;
+                    height: 100%;
+                    display: flex;
+                    justify-content: center;
+                align-items: center;
+                    background-color: var(--colorTitulos);
+                    font-size: 2vw;
+                }
+                .header-tabla .celular{
+                
+                    width: 18%;
+                    height: 100%;
+                    display: flex;
+                    justify-content: center;
+                align-items: center;
+                    background-color: var(--colorTitulos);
+                    font-size: 2vw;
+                }
+                .header-tabla .direccion{
+                width: 18%;
+                height: 100%;
+                display: flex;
+                text-align: center;
+                justify-content: center;
+                align-items: center;
+                background-color: var(--colorTitulos);
+                font-size: 2vw;
+                }
+                .header-tabla-1{
+                    width:90%;
+                    height: 5vh;
+                    display: flex;
+                    border-bottom: solid darkgray;
+                    border-left: solid darkgray;
+                    border-right: solid darkgray;
+                    
+                }
+                .header-tabla-1 .id{
+                    width: 10%;
+                    height: 100%;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    background-color: var(--colorCuerpo);
+                    font-size: 2vw;
+                }
+                .header-tabla-1 .nombre{
+                    width: 18%;
+                    height: 100%;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    background-color: var(--colorCuerpo);
+            
+                    font-size: 2vw;
+                }
+                .header-tabla-1 .apellido{
+                    width: 18%;
+                    height: 100%;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    background-color: var(--colorCuerpo);
+                    font-size: 2vw;
+            
+                }
+                .header-tabla-1 .documento{
+                    width: 18%;
+                    height: 100%;
+                    display: flex;
+                    justify-content: center;
+                align-items: center;
+                    background-color: var(--colorCuerpo);
+                    font-size: 2vw;
+                }
+                .header-tabla-1 .celular{
+                    width: 18%;
+                    height: 100%;
+                    display: flex;
+                    justify-content: center;
+                align-items: center;
+                    background-color: var(--colorCuerpo);
+                    font-size: 2vw;
+                }
+                .header-tabla-1 .direccion{
+                    width: 18%;
+                    height: 100%;
+                    display: flex;
+                    justify-content: center;
+                    text-align: center;
+                    align-items: center;
+                    background-color: var(--colorCuerpo);
+                    font-size: 1.4vw;
+                }
+    }
+@media(orientation:portrait){
+    .container-header .put-logo{
+        width: 25%;
+        height: 80%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        
+        
+        }
+        .put-logo .imagen{
+        width: 70%;
+        height: 55%;
+        }
+        .create-at .subtitle{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+    width:40%;
+    height: 100%;
+    font-weight: 700;
+    font-size: 1.4vh;
+        }
+        .create-at .put-fecha{
+    
+            width: 60%;
+            height: 100%;
+            display: flex;
+       
+            text-align: center;
+            justify-content: center;
+            align-items: center;
+            font-size: 1.4vh;
+            font-weight: 700;
+        }
+        .put-logo-1 .update-at{
+            width: 100%;
+            height: 50%;
+            display: flex;
+            text-align: center;
+         
+            
+        }
+        .update-at .subtitle{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width:40%;
+            height: 100%;
+            font-weight: 700;
+            font-size: 1.2vh;
+        }
+        .update-at .put-fecha{
+    width: 60%;
+    height: 100%;
+    display: flex;
+    font-weight: 700;
+    text-align: center;
+            justify-content: center;
+            align-items: center;
+            font-size: 1.4vh;
+    
+    
+        }
+        .container-header .put-titulo{
+        width: 30%;
+        height: 80%;
+        display: flex;
+        
+        justify-content: center;
+        align-items: center;
+        font-size:3vh;
+        text-align: center;
+        }
+        .header-tabla .id{
+            width: 10%;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: var(--colorTitulos);
+            font-size: 2vw;
+            }
+            .header-tabla .nombre{
+            width: 18%;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: var(--colorTitulos);
+            font-size: 2vw;
+            
+            }
+            .header-tabla .apellido{
+            width: 18%;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: var(--colorTitulos);
+            font-size: 2vw;
+            
+            }
+            .header-tabla .documento{
+                width: 18%;
+                height: 100%;
+                display: flex;
+                justify-content: center;
+            align-items: center;
+                background-color: var(--colorTitulos);
+                font-size: 2vw;
+            }
+            .header-tabla .celular{
+            
+                width: 18%;
+                height: 100%;
+                display: flex;
+                justify-content: center;
+            align-items: center;
+                background-color: var(--colorTitulos);
+                font-size: 2vw;
+            }
+            .header-tabla .direccion{
+            width: 18%;
+            height: 100%;
+            display: flex;
+            text-align: center;
+            justify-content: center;
+            align-items: center;
+            background-color: var(--colorTitulos);
+            font-size: 2vw;
+            }
+            .header-tabla-1{
+                width:90%;
+                height: 5vh;
+                display: flex;
+                border-bottom: solid darkgray;
+                border-left: solid darkgray;
+                border-right: solid darkgray;
+                
+            }
+            .header-tabla-1 .id{
+                width: 10%;
+                height: 100%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                background-color: var(--colorCuerpo);
+                font-size: 2vw;
+            }
+            .header-tabla-1 .nombre{
+                width: 18%;
+                height: 100%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                background-color: var(--colorCuerpo);
+        
+                font-size: 2vw;
+            }
+            .header-tabla-1 .apellido{
+                width: 18%;
+                height: 100%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                background-color: var(--colorCuerpo);
+                font-size: 2vw;
+        
+            }
+            .header-tabla-1 .documento{
+                width: 18%;
+                height: 100%;
+                display: flex;
+                justify-content: center;
+            align-items: center;
+                background-color: var(--colorCuerpo);
+                font-size: 2vw;
+            }
+            .header-tabla-1 .celular{
+                width: 18%;
+                height: 100%;
+                display: flex;
+                justify-content: center;
+            align-items: center;
+                background-color: var(--colorCuerpo);
+                font-size: 2vw;
+            }
+            .header-tabla-1 .direccion{
+                width: 18%;
+                height: 100%;
+                display: flex;
+                justify-content: center;
+                text-align: center;
+                align-items: center;
+                background-color: var(--colorCuerpo);
+                font-size: 1.8vw;
+            }
+
+}

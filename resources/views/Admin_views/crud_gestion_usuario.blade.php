@@ -16,6 +16,9 @@ Gestion De Clientes
                    <div class="titulo">
 <h2>GESTION CLIENTES</h2>
                    </div>
+                   <div class="insert-botones">
+                   <a class="boton-reporte" href="{{route('reporteClientes')}}">GENERAR REPORTE</a>
+                   </div>
                     </div>  
                     <div class="container-tabla">
                       <button class="crear" id="create"><i class="bi bi-plus"></i></button>
@@ -71,7 +74,7 @@ Gestion De Clientes
                     </div>
                     
                     </div>
-<a class="boton-random" href="{{route('pdfClientes')}}">GENERAR REPORTE</a>
+
                     <script src="{{asset('js/script_gestion_cliente.js?v=1.16')}}"></script>
 @endsection
 @section("menuButtons")

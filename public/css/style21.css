@@ -61,6 +61,39 @@
                 font-size: 3vh;
          
          }
+         .insert-title .insert-botones{
+              display: flex;
+              width: 25%;
+              height: 100%;
+              align-items: center;
+              justify-content: center;
+              
+              
+              
+                       }
+                       .insert-botones .boton-reporte{
+              width: 50%;
+              height: 50%;
+              text-decoration: none;
+              background-color: #FF914D;
+              border: solid #268CCA;
+              display: flex;
+              text-align: center;
+              justify-content: center;
+              align-items: center;
+              font-size: 1.25vw;
+              font-family: hatton;
+              color: black;
+              border-radius: 2vw;
+              transition: 0.5s;
+              color: #0f74b3;
+                       }
+                       .boton-reporte:hover{
+                           transform: scale(1.1);
+              background-color: #268CCA;
+              color: black
+              
+                       }
            .maincontainer .container-tabla{
             width: 100%;
             height: 85%;

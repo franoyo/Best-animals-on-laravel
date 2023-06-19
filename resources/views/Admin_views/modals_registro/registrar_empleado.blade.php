@@ -85,13 +85,13 @@
 
             <option value="administrador">1.ADMINISTRADOR</option>
             
-            <option value="usuario">2.USUARIO</option>
+        
             
-            <option value="auxliar_de_bodega">3.AUXILIAR DE BODEGA</option>
+            <option value="auxliar_de_bodega">2.AUXILIAR DE BODEGA</option>
 
-            <option value="veterinario">4.VETERINARIO</option>
+            <option value="veterinario">3.VETERINARIO</option>
 
-            <option value="caja">5.CAJA</option>
+            <option value="caja">4.CAJA</option>
             
             </select>
 

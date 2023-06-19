@@ -9,7 +9,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Storage;
 use App\Models\historiaClinica;
 use Illuminate\Support\Facades\Hash;
-
+use Carbon\Carbon;
 class AdminController extends Controller
 {
     //se usa un connstructor para definir el middleware en este caso es auth.admin ya que por cada rol toca crear uno
@@ -370,11 +370,19 @@ return redirect()->route("listaClientes")->withSuccess("Cliente Modificado Corre
 
 }
 
-public function pdfClientes(){
+public function reporteClientes(){
+ 
+    $clientes = User::all();
+    $fechaActual = Carbon::now();
+    $vista=view("pdf.pdf", ['clientes' => $clientes, 'fecha' => $fechaActual]);
+    return $vista;
 
-    return view("pdf.pdf",['clientes'=>User::all()]);
-
-
+}
+public function reporteEmpleados(){
+$empleados= Empleado::all();
+$fecha= Carbon::now();
+$vistaEmpleado=view("pdf.pdf_empleado",['empleados'=>$empleados, 'fecha'=>$fecha]);
+return $vistaEmpleado;
 
 }
 }
