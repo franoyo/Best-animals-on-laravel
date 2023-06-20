@@ -8,6 +8,8 @@ use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Hash;
+use Illuminate\Support\Facades\Password;
+
 
 
 class LoginRegisterController extends Controller
@@ -136,4 +138,59 @@ class LoginRegisterController extends Controller
         return redirect()->route('login')
             ->withSuccess('Ha cerrado sesión con éxito!');
     }
+    public function resetPassword(){
+return view("auth.reset_password");
+    }
+    public function enviarEmailRestablecimiento(Request $request){
+        $request->validate(['email' => 'required|email']);
+
+        $response = Password::sendResetLink(
+            $request->only('email')
+        );
+
+        return $response == Password::RESET_LINK_SENT
+            ? redirect()->route('recuperarContraseña')->with('status', trans($response))
+            : back()->withErrors(['email' => trans($response)]);
+    }
+    public function mostrarFormDeReseteo(Request $request, $token = null)
+    {
+        return view('auth.token_reset_password')->with(
+            ['token' => $token, 'email' => $request->email]
+        );
+    }
+    public function reset(Request $request)
+    {
+        $request->validate([
+            'token' => 'required',
+            'email' => 'required|email',
+            'password' => 'required|confirmed|min:8',
+        ]);
+
+        $response = $this->resetPasswordZ($request->email, $request->password, $request->token);
+
+        return $response == Password::PASSWORD_RESET
+            ? redirect()->route('recuperarContraseña')->with('status', trans($response))
+            : back()->withErrors(['email' => trans($response)]);
+    }
+    protected function resetPasswordZ($email, $password, $token)
+{
+    $credentials = [
+        'email' => $email,
+        'password' => $password,
+        'password_confirmation' => $password,
+        'token' => $token,
+    ];
+
+    $response = Password::reset($credentials, function ($user, $password) {
+        $this->updateUserPassword($user, $password);
+    });
+
+    return $response;
+}
+protected function updateUserPassword($user, $password)
+{
+    $user->password = Hash::make($password);
+    $user->save();
+}
+
 }

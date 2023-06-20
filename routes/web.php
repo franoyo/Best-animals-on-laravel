@@ -66,6 +66,10 @@ Route::controller(LoginRegisterController::class)->group(function () {
     Route::post('/authenticate', 'authenticate')->name('authenticate');
     Route::get('/dashboard', 'dashboard')->name('dashboard');
     Route::post('/logout', 'logout')->name('logout');
+    Route::get('/recuperarContraseña', 'resetPassword')->name('recuperarContraseña');
+    Route::post('/enviarEmailRestablecimiento', 'enviarEmailRestablecimiento')->name('password.sent');
+    Route::get('/restablecerContraseña/{token}', 'mostrarFormDeReseteo')->name('password.reset');
+    Route::post('/updatePassword', 'reset')->name('password.update');
 });
 Route::controller(AdminController::class)->group(function () {
     Route::get('/admin', 'index')->name('admin');
