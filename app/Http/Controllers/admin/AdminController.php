@@ -300,7 +300,7 @@ public function updateEmpleado(Request $request){
             'celular' => 'required|string|max:250',
             'direccion' => 'required|string|max:250',
             'email' => 'required|email|max:250',
-            'password' => 'required|min:8|confirmed'
+            'password' => 'confirmed'
     ]);
     $id = $request->input('id');
 $empleado=Empleado::find($id);

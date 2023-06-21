@@ -1,7 +1,7 @@
 @extends("layouts.plantillaRow")
 @section("contenidoPrincipal")
 @include("alerts.eliminar_historia")
-<link rel="stylesheet" href="{{asset('css/style28.css?v=1.11')}}">
+<link rel="stylesheet" href="{{asset('css/style28.css?v=1.15')}}">
 <a class="new-acta" href="{{route('historiasClinicasFormulario')}}">
   <i class="bi bi-plus-lg"></i>
   </a>

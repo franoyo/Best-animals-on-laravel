@@ -57,6 +57,12 @@
 </div>
 @endforeach
 </main>
+<script>
+        // Espera a que el documento se cargue completamente
+        document.addEventListener('DOMContentLoaded', function() {
+            window.print();
+        });
+    </script>
 
 </body>
 </html>

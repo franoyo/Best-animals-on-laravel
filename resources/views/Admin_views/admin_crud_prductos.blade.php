@@ -11,7 +11,14 @@
     <section class="put-input"><input class="search" type="search" placeholder="Busqueda por marca"></section>
 </div>
 <div class="main-title"><h1>GESTION PRODUCTOS</h1></div>
-<div class="put-variants"></div>
+<div class="put-variants">
+<button id="boton-informe" onclick="redirect()">GENERAR INFORME</button>
+<script>
+    function redirect(){
+window.location.href="{{route('reporteHistorias')}}"
+    }
+</script>
+</div>
 </div>
 <div class="container-content">
     <div class="tabla-container">
