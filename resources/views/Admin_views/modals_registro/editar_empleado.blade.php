@@ -65,7 +65,7 @@
     <div class="row1">  <div class="mitad-1">
         <div class="subtitle">CLAVE:</div> 
         <div class="container-input">
-            <input class="input-1" type="text" name="password" required>
+            <input class="input-1" type="text" name="password">
         </div> 
     </div>
     <div class="mitad-2"><div class="subtitle-2">EMAIL:</div>
@@ -76,7 +76,7 @@
     <div class="row1">  <div class="mitad-1">
         <div class="subtitle">CONFIRMAR CONTRASEÑA:</div>
         <div class="container-input">
-            <input class="input-1" type="text" name="password_confirmation" required>
+            <input class="input-1" type="text" name="password_confirmation">
         </div>  
     </div>
     <div class="mitad-2"><div class="subtitle-2">ROL ID:</div>
