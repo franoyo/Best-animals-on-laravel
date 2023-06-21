@@ -14,6 +14,16 @@
                    <div class="titulo">
 <h2>HISTORIAS CLINICAS</h2>
                    </div>
+                   <div class="put-button">
+<button id="boton-informe" onclick="redirect()">GENERAR INFORME</button>
+<script>
+    function redirect(){
+window.location.href="{{route('reporteHistorias')}}"
+
+    }
+</script>
+
+                   </div>
                    
                 </div>
                 <div class="container-table">

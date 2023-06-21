@@ -393,4 +393,11 @@ $vistaEmpleado=view("pdf.pdf_empleado",['empleados'=>$empleados, 'fecha'=>$fecha
 return $vistaEmpleado;
 
 }
+public function reporteHistorias(){
+$historias= historiaClinica::all();
+$fechita= Carbon::now();
+$vistaHistoria=view("pdf.pdf_historia_clinica",['historias'=>$historias, 'fecha'=>$fechita]);
+return $vistaHistoria;
+
+}
 }

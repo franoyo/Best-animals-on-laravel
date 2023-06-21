@@ -98,6 +98,8 @@ Route::controller(AdminController::class)->group(function () {
     Route::post('/editCliente', 'editCliente')->name('editCliente');
     Route::get('/reporteClientes', 'reporteClientes')->name('reporteClientes');
     Route::get('/reporteEmpleados', 'reporteEmpleados')->name('reporteEmpleados');
+    Route::get('/reporteHistorias', 'reporteHistorias')->name('reporteHistorias');
+
 
     
     
