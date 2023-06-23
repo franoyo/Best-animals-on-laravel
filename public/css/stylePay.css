@@ -1,0 +1,85 @@
+body{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    
+    }
+    .container-header{
+    width: 100vw;
+    height: 20vh;
+    display: flex;
+    justify-content: center;
+    align-items:center;
+     background-color: indianred;
+    }
+    .container-header .put-logo{
+    width: 20%;
+    height: 85%;
+    display: flex;
+    background-color: aquamarine;
+    
+    }
+    .put-logo .image-logo{
+    width: 100%;
+    height:100%;
+    
+    
+    }
+    .main-container{
+    width: 100%;
+    height: 70vh;
+    display:flex;
+    flex-direction: column;
+    background-color: darkseagreen;
+    }
+    .main-container .container-volver{
+    width: 100%;
+    height: 7%;
+    display: flex;
+    align-items: center;
+    background-color: aliceblue;
+    
+    
+    }
+    .container-volver .link{
+    text-decoration: none;
+    margin-left: 1%;
+    color: rgb(55, 167, 204);
+    font-size: 1.4vw;
+    font-weight: 800;
+    
+    }
+    .main-container .container-titulo{
+    width: 100%;
+    height: 15%;
+    display: flex;
+    background-color: grey;
+    justify-content: center;
+    align-items: center;
+    
+    }
+    .container-titulo .contenedor-img{
+    width: 25%;
+    height: 95%;
+    display:flex;
+    background-color: aquamarine;
+    }
+    .contenedor-img .put-img{
+    width: 25%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-size: 8vh;
+    background-color: chocolate;
+    
+    }
+    .footer-container{
+    width: 100%;
+    height:10vh;
+    display: flex;
+    background-color: chartreuse;
+    
+    
+    }
