@@ -5,6 +5,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Auth\LoginRegisterController;
 use App\Http\Controllers\admin\AdminController;
 use App\Http\Controllers\Veterinario\VeterinarioController;
+use App\Http\Controllers\Auth\restablecerContraseñaEmpleadoController;
 
 /*
 |--------------------------------------------------------------------------
@@ -70,7 +71,13 @@ Route::controller(LoginRegisterController::class)->group(function () {
     Route::post('/enviarEmailRestablecimiento', 'enviarEmailRestablecimiento')->name('password.sent');
     Route::get('/restablecerContraseña/{token}', 'mostrarFormDeReseteo')->name('password.reset');
     Route::post('/updatePassword', 'reset')->name('password.update');
+    Route::controller(restablecerContraseñaEmpleadoController::class)->group(function(){
+        Route::get('/recuperarContraseñaEmpleado', 'vistaRestablecerEmpleado')->name('recuperarContraseñaEmpleado');
+        Route::post('/enviarEmailRestablecimientoEmpleado', 'enviarCorreoEmpleado')->name('empleado.password.sent');
+        Route::get('/restablecerContraseñaEmpleado/{tokenSito}', 'mostrarFormDeReseteoEmpleado')->name('empleado.password.reset');
+    });
 });
+
 Route::controller(AdminController::class)->group(function () {
     Route::get('/admin', 'index')->name('admin');
     Route::get('/caja', 'caja')->name('caja');

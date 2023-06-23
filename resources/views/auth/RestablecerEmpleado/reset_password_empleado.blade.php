@@ -13,13 +13,13 @@
         </a>
     </header>
     <main class="container-principal">
-        <form class="form" method="POST" action="{{route('password.sent')}}">
+        <form class="form" method="POST" action="{{route('empleado.password.sent')}}">
             @csrf
 <div class="put-title">
     RESTABLECER CONTRASEÑA
 </div>
 <div class="put-description">
-    Si Desea Restablecer Su Contraseña Digite Su Correo Electronico:
+    Si Usted Es Empleado Y Desea Restablecer Su Contraseña Digite Su Correo Electronico:
 </div>
 <div class="put-input">
 <input class="input-email" type="email" name="email" placeholder="Correo Electronico" required autofocus>
@@ -38,15 +38,6 @@
 @endif
 </div>
 </form>
-<div class="reset-empleado">
-    
-    <button class="btn" onclick="redi()">Si es empleado y desea restablecer su contraseña haga click aqui</button>
-    <script>
-        function redi(){
-window.location.href="{{route('recuperarContraseñaEmpleado')}}";
-        }
-    </script>
-</div>
     </main>
     
 </body>
