@@ -139,7 +139,7 @@ text-align: center;
     display: flex;
     border-left: solid darkgray;
     border-right: solid darkgray;
-    
+    page-break-inside: avoid; 
     background-color: gray;
     margin-top: 2%;
     }
