@@ -1,5 +1,8 @@
-@extends("layouts.plantilla")
-@section("botones-menu")
+@extends("layouts.plantilla_right")
+@section("putTitle")
+Vista General Productos
+@endsection
+@section("menuButtons")
 <div class="dash">
     <a class="ins" href="{{route('caja')}}">
         <p class="t1">CAJA</p>
@@ -49,16 +52,27 @@
     <div class="linea"></div>
 </div>
 @endsection
-@section("mainContent")
-<div class="welcome">
-                          <p>BIENVENIDO!</p>
-                      </div>
-                      <div class="administrador">
-                          <p class="auth">{{ auth()->guard('empleado')->user()->name }} {{ auth()->guard('empleado')->user()->apellido }}</p>Es un gusto tenerte de vuelta!
-                      </div>
-                      <div class="cont-image">
-                          <div class="put-gift">
-                              <img class="mish" src="img/gato-imagen-animada-0301.gif" alt="gift">
-                          </div>
-                      </div>
+@section("contenidoPrincipal")
+<link rel="stylesheet" href="{{asset('CSS/style6.css')}}">
+<div class="cont3">
+<div class="menumin">
+ 
+  <nav class="modify-buttons">
+    <input class="create" type="button" value="CREAR">
+    <input class="search" type="button" value="BUSCAR">
+  
+    </nav>  
+
+</div>
+<div class="content_a"> <div class="row_a"> <div class="row_b"><div class="put_graphics"></div></div> <div class="row_b"><div class="put_graphics"></div></div></div>    
+<div class="row_a">
+<div class="put_graphics2">
+
+
+</div>
+
+</div> 
+</div>
+
+</div>
 @endsection

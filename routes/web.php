@@ -71,16 +71,17 @@ Route::controller(LoginRegisterController::class)->group(function () {
     Route::post('/enviarEmailRestablecimiento', 'enviarEmailRestablecimiento')->name('password.sent');
     Route::get('/restablecerContraseña/{token}', 'mostrarFormDeReseteo')->name('password.reset');
     Route::post('/updatePassword', 'reset')->name('password.update');
-    Route::controller(restablecerContraseñaEmpleadoController::class)->group(function(){
-        Route::get('/recuperarContraseñaEmpleado', 'vistaRestablecerEmpleado')->name('recuperarContraseñaEmpleado');
-        Route::post('/enviarEmailRestablecimientoEmpleado', 'enviarCorreoEmpleado')->name('empleado.password.sent');
-        Route::get('/restablecerContraseñaEmpleado/{tokenSito}', 'mostrarFormDeReseteoEmpleado')->name('empleado.password.reset');
-    });
+   
 });
-
+Route::controller(restablecerContraseñaEmpleadoController::class)->group(function(){
+    Route::get('/recuperarContraseñaEmpleado', 'vistaRestablecerEmpleado')->name('recuperarContraseñaEmpleado');
+    Route::post('/enviarEmailRestablecimientoEmpleado', 'enviarCorreoEmpleado')->name('empleado.password.sent');
+    Route::get('/restablecerContraseñaEmpleado/{tokenSito}', 'mostrarFormDeReseteoEmpleado')->name('a.password.reset');
+});
 Route::controller(AdminController::class)->group(function () {
     Route::get('/admin', 'index')->name('admin');
     Route::get('/caja', 'caja')->name('caja');
+    Route::get('/generalProductos', 'vistaProductos')->name('generalProductos');
     Route::get('/registroStock', 'stock')->name('registroStock');
     Route::post('/storeStock', 'storeStock')->name('storeStock');
     Route::get("/listaProductos", 'crudProductos')->name("listaProductos");
@@ -106,11 +107,7 @@ Route::controller(AdminController::class)->group(function () {
     Route::get('/reporteClientes', 'reporteClientes')->name('reporteClientes');
     Route::get('/reporteEmpleados', 'reporteEmpleados')->name('reporteEmpleados');
     Route::get('/reporteHistorias', 'reporteHistorias')->name('reporteHistorias');
-
-
-    
-    
-
+    Route::get('/error400.admin', 'error400Admin')->name('error400.admin');
 });
 Route::controller(VeterinarioController::class)->group(function(){
 Route::get('/veterinario','veterinarioDashboard')->name('veterinario');

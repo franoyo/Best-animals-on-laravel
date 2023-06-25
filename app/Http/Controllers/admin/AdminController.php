@@ -400,4 +400,11 @@ $vistaHistoria=view("pdf.pdf_historia_clinica",['historias'=>$historias, 'fecha'
 return $vistaHistoria;
 
 }
+public function error400Admin(){
+return view("error_views.error400_in_dashboard");
+}
+public function vistaProductos(){
+
+    return view("Admin_views.viewProductos");
+}
 }

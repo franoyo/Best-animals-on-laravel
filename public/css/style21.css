@@ -150,7 +150,7 @@ transition: 0.5s;
    height: 10%;
    display: flex;
    background-color: #268CCA;
-
+   font-family: hatton;
 
            }
            .row-subtitle .put-id{
@@ -162,7 +162,7 @@ transition: 0.5s;
             justify-content: center;
             align-items: center;
             font-size: 2vh;
-            font-family: hatton;
+          
 
            }
            .row-subtitle .name-dueño{
@@ -174,7 +174,7 @@ transition: 0.5s;
             border-right: solid 0.2vw black;
             align-items: center;
             font-size: 1.2vw;
-            font-family: hatton;
+           
             text-align: center;
 
            }
@@ -187,7 +187,7 @@ transition: 0.5s;
             border-right: solid 0.2vw black;
             align-items: center;
             font-size: 1.2vw;
-            font-family: hatton;
+          
             text-align: center;
 
 
@@ -202,7 +202,7 @@ transition: 0.5s;
             border-bottom: solid 0.2vw black;
             border-right: solid 0.2vw black;
             font-size: 1.2vw;
-            font-family: hatton;
+  
             text-align: center;
 
 
@@ -216,7 +216,7 @@ transition: 0.5s;
             border-bottom: solid 0.2vw black;
      
             font-size: 1.2vw;
-            font-family: hatton;
+          
             text-align: center;
             overflow: hidden;
 
@@ -228,7 +228,8 @@ transition: 0.5s;
             height: 10%;
             display: flex;
             background-color: #FF914D;
-
+font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        
            }
            .row-empleados .put-id{
             width: 6%;
@@ -252,8 +253,8 @@ transition: 0.5s;
             border-bottom: solid 0.2vw black;
             border-right: solid 0.2vw black;
             align-items: center;
-            font-size: 1vw;
-            font-family: hatton;
+            font-size: 1.2vw;
+            
             text-align: center;
             overflow: hidden;
            }
@@ -266,8 +267,7 @@ transition: 0.5s;
             border-bottom: solid 0.2vw black;
             border-right: solid 0.2vw black;
             align-items: center;
-            font-size: 1vw;
-            font-family: hatton;
+            font-size: 1.2vw;
             text-align: center;
             overflow: hidden;
 
@@ -281,10 +281,10 @@ transition: 0.5s;
             border-bottom: solid 0.2vw black;
             border-right: solid 0.2vw black;
             align-items: center;
-            font-size: 1vw;
-            font-family: hatton;
+            font-size: 1.05vw;
             text-align: center;
-            overflow: hidden;
+            flex-wrap: wrap;
+            
 
 
            }
@@ -298,8 +298,7 @@ transition: 0.5s;
             border-top: solid 0.2vw black;
             border-bottom: solid 0.2vw black;
             border-right: solid 0.2vw black;
-            font-size: 1vw;
-            font-family: hatton;
+            font-size: 1.2vw;
             text-align: center;
 overflow: hidden;
 
@@ -312,9 +311,7 @@ overflow: hidden;
             align-items: center;
             border-top: solid 0.2vw black;
             border-bottom: solid 0.2vw black;
-     
-            font-size: 1vw;
-            font-family: hatton;
+         font-size: 1.2vw;
             text-align: center;
             overflow: hidden;
 

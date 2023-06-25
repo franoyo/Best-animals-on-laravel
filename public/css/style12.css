@@ -1,0 +1,168 @@
+body{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    
+    }
+      @font-face{
+        font-family:hatton;
+        src: url(../fonts/Hatton\ Medium\ 500.otf);
+               }
+.main_contenedor{
+    display: flex;
+    align-items: center;
+width: 100%;
+height: 85%;
+background-color: #f6f6f6;
+
+
+
+
+
+
+}
+.main_contenedor .mitad_gato{
+
+    width: 50%;
+    height: 80%;
+  
+    align-items: center;
+    justify-content: center;
+}
+.mitad_gato .cat_size{
+  margin-top: 20%;
+width:95%;
+height: 60%;
+
+
+}
+.main_contenedor .mitad_texto{
+display: flex;
+    width: 50%;
+    height: 80%;
+   
+    align-items: center;
+
+
+}
+.mitad_texto .content{
+width: 100%;
+height: 70%;
+
+display: flex;
+flex-direction: column;
+
+}
+.content .mitad_number{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+width: 100%;
+height: 70%;
+
+
+
+}
+.mitad_number .a{
+
+font-size: 15vh;
+font-family: hatton;
+}
+.content .mitad_info{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 30%;
+   
+
+
+}
+.mitad_info .b{
+    font-size:7.5vh;
+    font-family: hatton;
+    margin-bottom: 12%;
+text-align: center;
+
+}
+@media (orientation:portrait) {
+    .main_contenedor{
+        display: flex;
+        flex-direction: column-reverse;
+        align-items: center;
+        justify-content: space-around;
+    width: 100%;
+    height: 95%;
+    background-color: #f6f6f6;
+    overflow: hidden;
+    } 
+    .main_contenedor .mitad_gato{
+display: flex;
+
+        width: 60%;
+        height: 40%;
+      
+        align-items: center;
+        justify-content: center;
+    }
+    .mitad_gato .cat_size{
+        margin-top: 0%;
+      width:95%;
+      height: 60%;
+      
+      
+      }
+    .main_contenedor .mitad_texto{
+        display: flex;
+    
+            width: 100%;
+            height: 50%;
+           
+            align-items: center;
+       
+        
+        }
+        .mitad_texto .content{
+            width: 100%;
+            height: 70%;
+            
+            display: flex;
+            flex-direction: column;
+          
+            
+            }
+            .content .mitad_number{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            width: 100%;
+            height: 70%;
+           
+            
+            
+            
+            }
+            .mitad_number .a{
+            
+            font-size: 10vh;
+            font-family: hatton;
+            }
+            .content .mitad_info{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                width: 100%;
+                height: 30%;
+               
+            
+            
+            }
+            .mitad_info .b{
+                font-size:7vh;
+                font-family: hatton;
+                margin-bottom: 12%;
+            text-align: center;
+            
+            }
+    
+}

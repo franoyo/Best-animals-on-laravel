@@ -35,15 +35,15 @@
             <div class="linea"></div>
           </div>
           <div class="dash">
-            <a class="ins" href="error400.html"><p class="t1">VENTAS</p></a>
+            <a class="ins" href="{{route('error400.admin')}}"><p class="t1">VENTAS</p></a>
             <div class="linea"></div>
           </div>
         <div class="dash">
-          <a class="ins" href="error400.html"><p class="t1">AGENDA</p></a>
+          <a class="ins" href="{{route('error400.admin')}}"><p class="t1">AGENDA</p></a>
           <div class="linea"></div>
         </div>
         <div class="dash">
-          <a class="ins" href="dashaboard_admin_productos.html"><p class="t1">PRODUCTOS</p></a>
+          <a class="ins" href="{{route('error400.admin')}}"><p class="t1">PRODUCTOS</p></a>
           <div class="linea"></div>
       
         </div>

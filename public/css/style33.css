@@ -264,8 +264,8 @@ transition: 0.5s;
             border-bottom: solid 0.2vw black;
             border-right: solid 0.2vw black;
             align-items: center;
-            font-size: 1vw;
-            font-family: hatton;
+            font-size: 1.2vw;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             text-align: center;
             overflow: hidden;
            }
@@ -279,8 +279,8 @@ transition: 0.5s;
             border-bottom: solid 0.2vw black;
             border-right: solid 0.2vw black;
             align-items: center;
-            font-size: 1vw;
-            font-family: hatton;
+            font-size: 1.2vw;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             text-align: center;
             overflow: hidden;
 
@@ -295,8 +295,8 @@ transition: 0.5s;
             border-bottom: solid 0.2vw black;
             border-right: solid 0.2vw black;
             align-items: center;
-            font-size: 1vw;
-            font-family: hatton;
+            font-size: 1.05vw;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             text-align: center;
             overflow: hidden;
 
@@ -313,8 +313,8 @@ transition: 0.5s;
             border-top: solid 0.2vw black;
             border-bottom: solid 0.2vw black;
             border-right: solid 0.2vw black;
-            font-size: 1vw;
-            font-family: hatton;
+            font-size: 1.2vw;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             text-align: center;
 overflow: hidden;
 
@@ -329,8 +329,8 @@ overflow: hidden;
             border-top: solid 0.2vw black;
             border-bottom: solid 0.2vw black;
      
-            font-size: 1vw;
-            font-family: hatton;
+            font-size: 1.2vw;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             text-align: center;
             overflow: hidden;
 

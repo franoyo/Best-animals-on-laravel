@@ -6,7 +6,7 @@ Gestion De Empleados
 @section("contenidoPrincipal")
 @include('alerts.eliminar_empleado')
 @include("Admin_views.modals_registro.registrar_empleado")
-<link rel="stylesheet" href="{{asset('css/style21.css?V=1.11')}}">
+<link rel="stylesheet" href="{{asset('css/style21.css?V=1.12')}}">
 
 
                 <div class="insert-title">

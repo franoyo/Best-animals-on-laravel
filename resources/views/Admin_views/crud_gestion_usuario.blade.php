@@ -3,7 +3,7 @@
 Gestion De Clientes
 @endsection
 @section("contenidoPrincipal")
-<link rel="stylesheet" href="{{asset('css/style33.css?V=1.1')}}">
+<link rel="stylesheet" href="{{asset('css/style33.css?V=1.11')}}">
 
 @include("Admin_views.modals_registro_cliente.registrar_cliente")
 @include("Admin_views.modals_registro_cliente.eliminar_cliente")

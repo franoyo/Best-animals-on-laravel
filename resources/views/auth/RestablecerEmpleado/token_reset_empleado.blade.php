@@ -13,7 +13,7 @@
         </a>
     </header>
     <main class="container-principal">
-        <form class="form" method="post" action="{{route('password.update')}}">
+        <form class="form" method="post" action="">
             @csrf
 <div class="put-title">
     RESTABLECER CONTRASEÑA EMPLEADO

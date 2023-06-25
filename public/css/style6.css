@@ -1,0 +1,218 @@
+.cont3 .menumin{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+width: 10%;
+height: 100%;
+background-color: darkgray;
+
+
+   }
+.desplegar:hover.modify-buttons{
+background-color: aqua;
+
+   }
+   .modify-buttons .create{
+    width: 90%;
+    height: 30%;
+    margin-top: 64%;
+   margin-bottom: 15%;
+    border: none;
+    background-color: #313e54;
+    color: white;
+    font-family: hatton;
+    font-size: 2vh;
+    transition: 0.5s;
+    
+    
+       }
+       .create:hover{
+        
+      
+        background-color: rgb(13, 105, 117);
+        padding: 30%;
+       
+         }
+       .modify-buttons .search{
+       
+        width: 90%;
+        height: 30%;
+        font-family: hatton;
+        border: none;
+        background-color: #313e54;
+        color: white;
+        font-size: 1.5vh;
+        transition: 0.5s;
+        
+        
+           }
+           .search:hover{
+            
+    
+      background-color: rgb(13, 105, 117);
+      padding: 30%;
+           }
+          
+   .cont3 .content_a{
+display: flex;
+flex-direction: column;
+width: 100%;
+height: 100%;
+
+
+
+
+   }
+   .content_a .row_a{
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 50%;
+    
+
+   }
+   .content_a .row_b{
+display: flex;
+align-items: center;
+justify-content: center;
+width: 50%;
+height: 100%;
+
+
+   }
+   .row_b .put_graphics{
+display: flex;
+width: 90%;
+height: 90%;
+background-color: white;
+border: solid #268ecd;
+
+
+   }
+   .cont3 .put_graphics2{
+    display: flex;
+    width: 50%;
+    height: 90%;
+    background-color: white;
+    border: solid #268ecd;
+
+
+   }
+   @media(orientation:portrait){
+ 
+   .cont3 .menumin{
+    display: flex;
+    flex-direction: column;
+width: 10%;
+height: 100%;
+background-color: darkgray;
+
+
+   }
+   .modify-buttons{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: start;
+    
+width: 100%;
+height: 100%;
+
+
+   }
+   .modify-buttons .create{
+    width: 100%;
+    height: 3%;
+    
+  
+    font-family:hatton;
+    margin-top: 64%;
+   margin-bottom: 15%;
+    border: none;
+    background-color: #313e54;
+    color: white;
+    font-size: 1vh;
+    
+    
+    
+       }
+       .create:hover{
+      transition: 0.5s;
+    
+      background-color: rgb(13, 105, 117);
+      padding: 30%;
+     
+       }
+       .modify-buttons .search{
+       
+        width: 100%;
+        height: 3%;
+        font-family:hatton;
+       font-size: 1vh;
+        border: none;
+        background-color: #313e54;
+        color: white;
+        
+        
+        
+           }
+           .search:hover{
+            transition: 0.5s;
+    
+      background-color: rgb(13, 105, 117);
+      padding: 30%;
+           }
+           .cont3 .content_a{
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+            height: 100%;
+          
+            
+            
+            
+            
+               }
+               .content_a .row_a{
+            
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                width: 100%;
+                height: 50%;
+                
+            
+               }
+               .content_a .row_b{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 50%;
+            height: 100%;
+            
+            
+               }
+               .row_b .put_graphics{
+            display: flex;
+            width: 90%;
+            height: 50%;
+            background-color: white;
+            border: solid #268ecd;
+            
+            
+               }
+               .cont3 .put_graphics2{
+                display: flex;
+                width: 50%;
+                height: 50%;
+                background-color: white;
+                border: solid #268ecd;
+            
+            
+               }
+
+
+
+   }
