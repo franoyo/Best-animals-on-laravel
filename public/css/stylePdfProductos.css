@@ -547,7 +547,7 @@ display: flex;
 
 
         }
-        @media(orientation:portrait){
+        @media(max-width:500px){
             .tabla-container .titulos-container{
                 width: 97%;
                 height: 6vh;
