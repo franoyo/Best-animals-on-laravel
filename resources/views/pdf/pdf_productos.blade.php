@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Reporte Historias clinicas {{$fecha}}</title>
-    <link rel="stylesheet" href="{{asset('css/stylePdfProductos.css?v=0.1')}}">
+    <link rel="stylesheet" href="{{asset('css/stylePdfProductos.css?v=0.2')}}">
 </head>
 <body>
     <header class="header-container">
