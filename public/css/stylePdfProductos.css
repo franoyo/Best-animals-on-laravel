@@ -1,0 +1,549 @@
+body{
+    margin: 0;
+    padding: 0;
+    box-sizing:border-box;
+    
+    }
+    :root{
+    --colorSubtitulos:#313E54;;
+    --colorBordes:black;
+    --colorInfo:beige;
+    
+    }
+    @font-face{
+        font-family:hatton;
+        src: url(../fonts/PP\ Hatton\ Medium\ 500.otf);
+               }
+    .header-container{
+    width: 100%;
+    height: 20vh;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    
+    
+    }
+    .header-container .put-logo{
+    width: 20%;
+    height: 80%;
+    display: flex;
+    flex-direction: column;
+    
+    justify-content: center;
+    align-items: center;
+    }
+    .put-logo .logo{
+    width: 85%;
+    height: 90%;
+    }
+    .put-logo .section{
+    width: 100%;
+    height: 50%;
+    display: flex;
+    
+    
+    }
+    .section .subtitle{
+    width: 35%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    
+    font-family: hatton;
+    font-size: 1.2vw;
+    
+    }
+    .section .put-fecha{
+    width: 65%;
+    height: 100%;
+    display: flex;
+    
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-family: hatton;
+    font-size: 1.2vw;
+    }
+    .header-container .put-title{
+    width: 35%;
+    height: 80%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    
+    font-size: 2.75vw;
+    font-family: hatton;
+    }
+    .linea-container{
+    width: 100%;
+    height: 2vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    
+    
+    }
+    .linea-container .linea{
+    width: 95%;
+    height: 80%;
+    
+    background-color: #313E54;
+    
+    }
+    .tabla-container{
+    width: 100%;
+    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+    
+    }
+    .tabla-container .titulos-container{
+    width: 97%;
+    height: 8vh;
+    display: flex;
+    margin-top: 2%;
+    color: white;
+    font-family: hatton;
+    border: solid 0.25vw var(--colorBordes);
+    }
+    .titulos-container .titulo-id{
+    width: 5%;
+    height: 100%;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--colorSubtitulos);
+    font-size: 1.2vw;
+    border-right: solid 0.25vw var(--colorBordes);
+    overflow: hidden;
+    
+    }
+    .titulos-container .titulo-dueño{
+    width: 10%;
+    height: 100%;
+    display: flex;
+    background-color: var(--colorSubtitulos);
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.2vw;
+    border-right: solid 0.25vw var(--colorBordes);
+    overflow: hidden;
+    }
+    .titulos-container .telefono-dueño{
+        width: 20%;
+        height: 100%;
+        display: flex;
+        background-color: var(--colorSubtitulos);
+        text-align: center;
+        justify-content: center;
+        align-items: center;
+        font-size: 1.2vw;
+        border-right: solid 0.25vw var(--colorBordes);
+        overflow: hidden;
+    }
+    .titulos-container .nombre-mascota{
+        width: 10%;
+        height: 100%;
+        display: flex;
+        background-color: var(--colorSubtitulos);
+        text-align: center;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.2vw;
+    border-right: solid 0.25vw var(--colorBordes);
+    overflow: hidden;
+    }
+    .titulos-container .edad-mascota{
+        width: 10%;
+        height: 100%;
+        display: flex;
+        background-color: var(--colorSubtitulos);
+        text-align: center;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.2vw;
+    border-right: solid 0.25vw var(--colorBordes);
+    overflow: hidden;
+    }
+    .titulos-container .peso-mascota{
+        width: 10%;
+        height: 100%;
+        display: flex;
+        background-color: var(--colorSubtitulos);
+        text-align: center;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.2vw;
+    border-right: solid 0.25vw var(--colorBordes);
+    overflow: hidden;
+    }
+    .titulos-container .tratamiento{
+    width: 15%;
+    height: 100%;
+    display: flex;
+    background-color: var(--colorSubtitulos);
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.2vw;
+    overflow: hidden;
+    }
+    .tabla-container .info-container{
+    
+        width: 97%;
+        height: 10vh;
+        display: flex;
+        border-bottom: solid 0.25vw var(--colorBordes);
+       border-left:solid 0.25vw var(--colorBordes); ;
+       border-right: solid 0.25vw var(--colorBordes);;
+    
+    
+    }
+    .info-container .titulo-id{
+        width: 5%;
+        height: 100%;
+        display: flex;
+        text-align: center;
+        justify-content: center;
+        align-items: center;
+        background-color: var(--colorInfo);
+        font-size: 1.2vw;
+        border-right: solid 0.25vw var(--colorBordes);
+        overflow: hidden;
+        
+        }
+        .info-container .titulo-dueño{
+        width: 10%;
+        height: 100%;
+        display: flex;
+        background-color: var(--colorInfo);
+        text-align: center;
+        justify-content: center;
+        align-items: center;
+        font-size: 1.2vw;
+        border-right: solid 0.25vw var(--colorBordes);
+        overflow: hidden;
+        }
+        .titulo-dueño .img-producto{
+width: 60%;
+height: 85%;
+display: flex;
+
+        }
+        .info-container .telefono-dueño{
+            width: 20%;
+            height: 100%;
+            display: flex;
+            background-color: var(--colorInfo);
+            text-align: center;
+            justify-content: center;
+            align-items: center;
+            font-size: 1.2vw;
+            border-right: solid 0.25vw var(--colorBordes);
+            overflow: hidden;
+        }
+        .info-container .nombre-mascota{
+            width: 10%;
+            height: 100%;
+            display: flex;
+            background-color: var(--colorInfo);
+            text-align: center;
+        justify-content: center;
+        align-items: center;
+        font-size: 1.2vw;
+        border-right: solid 0.25vw var(--colorBordes);
+        overflow: hidden;
+        }
+        .info-container .edad-mascota{
+            width: 10%;
+            height: 100%;
+            display: flex;
+            background-color: var(--colorInfo);
+            text-align: center;
+        justify-content: center;
+        align-items: center;
+        font-size: 1.2vw;
+        border-right: solid 0.25vw var(--colorBordes);
+        overflow: hidden;
+        }
+        .info-container .peso-mascota{
+            width: 10%;
+            height: 100%;
+            display: flex;
+            background-color: var(--colorInfo);
+            text-align: center;
+        justify-content: center;
+        align-items: center;
+        font-size: 1.2vw;
+        border-right: solid 0.25vw var(--colorBordes);
+        overflow: hidden;
+        }
+        .info-container .tratamiento{
+        width: 15%;
+        height: 100%;
+        display: flex;
+        background-color: var(--colorInfo);
+        text-align: center;
+        justify-content: center;
+        align-items: center;
+        font-size: 1.2vw;
+        overflow: hidden;}
+        @media(max-width:650px){
+            .header-container .put-logo{
+                width: 25%;
+                height: 60%;
+                display: flex;
+                flex-direction: column;
+
+                justify-content: center;
+                align-items: center;
+                }
+                .put-logo .logo{
+                width: 100%;
+                height: 90%;
+                }
+                .put-logo .section{
+                width: 100%;
+                height: 50%;
+                display: flex;
+                
+                
+                }
+                .section .subtitle{
+                width: 35%;
+                height: 100%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                text-align: center;
+                
+                font-family: hatton;
+                font-size: 1.35vw;
+                
+                }
+                .section .put-fecha{
+                width: 65%;
+                height: 100%;
+                display: flex;
+                
+                justify-content: center;
+                align-items: center;
+                text-align: center;
+                font-family: hatton;
+                font-size: 1.35vw;
+                }
+                .header-container .put-title{
+                width: 35%;
+                height: 80%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                text-align: center;
+                
+                font-size: 3.2vw;
+                font-family: hatton;
+                }
+                .tabla-container .titulos-container{
+                    width: 97%;
+                    height: 6vh;
+                    display: flex;
+                    margin-top: 2%;
+                    color: white;
+                    font-family: hatton;
+                    border: solid 0.25vw var(--colorBordes);
+                    }
+                    .titulos-container .titulo-id{
+                        width: 5%;
+                        height: 100%;
+                        display: flex;
+                        text-align: center;
+                        justify-content: center;
+                        align-items: center;
+                        background-color: var(--colorSubtitulos);
+                        font-size: 1.5vw;
+                        border-right: solid 0.25vw var(--colorBordes);
+                        overflow: hidden;
+                        
+                        }
+                        .titulos-container .titulo-dueño{
+                        width: 10%;
+                        height: 100%;
+                        display: flex;
+                        background-color: var(--colorSubtitulos);
+                        text-align: center;
+                        justify-content: center;
+                        align-items: center;
+                        font-size: 1.5vw;
+                        border-right: solid 0.25vw var(--colorBordes);
+                        overflow: hidden;
+                        }
+                        .titulos-container .telefono-dueño{
+                            width: 20%;
+                            height: 100%;
+                            display: flex;
+                            background-color: var(--colorSubtitulos);
+                            text-align: center;
+                            justify-content: center;
+                            align-items: center;
+                            font-size: 1.5vw;
+                            border-right: solid 0.25vw var(--colorBordes);
+                            overflow: hidden;
+                        }
+                        .titulos-container .nombre-mascota{
+                            width: 10%;
+                            height: 100%;
+                            display: flex;
+                            background-color: var(--colorSubtitulos);
+                            text-align: center;
+                        justify-content: center;
+                        align-items: center;
+                        font-size: 1.5vw;
+                        border-right: solid 0.25vw var(--colorBordes);
+                        overflow: hidden;
+                        }
+                        .titulos-container .edad-mascota{
+                            width: 10%;
+                            height: 100%;
+                            display: flex;
+                            background-color: var(--colorSubtitulos);
+                            text-align: center;
+                        justify-content: center;
+                        align-items: center;
+                        font-size: 1.5vw;
+                        border-right: solid 0.25vw var(--colorBordes);
+                        overflow: hidden;
+                        }
+                        .titulos-container .peso-mascota{
+                            width: 10%;
+                            height: 100%;
+                            display: flex;
+                            background-color: var(--colorSubtitulos);
+                            text-align: center;
+                        justify-content: center;
+                        align-items: center;
+                        font-size: 1.5vw;
+                        border-right: solid 0.25vw var(--colorBordes);
+                        overflow: hidden;
+                        }
+                        .titulos-container .tratamiento{
+                        width: 15%;
+                        height: 100%;
+                        display: flex;
+                        background-color: var(--colorSubtitulos);
+                        text-align: center;
+                        justify-content: center;
+                        align-items: center;
+                        font-size: 1.5vw;
+                        overflow: hidden;
+                        }
+                    .tabla-container .info-container{
+    
+                        width: 97%;
+                        height: 6vh;
+                        display: flex;
+                        border-bottom: solid 0.25vw var(--colorBordes);
+                       border-left:solid 0.25vw var(--colorBordes); ;
+                       border-right: solid 0.25vw var(--colorBordes);;
+                    
+                    
+                    }
+                    .info-container .titulo-id{
+                        width: 5%;
+                        height: 100%;
+                        display: flex;
+                        text-align: center;
+                        justify-content: center;
+                        align-items: center;
+                        background-color: var(--colorInfo);
+                        font-size: 1.5vw;
+                        border-right: solid 0.25vw var(--colorBordes);
+                        overflow: hidden;
+                        
+                        }
+                        .info-container .titulo-dueño{
+                        width: 10%;
+                        height: 100%;
+                        display: flex;
+                        background-color: var(--colorInfo);
+                        text-align: center;
+                        justify-content: center;
+                        align-items: center;
+                        font-size: 1.5vw;
+                        border-right: solid 0.25vw var(--colorBordes);
+                        overflow: hidden;
+                        }
+                        .titulo-dueño .img-producto{
+                width: 60%;
+                height: 85%;
+                display: flex;
+                
+                        }
+                        .info-container .telefono-dueño{
+                            width: 20%;
+                            height: 100%;
+                            display: flex;
+                            background-color: var(--colorInfo);
+                            text-align: center;
+                            justify-content: center;
+                            align-items: center;
+                            font-size: 1.5vw;
+                            border-right: solid 0.25vw var(--colorBordes);
+                            overflow: hidden;
+                        }
+                        .info-container .nombre-mascota{
+                            width: 10%;
+                            height: 100%;
+                            display: flex;
+                            background-color: var(--colorInfo);
+                            text-align: center;
+                        justify-content: center;
+                        align-items: center;
+                        font-size: 1.5vw;
+                        border-right: solid 0.25vw var(--colorBordes);
+                        overflow: hidden;
+                        }
+                        .info-container .edad-mascota{
+                            width: 10%;
+                            height: 100%;
+                            display: flex;
+                            background-color: var(--colorInfo);
+                            text-align: center;
+                        justify-content: center;
+                        align-items: center;
+                        font-size: 1.5vw;
+                        border-right: solid 0.25vw var(--colorBordes);
+                        overflow: hidden;
+                        }
+                        .info-container .peso-mascota{
+                            width: 10%;
+                            height: 100%;
+                            display: flex;
+                            background-color: var(--colorInfo);
+                            text-align: center;
+                        justify-content: center;
+                        align-items: center;
+                        font-size: 1.5vw;
+                        border-right: solid 0.25vw var(--colorBordes);
+                        overflow: hidden;
+                        }
+                        .info-container .tratamiento{
+                        width: 15%;
+                        height: 100%;
+                        display: flex;
+                        background-color: var(--colorInfo);
+                        text-align: center;
+                        justify-content: center;
+                        align-items: center;
+                        font-size: 1.5vw;
+                        overflow: hidden;}
+
+
+        }

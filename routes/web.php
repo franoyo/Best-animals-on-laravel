@@ -108,6 +108,7 @@ Route::controller(AdminController::class)->group(function () {
     Route::get('/reporteEmpleados', 'reporteEmpleados')->name('reporteEmpleados');
     Route::get('/reporteHistorias', 'reporteHistorias')->name('reporteHistorias');
     Route::get('/error400.admin', 'error400Admin')->name('error400.admin');
+    Route::get('/reporteProductos', 'reporteProductos')->name('reporteProductos');
 });
 Route::controller(VeterinarioController::class)->group(function(){
 Route::get('/veterinario','veterinarioDashboard')->name('veterinario');

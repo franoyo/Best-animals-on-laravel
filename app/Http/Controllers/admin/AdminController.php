@@ -407,4 +407,11 @@ public function vistaProductos(){
 
     return view("Admin_views.viewProductos");
 }
+public function reporteProductos(){
+$productos=Producto::all();
+$date=Carbon::now();
+$vistaPdfProductos=view("pdf.pdf_productos",['productos'=>$productos, 'fecha'=>$date]);
+return $vistaPdfProductos;
+
+}
 }

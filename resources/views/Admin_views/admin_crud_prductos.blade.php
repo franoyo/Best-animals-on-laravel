@@ -15,7 +15,7 @@
 <button id="boton-informe" onclick="redirect()">GENERAR INFORME</button>
 <script>
     function redirect(){
-window.location.href="{{route('reporteHistorias')}}"
+window.location.href="{{route('reporteProductos')}}"
     }
 </script>
 </div>
@@ -36,7 +36,7 @@ window.location.href="{{route('reporteHistorias')}}"
 @foreach ($Lista as $listas )
 <div class="row-info">
     <div class="put-id">{{$listas->id}}</div>
-    <div class="name-img"><img class="mage" src="{{asset($listas->imagen)}}" alt=""></div>
+    <div class="name-img"><img class="mage" src="{{asset($listas->imagen)}}" alt="alusive"></div>
     <div class="name-mascota">{{$listas->descripcion}}</div>
     <div class="name-dueño">{{$listas->marca}}</div>
     <div class="name-dueño">{{$listas->stock}}</div>
