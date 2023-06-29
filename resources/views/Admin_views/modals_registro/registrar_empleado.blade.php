@@ -83,15 +83,14 @@
     <div class="container-input-2">
         <select class="input-2" name="rol" required>
 
-            <option value="administrador">1.ADMINISTRADOR</option>
             
         
             
-            <option value="auxliar_de_bodega">2.AUXILIAR DE BODEGA</option>
+            <option value="auxliar_de_bodega">1.AUXILIAR DE BODEGA</option>
 
-            <option value="veterinario">3.VETERINARIO</option>
+            <option value="veterinario">2.VETERINARIO</option>
 
-            <option value="caja">4.CAJA</option>
+            <option value="caja">3.CAJA</option>
             
             </select>
 

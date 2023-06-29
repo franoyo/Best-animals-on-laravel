@@ -255,7 +255,8 @@ public function verHistoria($id){
 public function crudEmpleados(){
     $ultimoId = Empleado::latest('id')->value('id');
     $idFinal=$ultimoId+1;
-return view('Admin_views.crud_gestion_empleados',['empleado'=>Empleado::all(),'mostrar'=>$idFinal]);
+    $empleados = Empleado::where('rol', '!=', 'administrador')->get();
+return view('Admin_views.crud_gestion_empleados',['empleado'=>$empleados,'mostrar'=>$idFinal]);
 
 }
 public function ingresarEmpleado(Request $request){
@@ -265,7 +266,7 @@ public function ingresarEmpleado(Request $request){
         'documento' => 'required|string|max:250',
         'celular' => 'required|string|max:250',
         'direccion' => 'required|string|max:250',
-        'email' => 'required|email|max:250|unique:empleados',
+        'email' => 'required|custom_email|max:250|unique:empleados',
         'password' => 'required|min:8|confirmed'
     ]);
 
@@ -330,7 +331,7 @@ public function storeCliente(Request $request){
         'documento' => 'required|string|max:250',
         'celular' => 'required|string|max:250',
         'direccion' => 'required|string|max:250',
-        'email' => 'required|email|max:250|unique:users',
+        'email' => 'required|custom_email|max:250|unique:users',
         'password' => 'required|min:8|confirmed'
     ]);
 

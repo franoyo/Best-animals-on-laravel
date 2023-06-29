@@ -36,7 +36,7 @@ class LoginRegisterController extends Controller
             'documento' => 'required|string|max:250',
             'celular' => 'required|string|max:250',
             'direccion' => 'required|string|max:250',
-            'email' => 'required|email|max:250|unique:users',
+            'email' => 'required|custom_email|max:250|unique:users',
             'password' => 'required|min:8|confirmed'
         ]);
 

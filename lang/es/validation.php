@@ -213,4 +213,9 @@ return [
         'username'                 => 'usuario',
         'year'                     => 'año',
     ],
+'custom'=>[
+    'email' => [
+        'custom_email' => 'El campo de correo electronico que ha brindado no es permitido.',
+    ],
+],
 ];
