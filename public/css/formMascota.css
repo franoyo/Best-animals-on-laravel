@@ -1,0 +1,149 @@
+.cont3 .container-form{
+width: 100%;
+height: 100%;
+display: flex;
+justify-content: center;
+align-items: center;
+
+
+}
+.container-form .formulario{
+width: 85%;
+height: 75%;
+display: flex;
+flex-direction: column;
+border: solid 0.25vw #2E8DC6;
+border-radius: 1vw;
+background-color: white;
+
+
+
+}
+.formulario .container-encabezado{
+width: 100%;
+height: 20%;
+display: flex;
+
+
+}
+.container-encabezado .put-logo{
+width: 20%;
+height: 100%;
+display: flex;
+justify-content: center;
+align-items: center;
+
+
+}
+.put-logo .img{
+    width: 92%;
+    height: 80%;
+}
+.container-encabezado .put-title{
+width: 60%;
+height:100%;
+display:flex;
+
+justify-content: center;
+align-items: center;
+text-align: center;
+font-family: hatton;
+font-size: 2.5vw;
+}
+.formulario .container-campos{
+width: 100%;
+height: 62.5%;
+display: flex;
+
+
+}
+.container-campos .mitad{
+width: 50%;
+display: flex;height: 100%;
+
+align-items: center;
+justify-content: center;
+
+}
+.mitad .container-subtitulito{
+width: 32.5%;
+height: 90%;
+display: flex;
+font-size: 1.4vw;
+flex-direction: column;
+font-family: hatton;
+
+
+}
+.container-subtitulito .put-sub{
+width: 100%;
+height: 33.3333333333%;
+display: flex;
+justify-content: center;
+align-items: center;
+text-align: center;
+
+
+}
+.mitad .container-input{
+width: 58%;
+height: 90%;
+display: flex;
+flex-direction: column;
+
+
+
+}
+.container-input .put-input{
+    width: 100%;
+    height: 33.3333333333%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+.put-input .inputsito{
+width: 95%;
+height: 50%;
+display: flex;
+
+
+}
+.inputsito .inp{
+width: 100%;
+height: 100%;
+display: flex;
+border: solid 0.25vw #2E8DC6;
+border-radius: 0.7vw;
+font-size: 1vw;
+
+}
+.formulario .wrong-footer{
+width: 100%;
+height: 17.5%;
+display: flex;
+justify-content: center;
+align-items: center;
+
+
+}
+.wrong-footer .btn{
+width: 20%;
+height: 70%;
+display: flex;
+justify-content: center;
+align-items: center;
+text-align: center;
+border: solid #2E8DC6;
+cursor: pointer;
+font-family: hatton;
+font-size: 1.5vw;
+transition: 0.5s;
+}
+.btn:hover{
+background-color: #FF914D;
+border: solid #2E8DC6;
+border-radius: 50%;
+
+
+}

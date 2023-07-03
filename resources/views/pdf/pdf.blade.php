@@ -13,7 +13,7 @@
     <img class="imagen" src="{{asset('img/best animal2-01 (1).png')}}" alt="">
 </div>
 <div class="put-titulo">REPORTE DE CLIENTES</div>
-<div class="put-logo-1"><div class="create-at"><div class="subtitle">Creado el:</div><div class="put-fecha">{{$fecha}}</div></div><div class="update-at"><div class="subtitle">Actualizado:</div><div class="put-fecha">{{$fecha}}</div></div></div>
+<div class="put-logo-1"><div class="create-at"><div class="subtitle">Creado el:</div><div class="put-fecha">{{$fecha}}</div></div><div class="update-at"><div class="subtitle">Creado por:</div><div class="put-fecha">{{ auth()->guard('empleado')->user()->name }} {{ auth()->guard('empleado')->user()->apellido }}</div></div></div>
 
     </header>
     <div class="linea-container">

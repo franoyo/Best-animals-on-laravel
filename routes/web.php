@@ -6,7 +6,7 @@ use App\Http\Controllers\Auth\LoginRegisterController;
 use App\Http\Controllers\admin\AdminController;
 use App\Http\Controllers\Veterinario\VeterinarioController;
 use App\Http\Controllers\Auth\restablecerContraseñaEmpleadoController;
-
+use App\Http\Controllers\cliente\MangamentMascotas;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -71,7 +71,12 @@ Route::controller(LoginRegisterController::class)->group(function () {
     Route::post('/enviarEmailRestablecimiento', 'enviarEmailRestablecimiento')->name('password.sent');
     Route::get('/restablecerContraseña/{token}', 'mostrarFormDeReseteo')->name('password.reset');
     Route::post('/updatePassword', 'reset')->name('password.update');
-   
+});
+Route::controller(MangamentMascotas::class)->group(function () {
+    Route::get('/mascotas.cliente', 'crudMascotas')->name('mascotas.cliente');
+    Route::get('/añadirMascota.cliente', 'formMascota')->name('añadirMascota.cliente');
+    Route::post('/almacenarMascota.cliente', 'storeMascota')->name('almacenarMascota.cliente');
+
 });
 Route::controller(restablecerContraseñaEmpleadoController::class)->group(function(){
     Route::get('/recuperarContraseñaEmpleado', 'vistaRestablecerEmpleado')->name('recuperarContraseñaEmpleado');

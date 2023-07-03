@@ -16,8 +16,8 @@
     <div class="section"><div class="subtitle">Creado El:</div>
 <div class="put-fecha">{{$fecha}}</div>
 </div>
-    <div class="section"><div class="subtitle">Actualizado El:</div>
-    <div class="put-fecha">{{$fecha}}</div>
+    <div class="section"><div class="subtitle">Creado por:</div>
+    <div class="put-fecha">{{ auth()->guard('empleado')->user()->name }} {{ auth()->guard('empleado')->user()->apellido }}</div>
 </div>
 </div>
 

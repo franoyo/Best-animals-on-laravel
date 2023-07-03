@@ -45,43 +45,10 @@
               
               </header>
               <div class="dash">
-                <a class="ins" href="dashboar_caja_registro.php"><p class="t1">CAJA</p></a>
-                <div class="linea"></div>
-              
-              
-              
-              </div>
-              
-              <div class="dash">
-              <a class="ins" href="dashoboard_admin_stock.php"><p class="t1">STOCK</p></a>
-              <div class="linea"></div>
-              </div>
-              <div class="dash">
-                <a class="ins" href="error400.html"><p class="t1">VENTAS</p></a>
-                <div class="linea"></div>
-              </div>
-              <div class="dash">
-                <a class="ins" href="error400.html"><p class="t1">AGENDA</p></a>
-                <div class="linea"></div>
-              </div>
-              <div class="dash">
-                <a class="ins" href="dashaboard_admin_productos.html"><p class="t1">PRODUCTOS</p></a>
+                <a class="ins" href="{{route('mascotas.cliente')}}"><p class="t1">MIS MASCOTAS</p></a>
                 <div class="linea"></div>
               </div>
               
-              <div class="dash">
-                <a class="ins" href="error400.html"><p class="t1">ESTADISTICAS</p></a>
-                <div class="linea"></div>
-              </div>
-              <div class="dash">
-                <a class="ins" href="dashboard historias clinicas admin.php"><p class="t1">HISTORIAS CLINICAS</p></a>
-                <div class="linea"></div>
-              </div>
-              <div class="dash">
-                <a class="ins" href="gestion_usuario_empleados.php"><p class="t1">GESTION DE OPERARIOS</p> </a>
-               
-                <div class="linea"></div>
-              </div>
               
               </div>
               <div class="cont2">

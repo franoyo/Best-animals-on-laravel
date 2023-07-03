@@ -31,13 +31,13 @@
       </div>
   
       <div class="container_formulario3"><p class="excrit">STOCK</p></div>
-      <div class="container_formulario4"><input class="formz" name="stock_producto" type="text" value="{{$producto->stock}}" placeholder="Ingrese texto" required ></div>
+      <div class="container_formulario4"><input class="formz" name="stock_producto" min="1" max="500" type="number" value="{{$producto->stock}}" placeholder="Ingrese texto" required ></div>
   </div>
   <div class="example_1">
       <div class="sub_form_class"><p class="tex_gen">MARCA</p></div>
       <div class="container_formulario2"><input class="formz" name="marca_producto" type="text" value="{{$producto->marca}}" placeholder="Ingrese  texto" required></div>
       <div class="container_formulario3"><p class="excrit">PRECIO</p></div>
-      <div class="container_formulario4"><input class="formz" name="precio_producto" type="number" step="any" value="{{$producto->precio}}" placeholder="Ingrese  texto" required></div>
+      <div class="container_formulario4"><input class="formz" name="precio_producto" max="1.000.000" type="text" pattern="^[1-9][0-9]*(\.\d+)?$" step="any" value="{{$producto->precio}}" placeholder="Ingrese  texto" required></div>
   </div>
   <div class="example_1">
       <div class="sub_form_class"><p class="tex_gen">PESO</p></div>
