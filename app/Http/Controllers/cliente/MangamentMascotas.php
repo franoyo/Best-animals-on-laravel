@@ -6,12 +6,22 @@ use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use Carbon\Carbon;
 use App\Models\mascota;
+use App\Models\User;
+use Illuminate\Support\Facades\Auth;
 
 class MangamentMascotas extends Controller
 {
+    public function __construct()
+    {
+        $this->middleware('auth.cliente');
+    }
 
     public function crudMascotas(){
-return view("Cliente_views.form_add_mascota");
+//accede al usuario autenticado utilizando Auth::user()
+        $usuario = Auth::user();
+        //
+        $mascotas = $usuario->mascotas;
+return view("Cliente_views.form_add_mascota",['mascotas'=>$mascotas]);
 
     }
 
@@ -26,7 +36,7 @@ return view("Cliente_views.formulario_añadir_mascota",['fecha'=>$nowData]);
         if ($fechaNacimiento->diffInDays($fechaActual)<=30) {
             $edad=$fechaNacimiento->diffInDays($fechaActual). " dias";
             return $edad;
-        }elseif ($fechaNacimiento->diffInDays($fechaActual)>=30 and $fechaNacimiento->diffInDays($fechaActual)<=365 ) {
+        }elseif ($fechaNacimiento->diffInDays($fechaActual)>30 and $fechaNacimiento->diffInDays($fechaActual)<=365 ) {
             $edad=$fechaNacimiento->diffInMonths($fechaActual). " meses";
             return $edad;
         }elseif ($fechaNacimiento->diffInDays($fechaActual)>365) {
@@ -46,7 +56,9 @@ return view("Cliente_views.formulario_añadir_mascota",['fecha'=>$nowData]);
             'fecha_nacimiento' => 'required|string|max:250',
         ]);
         $edad = $this->calcularEdadMascota($request->fecha_nacimiento);
-        mascota::create([
+$usuario=Auth::user();
+
+        $mascota= $usuario->mascotas()->create([
             'nombre' =>$request->nombre,
             'raza' => $request->raza,
             'genero' =>$request->genero,

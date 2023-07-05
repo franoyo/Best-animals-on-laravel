@@ -46,4 +46,8 @@ class User extends Authenticatable
         'email_verified_at' => 'datetime',
         'password' => 'hashed',
     ];
+    public function mascotas()
+    {
+        return $this->hasMany(Mascota::class, 'usuario_id');
+    }
 }

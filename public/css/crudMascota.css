@@ -152,6 +152,17 @@ overflow: hidden;
     text-align: center;
     font-family: hatton;
     background-color: var(--colorContenidoTabla);
+    font-size: 2.4vw;
+    overflow:hidden;
     
     
+    }
+    .bc .btn-edits{
+text-decoration: none;
+color: orange;
+transition: 0.5s;
+    }
+    .btn-edits:hover{
+transform: scale(1.35);
+
     }

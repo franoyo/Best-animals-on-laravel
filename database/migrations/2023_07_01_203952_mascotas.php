@@ -20,6 +20,8 @@ return new class extends Migration
             $table->string('color');
             $table->string('especie');
             $table->date('fecha_nacimiento');
+            $table->unsignedBigInteger('usuario_id');
+            $table->foreign('usuario_id')->references('id')->on('users');
             $table->rememberToken();
             $table->timestamps();
         });

@@ -1,0 +1,205 @@
+body{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    
+    }
+    .modal-container{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    position: fixed;
+    left: 0;
+    bottom:0;
+    opacity: 0;
+    pointer-events: none;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(128, 128, 128, 0.35);
+    transition: 0.5s;
+    }
+    .modal-container .modal{
+    width: 1vw;
+    height: 1vh;
+    display: flex;
+    flex-direction: column;
+    border-radius: 1.5vw;
+    background-color: white;
+    border: solid 0.3vw #FF914D;
+    transition: 0.5s;
+    }
+    .modal .cabecera{
+    width: 100%;
+    height: 20%;
+    display: flex;
+    
+    
+    }
+    .cabecera .put-logo{
+    width: 22.5%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    
+    }
+    .put-logo .img{
+    width: 88%;
+    height: 80%;
+    
+    }
+    .cabecera .put-title{
+    width: 55%;
+    height: 100%;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    font-size: 3.4vw;
+    
+    
+    }
+    .cabecera .put-logo-1{
+        width: 22.5%;
+        height: 100%;
+        display: flex;
+        justify-content: end;
+    
+        
+        }
+        .put-logo-1 .put-close{
+    width: 30%;
+    height: 50%;
+    display: flex;
+    
+        }
+        .put-close .btn{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    font-size: 4vw;
+    background: none;
+    border: none;
+    cursor: pointer;
+    transition: .5s;
+        }
+        .btn:hover{
+color: red;
+background: lightblue;
+border-radius: 50%;
+
+        }
+        .modal .main-content{
+    width: 100%;
+    height: 65%;
+    display: flex;
+    
+    
+        }
+        .main-content .double{
+    width: 50%;
+    height: 100%;
+    display: flex;
+    
+    align-items: center;
+    justify-content: center;
+    
+    
+        }
+        .double .subtitle-container{
+    width: 35%;
+    height: 90%;
+    display: flex;
+    flex-direction: column;
+    
+    
+    
+        }
+        .subtitle-container .put-subtitle{
+    width: 100%;
+    height: 25%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    
+    
+        }
+        .double .general-input-container{
+    width: 60%;
+    height: 90%;
+    display: flex;
+    flex-direction: column;
+    
+        }
+        .general-input-container .divs-inputs{
+    width: 100%;
+    height: 25%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    
+    
+        }
+        .divs-inputs .input{
+    width: 90%;
+    height: 65%;
+    display: flex;
+    border-radius: 1vw;
+    border: solid 0.25vw orange;
+    
+        }
+        .divs-inputs .act{
+    display: flex;
+    text-decoration: none;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: 70%;
+    height: 65%;
+    font-size: 1.3vw;
+    color: white;
+    background-color: rgb(23, 126, 185);
+    border-radius: 1.4vw;
+    
+        }
+        .modal .container-editar{
+    width: 100%;
+    height: 15%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    
+        }
+        .container-editar .editar-btn{
+    width: 20%;
+    height: 70%;
+    display: flex;
+    font-size: 1.5vw;
+    text-decoration: none;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-color: gray;
+    color: white;
+    border-radius: 2vw;
+    
+    
+        }
+        .aparecer{
+opacity: 1;
+pointer-events:auto;
+
+
+        }
+        .aparecer .modal{
+            width: 67.5vw;
+            height: 75vh;
+
+        }

@@ -53,6 +53,7 @@ class Kernel extends HttpKernel
      * @var array<string, class-string|string>
      */
     protected $middlewareAliases = [
+        'auth.cliente'=>\App\Http\Middleware\ClienteAuth::class,
         'auth.veterinario'=>\App\Http\Middleware\VeterinarioAuth::class,
         'auth.admin'=>\App\Http\Middleware\AdminAuth::class,
         'auth' => \App\Http\Middleware\Authenticate::class,
