@@ -6,10 +6,14 @@
                 <a class="ins" href="{{route('añadirMascota.cliente')}}"><p class="t1">AÑADIR MASCOTA</p></a>
                 <div class="linea"></div>
               </div>
+              <div class="dash">
+                <a class="ins" href="{{route('dashboard')}}"><p class="t1">ATRAS</p></a>
+                <div class="linea"></div>
+              </div>
 
 @endsection
 @section("contenidoPrincipal")
-
+@include("Cliente_views.modals_cliente.eliminar_pet")
 <link rel="stylesheet" href="{{asset('css/crudMascota.css?v=1.1')}}">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
 <div class="cont3">
@@ -44,7 +48,7 @@
     <div class="campos">{{$mascota->edad}}</div>
     <div class="campos">{{$mascota->fecha_nacimiento}}</div>
     <div class="bc"><a class="btn-edits update-button" href="#" data-id="{{$mascota->id}}"><i class="bi bi-pen"></i></a></div>
-    <div class="bc"><a class="btn-edits" href="#" data-id="{{$mascota->id}}"><i class="bi bi-trash3"></i></a></div>
+    <div class="bc"><a class="btn-edits delete-button" href="#" data-id="{{$mascota->id}}"><i class="bi bi-trash3"></i></a></div>
     
 
 </div>
@@ -55,5 +59,5 @@
 
 </main>
 </div>
-<script src="{{asset('js/script_crud_mascotas.js')}}"></script>
+<script src="{{asset('js/script_crud_mascotas.js?v=1.0')}}"></script>
 @endsection

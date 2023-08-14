@@ -48,6 +48,10 @@
                 <a class="ins" href="{{route('mascotas.cliente')}}"><p class="t1">MIS MASCOTAS</p></a>
                 <div class="linea"></div>
               </div>
+              <div class="dash">
+                <a class="ins" href="{{route('agendarCita')}}"><p class="t1">AGENDAR CITA</p></a>
+                <div class="linea"></div>
+              </div>
               
               
               </div>

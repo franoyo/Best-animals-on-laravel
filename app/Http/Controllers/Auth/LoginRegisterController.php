@@ -31,11 +31,11 @@ class LoginRegisterController extends Controller
     public function store(Request $request)
     {
         $request->validate([
-            'name' => 'required|string|max:250',
-            'apellido' => 'required|string|max:250',
-            'documento' => 'required|string|max:250',
-            'celular' => 'required|string|max:250',
-            'direccion' => 'required|string|max:250',
+            'name' => 'required|string|min:3|max:250|regex:/^[\pL\s\-]+$/u',
+            'apellido' => 'required|string|min:3|max:250|regex:/^[\pL\s\-]+$/u',
+            'documento' => 'required|string|max:250|min:8',
+            'celular' => 'required|min:6|string|max:250',
+            'direccion' => 'required|string|max:250|min:6',
             'email' => 'required|custom_email|max:250|unique:users',
             'password' => 'required|min:8|confirmed'
         ]);
@@ -191,6 +191,10 @@ protected function updateUserPassword($user, $password)
 {
     $user->password = Hash::make($password);
     $user->save();
+}
+public function loginCita(){
+return redirect()->route('login')->withSuccess('SI DESEA AGENDAR UNA CITA INICIE SESION');
+
 }
 
 }

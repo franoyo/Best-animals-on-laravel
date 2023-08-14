@@ -34,6 +34,7 @@ transition: 0.5s;
     }
     .tienda-submenu .submenu{
         display: flex;
+        flex-direction: column;
 width: 1vw;
 height: 100vh;
 background-color: white;
@@ -52,7 +53,23 @@ font-family: hatton;
 font-size: 2vh;
 text-align: center;
     }
-   
+    .submenu .items-container{
+display: flex;
+justify-content: center;
+align-items: center;
+width: 100%;
+height: 92%;
+
+
+    }
+   .items-container .item-container-carrito{
+display: flex;
+border-radius: 1.1vw;
+width: 84.5%;
+height: 93%;
+background-color: #9C928E;
+
+   }
     .title .shop-car{
         position: relative;
         left: 12%;

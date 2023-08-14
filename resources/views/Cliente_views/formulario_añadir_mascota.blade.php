@@ -4,6 +4,10 @@
                 <a class="ins" href="{{route('mascotas.cliente')}}"><p class="t1">MIS MASCOTAS</p></a>
                 <div class="linea"></div>
               </div>
+              <div class="dash">
+                <a class="ins" href="{{route('mascotas.cliente')}}"><p class="t1">ATRAS</p></a>
+                <div class="linea"></div>
+              </div>
 @endsection
 
 @section("contenidoPrincipal")
@@ -30,7 +34,12 @@
     </div>
     <div class="container-input">
 <div class="put-input"><div class="inputsito"><input name="nombre" class="inp" type="text"></div></div>
-<div class="put-input"><div class="inputsito"><input name="genero" class="inp" type="text"></div></div>  
+<div class="put-input"><div class="inputsito"><select class="inp" name="genero">
+<option value="Macho">Macho</option>
+<option value="Hembra">Hembra</option>
+<option value="Otro">Otro</option>
+
+        </select></div></div>  
 <div class="put-input"><div class="inputsito"><input name="especie" class="inp" type="text"></div></div> 
     </div>
 </div>

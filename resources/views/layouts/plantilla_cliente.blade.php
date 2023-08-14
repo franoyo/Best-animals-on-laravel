@@ -33,7 +33,7 @@ setTimeout(() => {
       }, 2200);
     </script>
 @endif
-@include("alerts.alert_eliminar")
+
     <div class="maincontainer">
     
         <div class="cont1">

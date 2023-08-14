@@ -35,7 +35,7 @@
         <div class="container-after-subti">
 <div class="mitad-texto"><div class="put-text">No te preocupes nosotros nos encargamos, en nuestra guardería podrás contar con,  transporte puerta a puerta, encargados de que tu mascota siga su rutina diaria, tu escoges el tiempo que requiere para así brindarle un rato acogedor </div></div>
 <div class="mitad-image">
-    <a class="cont-link" href="error400.html"><img class="form-img" src="img/CASITA-removebg-preview.png" alt="casa"></a> <a class="description" href="error400.html">HAZ CLICK PARA CONTACTARNOS</a>
+    <a class="cont-link" href="{{route('loginCita')}}"><img class="form-img" src="img/CASITA-removebg-preview.png" alt="casa"></a> <a class="description" href="{{route('loginCita')}}">HAZ CLICK PARA CONTACTARNOS</a>
 </div>
 
         </div>

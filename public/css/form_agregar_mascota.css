@@ -1,0 +1,157 @@
+body{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    
+    }
+    @font-face {
+        font-family:hatton ;
+        src: url(../fonts/PP\ Hatton\ Medium\ 500.otf);
+    }
+    :root{
+--borderColor:#268ecd;
+
+    }
+    .container-form{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #F6F6F6; 
+    }
+    .container-form .form-layout{
+        width: 70%;
+        height: 97%;
+        display: flex;
+        flex-direction: column;
+        background-color: white;
+        border-radius: 2vw;
+        border: solid 0.4vh var(--borderColor);
+        
+        }
+        .form-layout .cabecera-form{
+    width: 100%;
+    height: 17%;
+    display: flex;
+    justify-content: space-evenly;
+ 
+    
+        }
+        .cabecera-form .put-logo{
+    width: 24%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    
+        }
+        .put-logo .logo{
+    width: 100%;
+    height:70%;
+    
+        }
+        .cabecera-form .title{
+    width: 50%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-family: hatton;
+    font-size: 2.8VW;
+    
+        }
+        .form-layout .subtitle{
+    width: 100%;
+    height: 6%;
+    display: flex;
+font-family: hatton;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.2vw;
+    
+        }
+        .form-layout .container-input-dueño{
+    width: 100%;
+    height: 20%;
+    display: flex;
+    
+    flex-direction: column;
+   
+    
+        }
+        .container-input-dueño .sub-title{
+    width: 100%;
+    height: 15%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    font-family: hatton;
+    font-size: 1VW;
+    
+        }
+        .sub-title .space{
+    width: 27%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    
+    
+        }
+        .container-input-dueño .put-inputs{
+    width: 100%;
+    height: 35%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+    
+    
+        }
+        .put-inputs .inpt{
+    width: 27%;
+    height: 70%;
+    border: solid 0.4vh var(--borderColor);
+    text-transform: uppercase;
+        }
+        .form-layout .container-service{
+    width: 100%;
+    height: 10%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+        }
+        .container-service .inp{
+    width: 30%;
+    height: 65%;
+    font-size: 1.2vw;
+    border: solid 0.4vh #268ecd;
+    
+        }
+        .form-layout .buttons-container{
+    width: 100%;
+    height: 20%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    
+    
+        }
+        .buttons-container .btn{
+    width: 25%;
+    height: 40%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.4vw;
+    background-color: rgb(38, 121, 148);
+    cursor: pointer;
+    color: white;
+    border-radius: 1vw;
+    font-family: hatton;
+        }

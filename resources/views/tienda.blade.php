@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <link rel="stylesheet" href="{{ asset('css/style10.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/style10.css?v=1.1') }}">
 
     <title>tienda</title>
 
@@ -42,6 +42,9 @@
                 <p class="texto">CARRITO DE COMPRAS</p>
                 <button class="exit" id="cerrar"><i class="bi bi-box-arrow-right "></i></button>
 
+            </div>
+            <div class="items-container">
+                <div class="item-container-carrito"></div>
             </div>
 
         </div>

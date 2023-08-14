@@ -36,7 +36,7 @@
 <div class="mitad-texto"><div class="put-text">No te preocupes nosotros nos encargamos realizando todos los trámites, chequeos y certificaciones necesarias para el viaje nacional o internacional de tu mascota.
     también aseguramos que tu mascota tenga todos los requisitos veterinarios para viajar como,    vacunas o refuerzo de vacunas, serología</div></div>
 <div class="mitad-image">
-    <a class="cont-link" href="error400.html"><img class="form-img" src="img/former-transformed-removebg-preview.png" alt="formulario"></a> <a class="description" href="error400.html">HAZ CLICK PARA CONTACTARNOS</a>
+    <a class="cont-link" href="{{route('loginCita')}}"><img class="form-img" src="img/former-transformed-removebg-preview.png" alt="formulario"></a> <a class="description" href="{{route('loginCita')}}">HAZ CLICK PARA CONTACTARNOS</a>
 </div>
 
         </div>

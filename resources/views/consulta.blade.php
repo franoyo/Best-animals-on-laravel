@@ -34,10 +34,10 @@
 
     </div>
 <nav class="contenedor3">
-<div class="box1"><header class="tituloo"><a class="dentro" href="">Consulta Médica</a></header> <div class="contimages"> <a class="photosurl" href=""><img class="kaw" src="img/COnsulta_medica.PNG" alt="consulta"></a></div>        </div>
-<div class="box1"> <header class="tituloo"><a class="dentro" href="">Vacunacion y <br> Desparacitacion</a></header><div class="contimages"><a class="photosurl" href=""><img class="kaw" src="img/cat_vacuna.PNG" alt="vacunacion"></a></div>         </div>
-<div class="box1"><header class="tituloo"><a class="dentro" href="">Cirujia Y Hospital</a></header> <div class="contimages"><a class="photosurl" href=""><img class="kaw" src="img/cirujia_hospital.PNG" alt="cirujia"></a></div>         </div>
-<div class="box1"> <header class="tituloo"><a class="dentro" href="">Profilaxis</a></header> <div class="contimages"><a class="photosurl" href=""><img class="kaw" src="img/profi.PNG" alt="cirujia"></a></div>      </div>
+<div class="box1"><header class="tituloo"><a class="dentro" href="{{route('loginCita')}}">Consulta Médica</a></header> <div class="contimages"> <a class="photosurl" href="{{route('loginCita')}}"><img class="kaw" src="img/COnsulta_medica.PNG" alt="consulta"></a></div>        </div>
+<div class="box1"> <header class="tituloo"><a class="dentro" href="{{route('loginCita')}}">Vacunacion y <br> Desparacitacion</a></header><div class="contimages"><a class="photosurl" href="{{route('loginCita')}}"><img class="kaw" src="img/cat_vacuna.PNG" alt="vacunacion"></a></div>         </div>
+<div class="box1"><header class="tituloo"><a class="dentro" href="{{route('loginCita')}}">Cirujia Y Hospital</a></header> <div class="contimages"><a class="photosurl" href="{{route('loginCita')}}"><img class="kaw" src="img/cirujia_hospital.PNG" alt="cirujia"></a></div>         </div>
+<div class="box1"> <header class="tituloo"><a class="dentro" href="{{route('loginCita')}}">Profilaxis</a></header> <div class="contimages"><a class="photosurl" href="{{route('loginCita')}}"><img class="kaw" src="img/profi.PNG" alt="cirujia"></a></div>      </div>
 
 
 

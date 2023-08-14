@@ -166,6 +166,7 @@ border-radius: 50%;
     color: white;
     background-color: rgb(23, 126, 185);
     border-radius: 1.4vw;
+    cursor: pointer;
     
         }
         .modal .container-editar{
@@ -189,6 +190,7 @@ border-radius: 50%;
     background-color: gray;
     color: white;
     border-radius: 2vw;
+    cursor: pointer;
     
     
         }

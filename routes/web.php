@@ -7,6 +7,7 @@ use App\Http\Controllers\admin\AdminController;
 use App\Http\Controllers\Veterinario\VeterinarioController;
 use App\Http\Controllers\Auth\restablecerContraseñaEmpleadoController;
 use App\Http\Controllers\cliente\MangamentMascotas;
+use App\Http\Controllers\cliente\gestionCitasController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -61,6 +62,7 @@ Route::get("/tienda", function () {
 
 Route::controller(LoginRegisterController::class)->group(function () {
     Route::get('/login', 'login')->name('login');
+    Route::get('/loginCita', 'loginCita')->name('loginCita');
     Route::get('/register', 'register')->name('register');
     Route::get('/sucessfully', 'alert_register')->name('sucessfully');
     Route::post('/store', 'store')->name('store');
@@ -71,11 +73,20 @@ Route::controller(LoginRegisterController::class)->group(function () {
     Route::post('/enviarEmailRestablecimiento', 'enviarEmailRestablecimiento')->name('password.sent');
     Route::get('/restablecerContraseña/{token}', 'mostrarFormDeReseteo')->name('password.reset');
     Route::post('/updatePassword', 'reset')->name('password.update');
+    
+});
+Route::controller(gestionCitasController::class)->group(function () {
+    Route::post('/almacenarCita.cliente', 'storeCita')->name('almacenarCita.cliente');
+
 });
 Route::controller(MangamentMascotas::class)->group(function () {
     Route::get('/mascotas.cliente', 'crudMascotas')->name('mascotas.cliente');
     Route::get('/añadirMascota.cliente', 'formMascota')->name('añadirMascota.cliente');
     Route::post('/almacenarMascota.cliente', 'storeMascota')->name('almacenarMascota.cliente');
+    Route::post('/updateMascota.cliente', 'updateMascota')->name('updateMascota.cliente');
+    Route::post('/eliminarMascota.cliente', 'inhabilitarBorrarMascota')->name('eliminarMascota.cliente');
+    Route::get('/agendarCita', 'formAgendarCita')->name('agendarCita');
+    Route::get('/obtener-datos-mascota-ajax/{id}', 'obtenerDatosMascotaAjax')->name('obtener-datos-mascota-ajax');
 
 });
 Route::controller(restablecerContraseñaEmpleadoController::class)->group(function(){

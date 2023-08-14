@@ -17,6 +17,7 @@ class mascota extends Model
         'especie',
         'fecha_nacimiento',
         'color',
+        'activo'
     ];
     public function user()
     {

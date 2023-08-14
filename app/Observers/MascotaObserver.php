@@ -17,18 +17,18 @@ class MascotaObserver
     /**
      * Handle the Mascota "updated" event.
      */
-    public function updated(Mascota $mascota): void
+    public static function updated(Mascota $mascota): void
     {
         $fechaNacimiento = Carbon::createFromFormat('Y-m-d', $mascota->fecha_nacimiento);
         $fechaActual = Carbon::now();
         if ($fechaNacimiento->diffInDays($fechaActual)<30) {
-         $edad=$fechaNacimiento->diffInDays($fechaActual). "Dias";
+         $edad=$fechaNacimiento->diffInDays($fechaActual). " Dias";
          $mascota->edad = $edad;
         }elseif ($fechaNacimiento->diffInDays($fechaActual)>30 and $fechaNacimiento->diffInDays($fechaActual)<=365) {
-           $edad=$fechaNacimiento->diffInMonths($fechaActual). "Meses";
+           $edad=$fechaNacimiento->diffInMonths($fechaActual). " Meses";
            $mascota->edad = $edad;
         }elseif ($fechaNacimiento->diffInDays($fechaActual)>365) {
-            $edad=$fechaNacimiento->diffInYears($fechaActual). "Años";
+            $edad=$fechaNacimiento->diffInYears($fechaActual). " Años";
             $mascota->edad=$edad;
         }
         

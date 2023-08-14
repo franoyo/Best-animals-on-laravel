@@ -23,3 +23,22 @@ editButtons.forEach(function(button) {
 function cerrarModal(modalId, modalc) {
   modalc.classList.remove('aparecer')// Quitar la clase "aparecer" para ocultar el modal
 }
+//desplegar alerta eliminar
+var deleteButtons = document.getElementsByClassName('delete-button');
+const launcAlert=document.getElementById("alertita");
+const closeButton=document.getElementById("close");
+for (var i = 0; i < deleteButtons.length; i++) {
+    deleteButtons[i].addEventListener('click', function(e) {
+      e.preventDefault(); // Prevenir el comportamiento predeterminado del enlace
+      var id = this.getAttribute('data-id'); // Obtener la ID almacenada en data-id
+  
+      // Mostrar una alerta con la ID correspondiente
+      launcAlert.classList.add("ver")
+      console.log(id);
+      var lil=document.getElementById("recepcion");
+      lil.value = id;
+    });
+  }
+  closeButton.addEventListener('click', function(){
+      launcAlert.classList.remove("ver");
+  })
