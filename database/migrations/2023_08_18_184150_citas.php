@@ -21,14 +21,20 @@ return new class extends Migration
             $table->string('email');
             $table->unsignedBigInteger('nombre_mascota_id');
             $table->foreign('nombre_mascota_id')->references('id')->on('mascotas');
+    
             $table->string('nombre_mascota_real');
             $table->string('raza_mascota');
             $table->string('genero_mascota');
             $table->string('color_mascota');
             $table->string('especie_mascota');
             $table->date('fecha_nacimiento');
-            $table->boolean('activo')->default(false);
-            $table->boolean('estado_cita')->default(false);
+            $table->boolean('activo')->default(true);
+            $table->unsignedBigInteger('estado_cita')->default(1);
+            $table->foreign('estado_cita')->references('id')->on('estado_cita');
+            $table->unsignedBigInteger('servicio_id');
+            $table->foreign('servicio_id')->references('id')->on('servicios');
+            $table->date('fecha_cita');
+            $table->time('hora_cita');
             $table->rememberToken();
             $table->timestamps();
         });
@@ -42,3 +48,4 @@ return new class extends Migration
         Schema::dropIfExists('citas');
     }
 };
+

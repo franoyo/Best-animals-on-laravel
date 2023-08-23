@@ -77,6 +77,10 @@ Route::controller(LoginRegisterController::class)->group(function () {
 });
 Route::controller(gestionCitasController::class)->group(function () {
     Route::post('/almacenarCita.cliente', 'storeCita')->name('almacenarCita.cliente');
+    Route::get('/gestionCitas', 'citasPorAceptar')->name('gestionCitas');
+      Route::get('/CitasConfirmadas', 'CitasConfirmadas')->name('CitasConfirmadas');
+      Route::get('/CitasCanceladas', 'CitasCanceladas')->name('CitasCanceladas');
+    Route::post('/cancelarCita.cliente', 'cancelarCita')->name('cancelarCita.cliente');
 
 });
 Route::controller(MangamentMascotas::class)->group(function () {

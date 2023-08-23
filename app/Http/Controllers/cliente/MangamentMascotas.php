@@ -6,10 +6,11 @@ use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use Carbon\Carbon;
 use App\Models\mascota;
+use App\Models\servicio;
 use App\Models\User;
 use Illuminate\Support\Facades\Auth;
 use App\Observers\MascotaObserver;
-
+use App\Models\estado_cita;
 class MangamentMascotas extends Controller
 {
     public function __construct()
@@ -113,9 +114,11 @@ $usuario=Auth::user();
     }
     public function formAgendarCita(){
         $usuario = Auth::user();
+
+        $servicios = Servicio::where('activo', 1)->get();
         //
         $mascotas = $usuario->mascotas()->where('activo', 1)->get();
-        return view("Cliente_views.form_agregar_cita",['mascotas'=>$mascotas]);
+        return view("Cliente_views.form_agregar_cita",['mascotas'=>$mascotas,'servicios'=>$servicios]);
         
         }
         public function obtenerDatosMascotaAjax($id) {

@@ -22,6 +22,19 @@ class cita extends Model
         'color_mascota',
         'especie_mascota',
         'fecha_nacimiento',
-        'estado_cita'
+        'estado_cita',
+        'servicio_id',
+        'fecha_cita',
+        'hora_cita'
+
     ];
+
+    public function servicio()
+    {
+        return $this->belongsTo(servicio::class,'servicio_id');
+    }
+    public function Mascota()
+    {
+        return $this->belongsTo(mascota::class, 'nombre_mascota_id');
+    }
 }

@@ -23,4 +23,8 @@ class mascota extends Model
     {
         return $this->belongsTo(User::class, 'usuario_id');
     }
+    public function citas()
+    {
+        return $this->hasMany(cita::class, 'nombre_mascota_id');
+    }
 }

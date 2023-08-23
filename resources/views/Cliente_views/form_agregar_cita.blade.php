@@ -1,7 +1,7 @@
 @extends("layouts.plantilla_cliente")
 @section("menuButtons")
 <div class="dash">
-                <a class="ins" href="{{route('dashboard')}}"><p class="t1">MIS CITAS</p></a>
+                <a class="ins" href="{{route('gestionCitas')}}"><p class="t1">MIS CITAS</p></a>
                 <div class="linea"></div>
               </div>
               <div class="dash">
@@ -87,10 +87,13 @@
         FECHA Y SERVICIO
     </div>
     <div class="container-service">
-        <input class="inp" type="date" min="{{ now()->format('Y-m-d') }}">
-        <input class="inp" type="time" min="09:00" max="20:00">
-        <select class="inp" name="servicio" id="" >
+        <input name="fecha_cita" class="inp" type="date" min="{{ now()->format('Y-m-d') }}">
+        <input name="hora_cita" class="inp" type="time" min="09:00" max="20:00">
+        <select class="inp" name="servicio_id" id="" >
             <option value="" selected>SELECCIONE EL SERVICIO</option>
+            @foreach ($servicios as $servicio )
+            <option value="{{$servicio->id}}">{{$servicio->nombre_servicio}}</option>
+            @endforeach
           
         </select>
     </div>

@@ -1,0 +1,251 @@
+body{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+:root{
+--border-colors:black;
+--subtitle-color:rgb(122, 122, 221);
+--contentRow-color:lightgreen;
+
+}
+@font-face{
+    font-family:hatton;
+    src: url(../fonts/PP\ Hatton\ Medium\ 500.otf);
+           }
+
+.cont3 .cabecera-container{
+width: 100%;
+height: 20%;
+display: flex;
+
+}
+.cabecera-container .search-container{
+width: 20%;
+height: 100%;
+display: flex;
+
+}
+.cabecera-container .put-title{
+width: 60%;
+display: flex;
+height: 100%;
+justify-content: center;
+align-items: center;
+text-align: center;
+font-family: hatton;
+font-size: 3.5vh;
+}
+.cont3 .tabla-container{
+width: 100%;
+height: 80%;
+display:flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+}
+.tabla-container .tabla{
+    width: 95%;
+    height: 85%;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    flex-wrap: wrap;
+    border-left:  solid 0.2vw var(--border-colors);
+    border-right:  solid 0.2vw var(--border-colors);
+    border-bottom:  solid 0.2vw var(--border-colors);
+    
+}
+.tabla .row-subtitle{
+    width: 100%;
+    height: 13%;
+    display: flex;
+    font-size: 1vw;
+font-family: hatton;
+
+}
+.row-subtitle .id-section{
+width: 6%;
+height: 100%;
+display: flex;
+text-align: center;
+justify-content: center;
+align-items: center;
+background-color: var(--subtitle-color);
+border-right:solid 0.2vw var(--border-colors); 
+border-top:solid 0.2vw var(--border-colors); 
+
+overflow: hidden;
+}
+.row-subtitle .general-section{
+width: 18.5%;
+height: 100%;
+display: flex;
+text-align: center;
+justify-content: center;
+align-items: center;
+background-color: var(--subtitle-color);
+border-top:solid 0.2vw var(--border-colors); 
+border-right:solid 0.2vw var(--border-colors); 
+overflow: hidden;
+
+}
+.row-subtitle .semifinal-section{
+    width: 12%;
+    height: 100%;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    border-top:solid 0.2vw var(--border-colors); 
+    border-right:solid 0.2vw var(--border-colors);
+    overflow: hidden;
+    background-color: var(--subtitle-color);
+
+
+}
+.row-subtitle .final-section{
+width: 19.5%;
+height: 100%;
+display: flex;
+text-align: center;
+justify-content: center;
+align-items: center;
+background-color: coral;
+background-color: var(--subtitle-color);
+border-top:solid 0.2vw var(--border-colors); 
+overflow: hidden;
+}
+.tabla .row-content{
+    width: 100%;
+    height: 10.875%;
+    display: flex;
+    font-size: 1.25vw;
+
+}
+.row-content .id-section{
+    width: 6%;
+    height: 100%;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    border-top: solid 0.2vw var(--border-colors);
+    align-items: center;
+    background-color: var(--contentRow-color);
+    border-right:solid 0.2vw var(--border-colors); 
+
+}
+.row-content .general-section{
+    width: 18.5%;
+    height: 100%;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--contentRow-color);
+    border-right:solid 0.2vw var(--border-colors); 
+    border-top: solid 0.2vw var(--border-colors);
+}
+.row-content .semifinal-section{
+    width: 12%;
+    height: 100%;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    border-top:solid 0.2vw var(--border-colors); 
+    border-right:solid 0.2vw var(--border-colors);
+    overflow: hidden;
+    background-color: var(--contentRow-color);
+
+}
+.row-content .final-section{
+    width: 19.5%;
+    height: 100%;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--contentRow-color);
+    border-top: solid 0.2vw var(--border-colors);
+
+}
+.semifinal-section .cancelar-button{
+    width: 75%;
+    height: 80%;
+    display: flex;
+    text-decoration: none;
+    text-transform: uppercase;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(100, 100, 199);
+    text-align: center;
+    color: black;
+    font-family: hatton;
+    border-radius: 1.4vw;
+    transition: .5s;
+    cursor: pointer;
+
+}
+.final-section .cancelar-button{
+width: 75%;
+height: 80%;
+display: flex;
+text-decoration: none;
+text-transform: uppercase;
+justify-content: center;
+align-items: center;
+background-color: rgb(100, 100, 199);
+text-align: center;
+color: black;
+font-family: hatton;
+border-radius: 1.4vw;
+transition: .5s;
+cursor: pointer;
+}
+.cancelar-button:hover{
+color: darkblue;
+background-color: orange;
+
+
+}
+.tabla-container .move-buttons{
+width:95%;
+height: 8%;
+display: flex;
+justify-content: space-evenly;
+align-items: center;
+background-color: #313E54
+
+
+
+}
+.move-buttons .contenedor-de-botones{
+width: 12%;
+height: 80%;
+display: flex;
+background-color: orange;
+justify-content:space-evenly;
+align-items: center;
+border-radius: 1.5vw;
+
+}
+.contenedor-de-botones .put-button{
+width: 30%;
+height: 95%;
+display: flex;
+cursor: pointer;
+justify-content: center;
+align-items: center;
+text-align: center;
+font-size: 2.7vw;
+transition: .5s;
+overflow: hidden;
+
+}
+.put-button:hover{
+color: white;
+font-size: 3.5vw;
+
+}

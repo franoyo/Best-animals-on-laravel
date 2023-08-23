@@ -16,9 +16,6 @@ const alerta=document.getElementById("main-container");
 setTimeout(() => {
     alerta.classList.add("mostrar")
 }, 500);
-setTimeout(() => {
-    alerta.classList.remove("mostrar")
-}, 2500);
 </script>
 @endunless
 @if(session('success'))
