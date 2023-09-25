@@ -69,7 +69,7 @@ return view("vet_views.inicio");
             'diagnostico_final'=> $request->diagnostico_final,
             'test_laboratorio'=> $request->pruebas_de_laboratorio,
             'tratamiento'=> $request->tratamiento,
-        ]);return redirect()->route('historiasClinicasFormulario.veterinario')->withSuccess('Datos almacenados correctamente!');
+        ]);return redirect()->route('historiasClinicasFormulario.vet')->withSuccess('Datos almacenados correctamente!');
     }
     public function crudHistoriasVet(){
         return view("vet_views.crud_historias",['historia'=>historiaClinica::all()]);
