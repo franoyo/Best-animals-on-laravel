@@ -3,7 +3,7 @@
 Gestion De Clientes
 @endsection
 @section("contenidoPrincipal")
-<link rel="stylesheet" href="{{asset('css/style33.css?V=1.11')}}">
+<link rel="stylesheet" href="{{asset('css/style33.css?V=1.12')}}">
 
 @include("Admin_views.modals_registro_cliente.registrar_cliente")
 @include("Admin_views.modals_registro_cliente.eliminar_cliente")
@@ -17,11 +17,12 @@ Gestion De Clientes
 <h2>GESTION CLIENTES</h2>
                    </div>
                    <div class="insert-botones">
-                   <nav class="botones-container">
+                    <nav class="botones-container">
                     <a class="boton-reporte" href="{{route('usuariosExcel')}}">EXCEL</a>
                     <a class="boton-reporte" href="{{route('reporteClientes')}}">PDF</a>
                     <a class="boton-reporte" href="{{route('usuariosExcel')}}">SVG</a>
                     </nav>
+            
                    </div>
                     </div>  
                     <div class="container-tabla">

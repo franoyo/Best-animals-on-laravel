@@ -320,6 +320,7 @@ return redirect()->route("listaEmpleados")->withSuccess("Empleado Modificado Cor
 public function crudClientes(){
     $ultimoId = User::latest('id')->value('id');
     $idFinal=$ultimoId+1;
+    session()->forget('resultados_busqueda'); // Reemplaza 'tu_clave_de_sesion' por la clave de sesión que utilizaste
 return view("Admin_views.crud_gestion_usuario",['clientes'=>User::all(),'mostrar'=>$idFinal]);
 
 
@@ -352,6 +353,7 @@ public function deleteCliente(Request $request){
     ]);
     $id = $request->input('id');
     $cliente=User::find($id);
+    $cliente->mascotas()->delete();
     $cliente->delete();
     return redirect()->route('listaClientes')->withSuccess("Cliente eliminado correctamente");
 }
@@ -381,7 +383,13 @@ return redirect()->route("listaClientes")->withSuccess("Cliente Modificado Corre
 
 public function reporteClientes(){
  
-    $clientes = User::all();
+    if (session()->has('resultados_busqueda')) {
+        // Utiliza los resultados de la búsqueda almacenados en la variable de sesión
+        $clientes = session('resultados_busqueda');
+    } else {
+        // Si no hay resultados en la variable de sesión, obtener todos los usuarios
+        $clientes = User::all();
+    }
     $fechaActual = Carbon::now();
     $vista=view("pdf.pdf", ['clientes' => $clientes, 'fecha' => $fechaActual]);
     return $vista;
@@ -415,4 +423,19 @@ $vistaPdfProductos=view("pdf.pdf_productos",['productos'=>$productos, 'fecha'=>$
 return $vistaPdfProductos;
 
 }
+public function filtroCrudClientes(Request $request){
+    $query = $request->input('buscar'); // Obtener el término de búsqueda desde el formulario
+
+    $usuarios = User::where('name', 'LIKE', "%$query%")
+                    ->orWhere('apellido', 'LIKE', "%$query%")
+                    ->orWhere('id', '=', $query)
+                    ->orWhere('documento', '=', $query)
+                    ->orWhere('email', '=', $query)
+                    ->get();
+
+                    session()->put('resultados_busqueda', $usuarios);
+                    $ultimoId = User::latest('id')->value('id');
+    return view('Admin_views.crud_gestion_cliente_buscador', ['clientes' => $usuarios,'mostrar'=>$ultimoId]);
+    
+    }
 }

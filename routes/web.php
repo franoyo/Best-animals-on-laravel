@@ -4,6 +4,7 @@ use App\Models\Producto;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Auth\LoginRegisterController;
 use App\Http\Controllers\admin\AdminController;
+use App\Http\Controllers\admin\AdminExcelController;
 use App\Http\Controllers\Veterinario\VeterinarioController;
 use App\Http\Controllers\Auth\restablecerContraseñaEmpleadoController;
 use App\Http\Controllers\cliente\MangamentMascotas;
@@ -129,6 +130,11 @@ Route::controller(AdminController::class)->group(function () {
     Route::get('/reporteHistorias', 'reporteHistorias')->name('reporteHistorias');
     Route::get('/error400.admin', 'error400Admin')->name('error400.admin');
     Route::get('/reporteProductos', 'reporteProductos')->name('reporteProductos');
+    Route::get('/buscarUsuario', 'filtroCrudClientes')->name('buscarUsuario');
+});
+Route::controller(AdminExcelController::class)->group(function () {
+    Route::get('/usuariosExcel','exportExcelAdmin')->name('usuariosExcel');
+
 });
 Route::controller(VeterinarioController::class)->group(function(){
 Route::get('/veterinario','veterinarioDashboard')->name('veterinario');
