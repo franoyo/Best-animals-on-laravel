@@ -193,6 +193,7 @@ public function storeHistoriaClinica(Request $request){
     ]);return redirect()->route('historiasClinicasFormulario')->withSuccess('Datos almacenados correctamente!');
 }
 public function crudHistorias(){
+    session()->forget('resultados_busqueda');
 return view("Admin_views.crud_historia",['historia'=>historiaClinica::all()]);
 }
 
@@ -255,6 +256,7 @@ public function verHistoria($id){
 public function crudEmpleados(){
     $ultimoId = Empleado::latest('id')->value('id');
     $idFinal=$ultimoId+1;
+    session()->forget('resultados_busqueda');
     $empleados = Empleado::where('rol', '!=', 'administrador')->get();
 return view('Admin_views.crud_gestion_empleados',['empleado'=>$empleados,'mostrar'=>$idFinal]);
 
@@ -396,14 +398,26 @@ public function reporteClientes(){
 
 }
 public function reporteEmpleados(){
-$empleados= Empleado::all();
+    if (session()->has('resultados_busqueda')) {
+        // Utiliza los resultados de la búsqueda almacenados en la variable de sesión
+        $empleados = session('resultados_busqueda');
+    } else {
+        // Si no hay resultados en la variable de sesión, obtener todos los usuarios
+        $empleados = Empleado::where('rol', '!=', 'administrador')->get();
+    }
 $fecha= Carbon::now();
 $vistaEmpleado=view("pdf.pdf_empleado",['empleados'=>$empleados, 'fecha'=>$fecha]);
 return $vistaEmpleado;
 
 }
 public function reporteHistorias(){
-$historias= historiaClinica::all();
+    if (session()->has('resultados_busqueda')) {
+        // Utiliza los resultados de la búsqueda almacenados en la variable de sesión
+        $historias = session('resultados_busqueda');
+    } else {
+        // Si no hay resultados en la variable de sesión, obtener todos los usuarios
+        $historias = historiaClinica::all();
+    }
 $fechita= Carbon::now();
 $vistaHistoria=view("pdf.pdf_historia_clinica",['historias'=>$historias, 'fecha'=>$fechita]);
 return $vistaHistoria;
@@ -438,4 +452,35 @@ public function filtroCrudClientes(Request $request){
     return view('Admin_views.crud_gestion_cliente_buscador', ['clientes' => $usuarios,'mostrar'=>$ultimoId]);
     
     }
+    public function filtroCrudEmpleados(Request $request){
+        $query = $request->input('buscar'); // Obtener el término de búsqueda desde el formulario
+    
+        $empleados =Empleado::where('rol', '!=', 'administrador')
+        ->where(function($queryBuilder) use ($query) {
+            $queryBuilder->where('name', 'LIKE', "%$query%")
+                ->orWhere('apellido', 'LIKE', "%$query%")
+                ->orWhere('id', '=', $query)
+                ->orWhere('documento', '=', $query)
+                ->orWhere('email', '=', $query);
+        })
+        ->get();
+    
+                        session()->put('resultados_busqueda', $empleados);
+                        $ultimoId = Empleado::latest('id')->value('id');
+        return view('Admin_views.crud_empleados_buscador', ['empleado' => $empleados,'mostrar'=>$ultimoId]);
+        
+        }
+        public function filtroCrudHistoriasClinicas(Request $request){
+            $query = $request->input('buscar'); // Obtener el término de búsqueda desde el formulario
+        
+            $historias = historiaClinica::where('nombre_mascota', 'LIKE', "%$query%")
+                            ->orWhere('nombre_dueño', 'LIKE', "%$query%")
+                            ->orWhere('id', '=', $query)
+                            ->get();
+        
+                            session()->put('resultados_busqueda', $historias);
+            return view('Admin_views.crud_historias_buscador', ['historia' => $historias]);
+            
+            }
+
 }

@@ -2,7 +2,7 @@
 
 namespace App\Exports;
 
-use App\Models\User;
+use App\Models\Empleado;
 use Maatwebsite\Excel\Concerns\FromCollection;
 use Maatwebsite\Excel\Concerns\WithHeadings;
 use Maatwebsite\Excel\Concerns\WithStyles;
@@ -12,20 +12,19 @@ use PhpOffice\PhpSpreadsheet\Style\Fill;
 use PhpOffice\PhpSpreadsheet\Style\Font;
 use PhpOffice\PhpSpreadsheet\Worksheet\Worksheet;
 
-class UsersExport implements FromCollection, WithHeadings,WithStyles
+class EmpleadosExport implements FromCollection,WithHeadings,WithStyles
 {
     /**
     * @return \Illuminate\Support\Collection
     */
-   
-    protected $usuarios;
-    public function __construct($usuarios)
+    protected $empleados;
+    public function __construct($empleados)
     {
-        $this->usuarios = $usuarios;
+        $this->empleados = $empleados;
     }
     public function collection()
     {
-        return $this->usuarios;
+        return $this->empleados;
     }
     public function headings(): array
     {
@@ -46,7 +45,7 @@ class UsersExport implements FromCollection, WithHeadings,WithStyles
     public function styles(Worksheet $sheet)
     {
        // Verificar si se está aplicando un filtro
-    if (!empty($this->usuarios)) {
+    if (!empty($this->empleados)) {
         // Aplicar estilos a los encabezados
         $sheet->getStyle('A1:K1')->applyFromArray([
             'font' => [
@@ -74,8 +73,8 @@ class UsersExport implements FromCollection, WithHeadings,WithStyles
         $sheet->getColumnDimension('C')->setAutoSize(true);
         $sheet->getColumnDimension('D')->setAutoSize(true);
         $sheet->getColumnDimension('E')->setAutoSize(true);
-        $sheet->getColumnDimension('G')->setAutoSize(true);
         $sheet->getColumnDimension('F')->setAutoSize(true);
+        $sheet->getColumnDimension('G')->setAutoSize(true);
         $sheet->getColumnDimension('H')->setAutoSize(true);
         $sheet->getColumnDimension('I')->setAutoSize(true);
         $sheet->getColumnDimension('J')->setAutoSize(true);
@@ -84,7 +83,7 @@ class UsersExport implements FromCollection, WithHeadings,WithStyles
 
         // Aplicar estilos personalizados a las celdas de datos si es necesario
         // Ejemplo: aplicar un borde a todas las celdas de datos
-        $dataRange = 'A2:K' . (count($this->usuarios) + 1); // Asumiendo que los datos comienzan en la fila 2
+        $dataRange = 'A2:K' . (count($this->empleados) + 1); // Asumiendo que los datos comienzan en la fila 2
         $sheet->getStyle($dataRange)->applyFromArray([
             'borders' => [
                 'allBorders' => [
@@ -94,5 +93,4 @@ class UsersExport implements FromCollection, WithHeadings,WithStyles
         ]);
     }
     }
-    
 }

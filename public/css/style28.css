@@ -95,27 +95,31 @@
     align-items: center;
 
 }
-#boton-informe{
+.put-button .botones-container{
+width: 65%;
+height: 35%;
+display: flex;
 
-margin-left: 15%;
+}
+.botones-container .boton-reporte{
+width: 33.333333%;
+height: 100%;
 display: flex;
 justify-content: center;
 align-items: center;
 text-align: center;
+color: black;
 font-family: hatton;
-font-size: 0.78vw;
-width: 45%;
-height: 50%;
-background-color: lightgreen;
-border-radius: 2vw;
-border: solid rgb(113, 112, 112);
-transition: 0.5s;
-cursor: pointer;
-
+text-decoration: none;
+font-size: 1vw;
+border: solid 0.2vw black;
+background-color: chartreuse;
+transition: .5s;
 }
-#boton-informe:hover{
-background-color:rgb(113, 112, 112); ;
-
+.boton-reporte:hover{
+background-color: orange;
+color: white;
+transform: scale(1.1);
 
 }
 .cont3 .container-table {

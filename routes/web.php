@@ -131,9 +131,13 @@ Route::controller(AdminController::class)->group(function () {
     Route::get('/error400.admin', 'error400Admin')->name('error400.admin');
     Route::get('/reporteProductos', 'reporteProductos')->name('reporteProductos');
     Route::get('/buscarUsuario', 'filtroCrudClientes')->name('buscarUsuario');
+    Route::get('/buscarEmpleado', 'filtroCrudEmpleados')->name('filtroCrudEmpleados');
+    Route::get('/buscarHistoria', 'filtroCrudHistoriasClinicas')->name('buscarHistoria');
 });
 Route::controller(AdminExcelController::class)->group(function () {
     Route::get('/usuariosExcel','exportExcelAdmin')->name('usuariosExcel');
+    Route::get('/empleadosExcel','exportExcelEmpleadosAdmin')->name('empleadosExcel');
+    Route::get('/historiasExcel','exportExcelHistoriasAdmin')->name('historiasExcel');
 
 });
 Route::controller(VeterinarioController::class)->group(function(){

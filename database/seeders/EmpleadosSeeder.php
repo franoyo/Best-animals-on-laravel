@@ -23,5 +23,6 @@ class EmpleadosSeeder extends Seeder
             'password'=> hash::make("admin2003"),
             'rol'=>'administrador',
         ]);
+        
     }
 }

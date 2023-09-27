@@ -71,22 +71,26 @@
               
               
                        }
-                       .insert-botones .boton-reporte{
-              width: 50%;
-              height: 50%;
-              text-decoration: none;
-              background-color: #FF914D;
-              border: solid #268CCA;
-              display: flex;
-              text-align: center;
-              justify-content: center;
-              align-items: center;
-              font-size: 1.25vw;
-              font-family: hatton;
-              color: black;
-              border-radius: 2vw;
-              transition: 0.5s;
-              color: #0f74b3;
+                       .insert-botones .botones-container{
+                            width: 95%;
+                            height: 35%;
+                            display: flex;
+
+                       }
+                       .botones-container .boton-reporte{
+                            width: 33.3333333333%;
+                            height: 100%;
+                            display: flex;
+                            background-color:#268CCA;
+                            font-family: hatton;
+                            font-size: 1vw;
+                            color: white;
+                            justify-content: center;
+                            align-items: center;
+                            text-align: center;
+                            text-decoration: none;
+                            transition: .5s;
+                            border: solid 0.2vw black;
                        }
                        .boton-reporte:hover{
                            transform: scale(1.1);
