@@ -28,6 +28,32 @@ display: flex;
 
 
 }
+.put-variants .botones-container{
+width: 80%;
+height: 35%;
+display: flex;
+
+} 
+.botones-container .boton-reporte{
+width: 33.333333%;
+height: 100%;
+display: flex;
+border: solid 0.2vw rgb(105, 1, 1);
+justify-content: center;
+align-items: center;
+text-align: center;
+font-family: hatton;
+font-size: 1vw;
+text-decoration: none;
+color: white;
+background-color: #313E54;
+transition: .5s;
+}
+.boton-reporte:hover{
+background-color: #F5F5DC;
+transform: scale(1.1);
+color: black;
+}
 .put-input .search{
     display: flex;
     width: 100%;

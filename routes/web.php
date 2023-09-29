@@ -133,11 +133,13 @@ Route::controller(AdminController::class)->group(function () {
     Route::get('/buscarUsuario', 'filtroCrudClientes')->name('buscarUsuario');
     Route::get('/buscarEmpleado', 'filtroCrudEmpleados')->name('filtroCrudEmpleados');
     Route::get('/buscarHistoria', 'filtroCrudHistoriasClinicas')->name('buscarHistoria');
+    Route::get('/buscarProductoId', 'filtroCrudProductosId')->name('buscarProductoId');
 });
 Route::controller(AdminExcelController::class)->group(function () {
     Route::get('/usuariosExcel','exportExcelAdmin')->name('usuariosExcel');
     Route::get('/empleadosExcel','exportExcelEmpleadosAdmin')->name('empleadosExcel');
     Route::get('/historiasExcel','exportExcelHistoriasAdmin')->name('historiasExcel');
+    Route::get('/productosExcel','exportExcelProductosAdmin')->name('productosExcel');
 
 });
 Route::controller(VeterinarioController::class)->group(function(){

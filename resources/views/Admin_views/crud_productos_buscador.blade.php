@@ -5,8 +5,9 @@
 <div class="titulo-container">
 <div class="put-variants">
     <form class="put-input" method="get" action="{{route('buscarProductoId')}}">
-        <input name="buscarId" class="search" type="search" placeholder="Busquedor:">
+        <input name="buscarId" class="search" type="search" placeholder="Buscador:">
 </form>
+   
 </div>
 <div class="main-title"><h1>GESTION PRODUCTOS</h1></div>
 <div class="put-variants">

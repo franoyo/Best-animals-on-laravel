@@ -4,13 +4,16 @@ namespace App\Http\Controllers\admin;
 
 use App\Exports\EmpleadosExport;
 use App\Exports\HistoriasClinicasExport;
+use App\Exports\ProductoExport;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Exports\UsersExport;
 use App\Models\Empleado;
 use App\Models\historiaClinica;
+use App\Models\Producto;
 use Maatwebsite\Excel\Facades\Excel;
 use App\Models\User;
+use Illuminate\Support\Facades\DB;
 
 class AdminExcelController extends Controller
 {
@@ -57,6 +60,23 @@ class AdminExcelController extends Controller
     
         // Generar el reporte en Excel y pasar los resultados
         return Excel::download(new HistoriasClinicasExport($historia), 'HistoriasClinicasReport.xlsx');
+
+    }
+    public function exportExcelProductosAdmin(){
+        if (session()->has('resultados_busqueda')) {
+    
+            $producto = session('resultados_busqueda');
+
+            // Elimina la columna 'imagen' de la colección de productos
+        $producto = $producto->map(function ($item) {
+            unset($item['imagen']); // Reemplaza 'imagen' con el nombre real de la columna si es diferente
+            return $item;
+        });
+        } else {
+            $producto = Producto::select('id', 'descripcion', 'marca','peso','stock','precio','ubicacion','vencimiento',DB::raw("'' as imagen"),'created_at','updated_at')
+            ->get();
+        }
+        return Excel::download(new ProductoExport($producto), 'ProductosReport.xlsx');
 
     }
 }

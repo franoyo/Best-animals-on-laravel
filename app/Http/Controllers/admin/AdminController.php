@@ -46,6 +46,7 @@ class AdminController extends Controller
     //Productos por lo cual se usa el modelo Producto con su respectiva funcion que es all() que sirve para capturar todos
     //datos.
     public function crudProductos(){
+        session()->forget('resultados_busqueda');
 return view("Admin_views.admin_crud_prductos",["Lista"=>Producto::all()]);
 
     }
@@ -431,7 +432,13 @@ public function vistaProductos(){
     return view("Admin_views.viewProductos");
 }
 public function reporteProductos(){
-$productos=Producto::all();
+    if (session()->has('resultados_busqueda')) {
+        // Utiliza los resultados de la búsqueda almacenados en la variable de sesión
+        $productos = session('resultados_busqueda');
+    } else {
+        // Si no hay resultados en la variable de sesión, obtener todos los usuarios
+        $productos = Producto::all();
+    }
 $date=Carbon::now();
 $vistaPdfProductos=view("pdf.pdf_productos",['productos'=>$productos, 'fecha'=>$date]);
 return $vistaPdfProductos;
@@ -482,5 +489,18 @@ public function filtroCrudClientes(Request $request){
             return view('Admin_views.crud_historias_buscador', ['historia' => $historias]);
             
             }
+            public function filtroCrudProductosId(Request $request){
+                $query = $request->input('buscarId'); // Obtener el término de búsqueda desde el formulario
+            
+                $producto = Producto::where('id', '=', "$query")
+                ->orWhere('marca', 'LIKE', "%$query%")
+                ->orWhere('precio', '=', "$query")
+                ->orWhere('descripcion', 'LIKE', "%$query%")
+                                ->get();
+            
+                                session()->put('resultados_busqueda', $producto);
+                return view('Admin_views.crud_productos_buscador', ['Lista' => $producto]);
+                
+                }
 
 }
