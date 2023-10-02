@@ -19,7 +19,7 @@
     <div class="linea"></div>
 </div>
 <div class="dash">
-    <a class="ins" href="{{route('error400.admin')}}">
+    <a class="ins" href="{{route('citasPorConfirmar')}}">
         <p class="t1">AGENDA</p>
     </a>
     <div class="linea"></div>

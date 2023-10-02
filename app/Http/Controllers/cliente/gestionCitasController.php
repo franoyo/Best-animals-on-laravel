@@ -25,7 +25,7 @@ class gestionCitasController extends Controller
             'direccion' => 'required|string|max:250|min:6',
             'email' => 'required|custom_email|max:250|',
             'nombre_mascota_id'=>'required|int|min:1|max:250',
-            'nombre_mascota_real'=>'required|string|min:3|max:250|regex:/^[\pL\s\-]+$/u',
+            'nombre_mascota_real'=>'required|string|min:2|max:250|regex:/^[\pL\s\-]+$/u',
             'raza'=>'required|string|min:3|max:250|regex:/^[\pL\s\-]+$/u',
             'genero'=>'required|string|min:3|max:250|regex:/^[\pL\s\-]+$/u',
             'color'=>'required|string|min:3|max:250|regex:/^[\pL\s\-]+$/u',
@@ -36,7 +36,18 @@ class gestionCitasController extends Controller
             
 
         ]);
-        
+        $mascotaId = $request->nombre_mascota_id;
+        $citaExistente = Cita::where('nombre_mascota_id', $mascotaId)
+            ->where(function ($query) {
+                $query->where('estado_cita', 1)
+                      ->orWhere('estado_cita', 2);
+            })
+            ->first();
+
+        if ($citaExistente) {
+            // Si ya existe una cita con estado 1 o 2, mostrar un error
+            return redirect()->back()->withErrors("La mascota ya tiene una cita activa.");
+        }
         cita::create([
             'nombre_dueño'=>$request->nombre,
             'apellido_dueño'=>$request->apellido,

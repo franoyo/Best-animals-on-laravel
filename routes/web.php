@@ -5,6 +5,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Auth\LoginRegisterController;
 use App\Http\Controllers\admin\AdminController;
 use App\Http\Controllers\admin\AdminExcelController;
+use App\Http\Controllers\admin\GestionCitasAdminController;
 use App\Http\Controllers\Veterinario\VeterinarioController;
 use App\Http\Controllers\Auth\restablecerContraseñaEmpleadoController;
 use App\Http\Controllers\cliente\MangamentMascotas;
@@ -141,6 +142,13 @@ Route::controller(AdminExcelController::class)->group(function () {
     Route::get('/historiasExcel','exportExcelHistoriasAdmin')->name('historiasExcel');
     Route::get('/productosExcel','exportExcelProductosAdmin')->name('productosExcel');
 
+});
+Route::controller(GestionCitasAdminController::class)->group(function () {
+    Route::get('/citasPorConfirmar','citasPorConfirmarAdmin')->name('citasPorConfirmar');
+    Route::post('/confirmarCita.admin', 'confirmarCita')->name('confirmarCita.admin');
+    Route::post('/cancelarCita.admin', 'cancelarCitaEmpleado')->name('cancelarCita.admin');
+    Route::get('/citasConfirmadas','citasConfirmadas')->name('citasConfirmadas');
+    Route::get('/obtener-datos-cita-ajax/{id}', 'obtenerDatosCitaAjax')->name('obtener-datos-cita-ajax');
 });
 Route::controller(VeterinarioController::class)->group(function(){
 Route::get('/veterinario','veterinarioDashboard')->name('veterinario');

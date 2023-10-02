@@ -37,4 +37,9 @@ class cita extends Model
     {
         return $this->belongsTo(mascota::class, 'nombre_mascota_id');
     }
+    public function estadoCita()
+    {
+        return $this->belongsTo(estado_cita::class,'estado_cita');
+    }
+   
 }

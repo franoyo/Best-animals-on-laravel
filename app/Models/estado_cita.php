@@ -12,4 +12,10 @@ class estado_cita extends Model
     protected $fillable = [
        'estado'
     ];
+
+    public function cita()
+    {
+        
+        return $this->hasOne(cita::class, 'estado_cita');
+    }
 }
