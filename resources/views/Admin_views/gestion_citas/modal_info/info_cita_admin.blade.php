@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="{{asset('css/styleFullInfoCss.css?v=1.11')}}">
+    <link rel="stylesheet" href="{{asset('css/styleFullInfoCss.css?v=1.12')}}">
 </head>
 <body>
     <div class="principal-container" id="alerta-form">
@@ -78,7 +78,7 @@
     <div class="row-form-container">
         <div class="subtitle">FECHA DE NACIMIENTO DE LA MASCOTA:</div>
         <div class="info-container">
-            <input class="read-text" id="nacimiento_mascota" type="date" readonly>
+            <input class="read-text" id="nacimiento_mascota" type="text" readonly>
         </div>
         <div class="subtitle">EDAD DE LA MASCOTA:</div>
         <div class="info-container">
@@ -86,7 +86,7 @@
         </div>
         <div class="subtitle">FECHA DE LA CITA:</div>
         <div class="info-container">
-            <input class="read-text" type="date" id="fecha_cita" readonly>
+            <input class="read-text" type="text" id="fecha_cita" readonly>
         </div>
         <div class="subtitle">HORA DE LA CITA:</div>
         <div class="info-container">

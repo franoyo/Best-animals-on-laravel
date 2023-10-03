@@ -119,6 +119,7 @@ border-top: #7A7ADD solid 0.25vw;
     display: flex;
     border: solid orange 0.25vw;
     border-radius: 0.5vw;
+    font-size: 1.2vw;
 }
 .ver{
 opacity: 1;

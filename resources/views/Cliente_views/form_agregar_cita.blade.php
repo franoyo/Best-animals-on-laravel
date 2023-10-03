@@ -10,7 +10,7 @@
               </div>
 @endsection
 @section("contenidoPrincipal")
-<link rel="stylesheet" href="{{asset('css/form_agregar_mascota.css?v=1.11')}}">
+<link rel="stylesheet" href="{{asset('css/form_agregar_mascota.css?v=1.12')}}">
 <div class="container-form">
 <form class="form-layout" action="{{route('almacenarCita.cliente')}}" method="post">
     @csrf

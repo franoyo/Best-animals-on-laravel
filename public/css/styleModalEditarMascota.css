@@ -126,6 +126,7 @@ border-radius: 50%;
     justify-content: center;
     align-items: center;
     text-align: center;
+    font-size: 1.6vw;
     
     
         }
@@ -152,6 +153,7 @@ border-radius: 50%;
     display: flex;
     border-radius: 1vw;
     border: solid 0.25vw orange;
+    font-size: 1.2vw;
     
         }
         .divs-inputs .act{

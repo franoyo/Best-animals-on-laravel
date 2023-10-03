@@ -117,6 +117,7 @@ font-family: hatton;
     height: 70%;
     border: solid 0.4vh var(--borderColor);
     text-transform: uppercase;
+    font-size: 1.2vw;
         }
         .form-layout .container-service{
     width: 100%;
