@@ -26,7 +26,7 @@
 </div>
 <div class="enter-buttons">
     <input class="ton" type="submit" value="SI">
-    <input class="ton" type="button" id="zerrate" value="NO">
+    <input class="ton" type="button" onclick="cerratAceptar()" id="zerrate" value="NO">
 </div>
 
 </form>

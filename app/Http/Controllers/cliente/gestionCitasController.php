@@ -7,7 +7,7 @@ use Illuminate\Http\Request;
 use App\Models\cita;
 use App\Models\estado_cita;
 use App\Models\mascota;
-use App\Models\User;
+use App\Models\servicio;
 use Illuminate\Support\Facades\Auth;
 class gestionCitasController extends Controller
 {
@@ -101,11 +101,11 @@ public function citasPorAceptar(){
     $usuario = Auth::user();
     $mascotas = $usuario->mascotas;
     $citasMascota = collect(); // Crear una colección vacía para almacenar las citas de todas las mascotas
-
+    $servicios = Servicio::where('activo', 1)->get();
 foreach ($mascotas as $mascota) {
     $citasMascota = $citasMascota->concat($mascota->citas->where('estado_cita',1));
 }
-$vista=view("Cliente_views.citas_por_confirmar",['citas'=>$citasMascota]);
+$vista=view("Cliente_views.citas_por_confirmar",['citas'=>$citasMascota,'servicios'=>$servicios]);
  return $vista;
 
 }
@@ -126,5 +126,29 @@ $vista=view("Cliente_views.citas_canceladas",['citas'=>$citasMascota]);
 
 
 }
+public function obtenerDatosCitaModificarAjax($id){
+    $cita = Cita::find($id);
+    return response()->json([
 
+        'fecha_cita'=>$cita->fecha_cita,
+        'hora_cita'=>$cita->hora_cita,
+        'servicio_cita'=>$cita->servicio->id,
+        'servicio_name'=>$cita->servicio->nombre_servicio,
+    ]);
+}
+public function reagendarCita(request $request){
+    $request->validate([
+        'fecha' => 'required|date|max:250',
+            'hora' => 'required|string|max:250',
+            'servicio' => 'required|integer|max:10',
+    ]);
+    $id = $request->input('id');
+    $cita=cita::find($id);
+    $cita->fecha_cita=$request->input('fecha');
+    $cita->hora_cita=$request->input('hora');
+    $cita->servicio_id=$request->input('servicio');
+    $cita->save();
+    return redirect()->back()->withSuccess("Cita Modificada Correctamente");
+
+} 
 }

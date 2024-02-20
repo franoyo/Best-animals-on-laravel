@@ -22,7 +22,7 @@ for (var i = 0; i < deleteButtons.length; i++) {
   
   var aceptButton=document.getElementsByClassName('acept-button')
   const launcAlertita=document.getElementById("alertitas-aceptar");
-  const closeButtonz=document.getElementById("zerrate");
+
 
   for (var y = 0; y < aceptButton.length; y++) {
     aceptButton[y].addEventListener('click', function(e) {
@@ -36,9 +36,11 @@ for (var i = 0; i < deleteButtons.length; i++) {
       lil.value = ides;
     });
   }
-  closeButtonz.addEventListener('click', function(){
-    launcAlertita.classList.remove("ver");
-  
-      
-  })
+  function cerratAceptar() {
+    launcAlertita.classList.remove("ver")
+  }
+function cerrarCito(){
+  const reagendarModal=document.getElementById("reagendar-modal")
+  reagendarModal.classList.remove("seeDa")
+}
   

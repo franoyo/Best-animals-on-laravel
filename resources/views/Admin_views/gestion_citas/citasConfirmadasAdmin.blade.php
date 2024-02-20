@@ -109,10 +109,7 @@ for (var i = 0; i < infoButtons.length; i++) {
           .catch(error => {
               console.error('Error:', error);
           });
-  } else {
-      document.getElementById('nombre-dueño').value = "";
-      document.getElementById('apellido').value = "";
-  };
+  }
     });
   }
     </script>

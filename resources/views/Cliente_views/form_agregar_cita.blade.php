@@ -99,7 +99,7 @@
     </div>
     <div class="buttons-container">
        <input class="btn" type="button" onclick="redirjirAddMascota()" value="AÑADIR MASCOTA">
-        <input class="btn" type="submit" value="AGENDAR CITA">
+        <input class="btn" id="submit" type="submit" value="AGENDAR CITA">
     </div>
 
 
@@ -142,5 +142,25 @@ document.getElementById('nombre_mascota').addEventListener('change', function() 
     <script>  var urlAñadirMascota = "{{ route('añadirMascota.cliente') }}"
 
     ;</script>
+
+    <script>
+      let clicCount = 0;
+
+function handleClick() {
+    clicCount++;
+    if (clicCount === 2) {
+        // Deshabilitar el botón al segundo clic
+        const btnEnviar = document.getElementById("submit");
+        btnEnviar.disabled = true;
+
+    }
+}
+
+// Asignar la función handleClick al evento onclick del botón
+const btnEnviar = document.getElementById("submit");
+btnEnviar.onclick = handleClick;
+
+
+    </script>
     <script src="{{asset('js/form_cita_script.js?v=1.23')}}"></script>
 @endsection

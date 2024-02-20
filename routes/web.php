@@ -10,6 +10,8 @@ use App\Http\Controllers\Veterinario\VeterinarioController;
 use App\Http\Controllers\Auth\restablecerContraseñaEmpleadoController;
 use App\Http\Controllers\cliente\MangamentMascotas;
 use App\Http\Controllers\cliente\gestionCitasController;
+use App\Http\Controllers\tienda\TiendaController;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -57,10 +59,13 @@ Route::get("/informacion", function () {
 
     return view("info");
 })->name('info');
-Route::get("/tienda", function () {
+Route::controller(TiendaController::class)->group(function(){
+    Route::get('/tienda', 'showTienda')->name('tienda');
+    Route::post('/agregar-carrito', 'agregarAlCarrito')->name('agregar-carrito');
+    Route::post('/vaciarCarrito', 'vaciarCarrito')->name('vaciarCarrito');
 
-    return view("tienda",['tarjetas'=>Producto::all()]);
-})->name('tienda');
+
+});
 
 Route::controller(LoginRegisterController::class)->group(function () {
     Route::get('/login', 'login')->name('login');
@@ -83,6 +88,8 @@ Route::controller(gestionCitasController::class)->group(function () {
       Route::get('/CitasConfirmadas', 'CitasConfirmadas')->name('CitasConfirmadas');
       Route::get('/CitasCanceladas', 'CitasCanceladas')->name('CitasCanceladas');
     Route::post('/cancelarCita.cliente', 'cancelarCita')->name('cancelarCita.cliente');
+    Route::get('/get-datos/{id}', 'obtenerDatosCitaModificarAjax')->name('get-datos');
+    Route::post('/modificarCita.cliente', 'reagendarCita')->name('modificarCita.cliente');
 
 });
 Route::controller(MangamentMascotas::class)->group(function () {

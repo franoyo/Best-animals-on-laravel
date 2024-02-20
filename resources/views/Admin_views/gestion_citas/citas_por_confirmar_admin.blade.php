@@ -76,7 +76,7 @@ guarderia de mascotas
         </div>
     </div>
     
-<script src="{{asset('js/gestion_citas_script.js?V=1.11')}}"></script>
+<script src="{{asset('js/gestion_citas_script.js?V=1.13')}}"></script>
                
 @endsection
 

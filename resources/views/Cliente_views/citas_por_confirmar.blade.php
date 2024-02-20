@@ -18,6 +18,7 @@ Gestion de citas
 @endsection
 
 @section("contenidoPrincipal")
+@include("Admin_views.gestion_citas.modal_info.reagendar_cita")
 @include("alerts.eliminar_cita_confirmada")
     <link rel="stylesheet" href="{{asset('css/styleCitaPorConfirmar.css')}}">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
@@ -87,6 +88,40 @@ guarderia de mascotas
             </div>
         </div>
     </div>
-    
-<script src="{{asset('js/gestion_citas_script.js')}}"></script>
+    <script>
+//cambiar inputs en tiempo real
+var infoButtons = document.getElementsByClassName('edit-button');
+const reagendarModal=document.getElementById("reagendar-modal")
+for (var i = 0; i < infoButtons.length; i++) {
+    infoButtons[i].addEventListener('click', function(e) {
+      e.preventDefault(); // Prevenir el comportamiento predeterminado del enlace
+      var id = this.getAttribute('data-id'); // Obtener la ID almacenada en data-id
+  
+      // Mostrar una alerta con la ID correspondiente
+      reagendarModal.classList.add("seeDa")
+
+      var get=document.getElementById("receptacion");
+      get.value = id;
+      if (id !== "") {
+      
+      var ruta = "{{ route('get-datos','id') }}";
+      ruta = ruta.replace('id', id);
+      fetch(ruta)
+          .then(response => response.json())
+          .then(data => {
+
+              document.getElementById('fecha').value = data.fecha_cita;
+              document.getElementById('hora').value = data.hora_cita;
+              document.getElementById('select-service').value = data.servicio_cita;
+              document.getElementById('select-service').innerText ="Su servicio actual es:"+data.servicio_name;
+
+          })
+          .catch(error => {
+              console.error('Error:', error);
+          });
+  }
+    });
+  }
+    </script>
+    <script src="{{asset('js/gestion_citas_script.js?v=1.11')}}"></script>
 @endsection
