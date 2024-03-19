@@ -53,7 +53,7 @@ Vista General Productos
 </div>
 @endsection
 @section("contenidoPrincipal")
-<link rel="stylesheet" href="{{asset('CSS/style6.css')}}">
+<link rel="stylesheet" href="{{asset('css/style6.css')}}">
 <div class="cont3">
 <div class="menumin">
  
