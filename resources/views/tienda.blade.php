@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <link rel="stylesheet" href="{{ asset('css/style10.css?v=1.22') }}">
+    <link rel="stylesheet" href="{{ asset('css/style10.css?v=1.24') }}">
 
     <title>tienda</title>
 
@@ -47,30 +47,42 @@
             <div class="items-container">
                 <form class="item-container-carrito" action="">
                     <div class="card-to-purchase-container">
-                    @foreach(session('carrito', []) as $idProducto => $producto)
+                        @foreach(session('carrito', []) as $idProducto => $producto)
                         <div class="tarjeta-carrito-container">
                             <div class="mitad-img-cant">
-                            <img width="70%" height="65%" src="{{asset($producto['imagen'])}}" alt="">
-                            <div class="amound-items-z">
-                            <input class="decrease-button-z" type="button" value="-" onclick="this.parentNode.querySelector('.mostrar-cantidad-z').stepDown()">
+                                <div class="put-image">
+                                    <img class="imagen-direct" src="{{asset($producto['imagen'])}}" alt="">
+                                </div>
+
+                                <div class="amound-items-z">
+                                    <input class="decrease-button-z" type="button" value="-" onclick="this.parentNode.querySelector('.mostrar-cantidad-z').stepDown()">
 
 
-                            <input class="mostrar-cantidad-z" name="cantidad-productos" min="1" max="15" value="{{$producto['cantidad']}}" type="number">
+                                    <input class="mostrar-cantidad-z" name="cantidad-productos" min="1" max="15" value="{{$producto['cantidad']}}" type="number">
 
 
-                            <input class="increase-button-z" type="button" value="+" onclick="this.parentNode.querySelector('.mostrar-cantidad-z').stepUp()">
-                        </div>
+                                    <input class="increase-button-z" type="button" value="+" onclick="this.parentNode.querySelector('.mostrar-cantidad-z').stepUp()">
+                                </div>
                             </div>
+                            <div class="container-descripcion-precio">
+                                <div class="put-description">
+                                    {{$producto['descripcion']}}
+                                </div>
+                                <div class="put-price">
+                                    Precio: {{$producto['precio']}}
+                                </div>
+                            </div>
+                            <input id="Cloze" type="button" value="X">
                         </div>
                         @endforeach
                     </div>
                     <div class="container-btns"></div>
-    </form>
-    <form action="{{route('vaciarCarrito')}}" class="vaciar-carrito" method="post">
-        @csrf
-        <input type="submit" value="Vaciar Carrito">
-    </form>
-                
+                </form>
+                <form action="{{route('vaciarCarrito')}}" class="vaciar-carrito" method="post">
+                    @csrf
+                    <input type="submit" value="Vaciar Carrito">
+                </form>
+
 
 
 
@@ -131,14 +143,16 @@
                         <a class="poner-producto" href=""><img class="imagen-producto" src="{{asset($tarjeta->imagen)}}" alt="imagen"></a>
                     </div>
                     <input type="hidden" name="id-card" value="{{$tarjeta->id}}">
-                    <div class="poner-descripcion"></div>
+                    <div class="poner-descripcion">
+                        {{$tarjeta->descripcion}}
+                    </div>
                     <div class="container-peso-producto">
                         <button class="peso-function">5 lb</button>
                         <button class="peso-function">15 lb</button>
                     </div>
                     <div class="descuento"></div>
                     <div class="precio">{{$tarjeta->precio}}</div>
-                    <div class="precioporkilo">(kilo $38.722)</div>
+                    <div class="precioporkilo">(kilo)</div>
                     <div class="container-main-buttons">
                         <div class="amound-items">
                             <input class="decrease-button" type="button" value="-" onclick="this.parentNode.querySelector('.mostrar-cantidad').stepDown()">
@@ -153,7 +167,7 @@
                     </div>
                 </form>
                 @endforeach
-                
+
             </div>
         </div>
         <div class="put-button">

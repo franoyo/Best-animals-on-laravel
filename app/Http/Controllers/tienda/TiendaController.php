@@ -34,6 +34,7 @@ return view("tienda",['tarjetas'=>Producto::all()]);
             'cantidad'=>$cantidad,
             'descripcion' => $producto->descripcion,
             'imagen' => $producto->imagen,
+            'precio' => $producto->precio
             // Agrega más atributos del producto según sea necesario
         ];
     
