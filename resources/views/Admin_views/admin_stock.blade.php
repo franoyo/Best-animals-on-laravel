@@ -43,27 +43,27 @@
         <div class="linea"></div>
         </div>
         <div class="dash">
-          <a class="ins" href="error400.html"><p class="t1">VENTAS</p></a>
+          <a class="ins" href="{route('error400.admin')}}"><p class="t1">VENTAS</p></a>
           <div class="linea"></div>
         </div>
         <div class="dash">
-          <a class="ins" href="error400.html"><p class="t1">AGENDA</p></a>
+          <a class="ins" href="{{route('citasPorConfirmar')}} "><p class="t1">AGENDA</p></a>
           <div class="linea"></div>
         </div>
         <div class="dash">
-          <a class="ins" href="dashaboard_admin_productos.html"><p class="t1">PRODUCTOS</p></a>
+          <a class="ins" href="{{route('generalProductos')}} "><p class="t1">PRODUCTOS</p></a>
           <div class="linea"></div>
         </div>
         <div class="dash">
-          <a class="ins" href="error400.html"><p class="t1">ESTADISTICAS</p></a>
+          <a class="ins" href="{{route('error400.admin')}} "><p class="t1">ESTADISTICAS</p></a>
           <div class="linea"></div>
         </div>
         <div class="dash">
-          <a class="ins" href="dashboard historias clinicas admin.html"><p class="t1">HISTORIAS CLINICAS</p></a>
+          <a class="ins" href="{{route('historiasClinicasFormulario')}} "><p class="t1">HISTORIAS CLINICAS</p></a>
           <div class="linea"></div>
         </div>
         <div class="dash">
-          <a class="ins" href="error400.html"><p class="t1">GESTION DE OPERARIOS</p> </a>
+          <a class="ins" href="{{route('listaEmpleados')}} "><p class="t1">GESTION DE OPERARIOS</p> </a>
          
           <div class="linea"></div>
         </div>
