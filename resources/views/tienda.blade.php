@@ -15,6 +15,7 @@
 </head>
 
 <body>
+
 @unless($errors->isEmpty())
 @include('alerts.alerta_tienda')
 <script>
@@ -24,6 +25,7 @@ setTimeout(() => {
 }, 500);
 </script>
 @endunless
+@include("alerts.alert_producto_agregado")
     <div class="flecha-moviles">
         <button class="flecha">
             <i class="bi bi-chevron-double-down flecha-1"></i>
@@ -242,7 +244,7 @@ setTimeout(() => {
                         if (xhr.status === 200) {
                             var response = JSON.parse(xhr.responseText);
                             if (response.success) {
-                                alert("alerta de pobre")
+                                alert("producto agregado correctamente")
                             } else {
                                 alert(response.error); // Muestra un mensaje de error si lo hay
                             }
