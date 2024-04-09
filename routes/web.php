@@ -63,6 +63,9 @@ Route::controller(TiendaController::class)->group(function(){
     Route::get('/tienda', 'showTienda')->name('tienda');
     Route::post('/agregar-carrito', 'agregarAlCarrito')->name('agregar-carrito');
     Route::post('/vaciarCarrito', 'vaciarCarrito')->name('vaciarCarrito');
+    Route::post('/actualizar-cantidad-producto', 'actualizarCantidadProducto')->name('actualizarCantidadProducto');
+    Route::post('/checkout', 'vistaCheckout')->name('checkout');
+    Route::get('/carrito-actualizado', 'carritoActualizado')->name('carrito-actualizado');
 
 
 });

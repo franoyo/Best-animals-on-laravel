@@ -222,6 +222,8 @@ body {
 
 .item-container-carrito .container-btns {
     display: flex;
+    justify-content: center;
+    align-items: center;
     width: 100%;
     height: 10%;
     background-color: crimson;
@@ -645,9 +647,22 @@ body {
     margin-top: 2.5%;
     width: 100%;
     height: 85%;
-    overflow: hidden;
+    overflow-x:auto;
     scroll-behavior: smooth;
 
+}
+.put-cards .slider::-webkit-scrollbar {
+    width: 0.2vw;
+    height: 0.1vw; /* Ancho de la barra de desplazamiento */
+}
+
+.put-cards .slider::-webkit-scrollbar-track {
+    background: transparent; /* Color de fondo de la barra de desplazamiento */
+}
+
+.put-cards .slider::-webkit-scrollbar-thumb {
+    background: #888; /* Color del thumb (la parte que se arrastra) */
+    border-radius: 10px; /* Radio de borde del thumb */
 }
 
 .slider .cards {
