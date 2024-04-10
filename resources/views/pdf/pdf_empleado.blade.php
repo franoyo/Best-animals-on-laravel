@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Informe Empleados {{$fecha}}</title>
-    <link rel="stylesheet" href="{{asset('css/stylePDFClientes.css?v=1.354')}}">
+    <link rel="stylesheet" href="{{asset('css/StylePDFClientes.css?v=1.354')}}">
 </head>
 <body>
    
