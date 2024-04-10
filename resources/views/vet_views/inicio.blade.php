@@ -21,6 +21,7 @@ Dashboard Veterinario
   align-items: center;
   text-align: center;
   font-size: 4vw;
+  background-color:#F6F6F6;
 }
 
 </style>
