@@ -16,7 +16,7 @@
         <div class="mitad">
             <div class="sub1"><div class="titulo">Precio Total De La Compra:</div>
         <div class="put-price">{{$total}}</div></div>
-            <div class="sub"><a href=""><-atras</a></div>
+            <div class="sub"><a href="{{route('tienda')}}"><-atras</a></div>
             
         </div>
         <div class="checkOut">
