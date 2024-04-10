@@ -25,7 +25,6 @@ setTimeout(() => {
 }, 500);
 </script>
 @endunless
-@include("alerts.alert_producto_agregado")
     <div class="flecha-moviles">
         <button class="flecha">
             <i class="bi bi-chevron-double-down flecha-1"></i>
